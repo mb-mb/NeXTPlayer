@@ -28,7 +28,6 @@
 		2CF3EDC92718B78600FB3AB4 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3EDC82718B78600FB3AB4 /* ConfigView.swift */; };
 		CED2F86E2AC8A0EB0001067A /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED2F86D2AC8A0EB0001067A /* SpotifyiOS.framework */; };
 		CED2F8732AC8A4ED0001067A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2F8722AC8A4ED0001067A /* Constants.swift */; };
-		CED2F8752AC8A5CA0001067A /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED2F8742AC8A5CA0001067A /* SpotifyiOS.framework */; };
 		CED2F8782AC8A68A0001067A /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED2F8772AC8A68A0001067A /* SpotifyiOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +77,6 @@
 		CED2F86D2AC8A0EB0001067A /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 		CED2F86F2AC8A1AD0001067A /* NeXTPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NeXTPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
 		CED2F8722AC8A4ED0001067A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CED2F8742AC8A5CA0001067A /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpotifyiOS.framework; path = "../../../ios-sdk-master/SpotifyiOS.framework"; sourceTree = "<group>"; };
 		CED2F8772AC8A68A0001067A /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,7 +101,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CED2F86E2AC8A0EB0001067A /* SpotifyiOS.framework in Frameworks */,
-				CED2F8752AC8A5CA0001067A /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,7 +192,6 @@
 		2CA968D8271C65C10060AF77 /* NeXTPlayerTests */ = {
 			isa = PBXGroup;
 			children = (
-				CED2F8742AC8A5CA0001067A /* SpotifyiOS.framework */,
 				2CA968D9271C65C10060AF77 /* NeXTPlayerTests.swift */,
 				2CA968DB271C65C10060AF77 /* Info.plist */,
 				CED2F86D2AC8A0EB0001067A /* SpotifyiOS.framework */,
