@@ -8,10 +8,12 @@
 import Foundation
 
 let accessTokenKey = "access-token-key"
-let redirectUri = URL(string:"nextplayerpro://")!
+//let redirectUri = URL(string:"nextplayerpro://")!
+let redirectURL = URL(string:"spotify-ios-quick-start://spotify-login-callback")!
+//let redirectURL = "spotify-ios-quick-start"
 let spotifyClientId = "8151e44bf07c4ea894700bb542c20020"
 let spotifyClientSecretKey = "2b467150281e41bc8f7a8c4dd76e124b"
-
+let tokenAPIURL = "https://accounts.spotify.com/api/token"
 /*
 Scopes let you specify exactly what types of data your application wants to
 access, and the set of scopes you pass in your call determines what access

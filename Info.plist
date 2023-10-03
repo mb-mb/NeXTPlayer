@@ -9,8 +9,7 @@
 			<string>com.biscuitmobile.NeXTPlayer</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>nextplayerpro
-</string>
+				<string>spotify-ios-quick-start</string>
 			</array>
 		</dict>
 	</array>
