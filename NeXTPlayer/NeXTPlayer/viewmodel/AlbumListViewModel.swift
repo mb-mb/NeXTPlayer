@@ -56,14 +56,12 @@ class AlbumListViewModel: ObservableObject {
             return
         }
         
-        let urlToSearch = urlAlbums
-                            .replacingOccurrences(of: "[searchTerm]", with: searchTerm)
-                            .replacingOccurrences(of: "[limit]", with: "\(limit)")
-                            .replacingOccurrences(of: "[offset]", with: "\(page*limit)")
         
-        guard let url = URL(string: urlToSearch) else {
+        guard let url = createURL(for: searchTerm) else {
             return
         }
+        
+        print(url)
         
         state = .isLoading
         URLSession.shared.dataTask(with: url) {[weak self] data, response, error in
@@ -94,5 +92,23 @@ class AlbumListViewModel: ObservableObject {
 
             
         }.resume()
+    }
+    
+    
+    func createURL(for searchItem: String) -> URL? {
+        
+        let baseURL = urlAlbums
+        let offset = page * limit
+        let queryItems = [
+            URLQueryItem(name: "term", value: searchItem),
+            URLQueryItem(name: "entity", value: "album"),
+            URLQueryItem(name: "limit", value: String(limit)),
+            URLQueryItem(name: "offset", value: String(offset))
+        ]
+        
+        var components = URLComponents(string: baseURL)
+        components?.queryItems = queryItems
+        return components?.url
+        
     }
 }

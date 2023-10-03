@@ -7,69 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "678F6D67-AA15-4079-9081-29A083A7EBB0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NeXTPlayer/viewmodel/AlbumListViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "fetchAlbum(for:)"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  uuid = "678F6D67-AA15-4079-9081-29A083A7EBB0 - 1e665f6aa90c5c66"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NeXTPlayer.AlbumListViewModel.fetchAlbum(for: Swift.String) -&gt; ()"
-                  moduleName = "NeXTPlayer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/AlbumListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "200">
-               </Location>
-               <Location
-                  uuid = "678F6D67-AA15-4079-9081-29A083A7EBB0 - 1e665f6aa90c42d3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NeXTPlayer.AlbumListViewModel.fetchAlbum(for: Swift.String) -&gt; ()"
-                  moduleName = "NeXTPlayer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/AlbumListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "572">
-               </Location>
-               <Location
-                  uuid = "678F6D67-AA15-4079-9081-29A083A7EBB0 - 1e665f6aa90c413c"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "NeXTPlayer.AlbumListViewModel.fetchAlbum(for: Swift.String) -&gt; ()"
-                  moduleName = "NeXTPlayer"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/AlbumListViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1500">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "B141FF0E-9A1F-48C4-BF16-D981BE009AE5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -77,8 +14,8 @@
             filePath = "NeXTPlayer/viewmodel/AlbumListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "fetchAlbum(for:)"
             landmarkType = "9">
             <Locations>
@@ -140,8 +77,8 @@
             filePath = "NeXTPlayer/viewmodel/AlbumListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "fetchAlbum(for:)"
             landmarkType = "9">
             <Locations>
@@ -203,8 +140,8 @@
             filePath = "NeXTPlayer/viewmodel/AlbumListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "fetchAlbum(for:)"
             landmarkType = "9">
          </BreakpointContent>
