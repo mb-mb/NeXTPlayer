@@ -8,6 +8,7 @@
 import UIKit
 import WebKit
 
+
 class AuthViewController: UIViewController, WKNavigationDelegate {
     
     public var completionHandler: ((Bool) -> Void)?
@@ -46,7 +47,8 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         }
         //exchange the code for access token
         let component = URLComponents(string: url.absoluteString)
-        guard let code = component?.queryItems?.first(where: {$0.name == "code"})?.value else { return }
+        let code = UserDefaults.standard.string(forKey: "accessToken") ?? ""
+        // guard let code = component?.queryItems?.first(where: {$0.name == "code"})?.value else { return }
         
         print("Code :\(code)")
         webView.isHidden = true

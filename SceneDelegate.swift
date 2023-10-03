@@ -9,18 +9,18 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, SPTAppRemotePlayerStateDelegate  {
     func appRemoteDidEstablishConnection(_ appRemote: SPTAppRemote) {
-        //
+        print("appRemoteDidEstablishConnection")
     }
     
     func appRemote(_ appRemote: SPTAppRemote, didFailConnectionAttemptWithError error: Error?) {
-        //
+        print("didFailConnectionAttemptWithError \(error)")
     }
     func appRemote(_ appRemote: SPTAppRemote, didDisconnectWithError error: Error?) {
-        //
+        print("didDisconnectWithError \(error)")
     }
     
     func playerStateDidChange(_ playerState: SPTAppRemotePlayerState) {
-        //
+        print("SPTAppRemotePlayerState \(playerState)")
     }
     
 
@@ -70,11 +70,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, SPTAppRemoteDelegate, S
          }
     }
 
-    func sceneDidBecomeActive(_ scene: UIScene) {
-    }
-
-    func sceneWillResignActive(_ scene: UIScene) {
-    }
     
   
 }

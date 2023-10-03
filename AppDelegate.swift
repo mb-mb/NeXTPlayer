@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     
     let SpotifyClientID = "\(spotifyClientId)"
     let SpotifyRedirectURL = URL(string: "spotify-ios-quick-start://spotify-login-callback")!
-    
+    let spotifyStringURL = "spotify-ios-quick-start/spotify-login-callback"
     lazy var configuration = SPTConfiguration(
         clientID: SpotifyClientID,
         redirectURL: SpotifyRedirectURL
@@ -54,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, SPTSessionManagerDelegate
     
     func sessionManager(manager: SPTSessionManager, didInitiate session: SPTSession) {
         self.appRemote.connectionParameters.accessToken = session.accessToken
+        UserDefaults.standard.setValue(session.accessToken, forKey: "accessToken")
         self.appRemote.connect()
     }
     

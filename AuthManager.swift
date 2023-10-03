@@ -53,9 +53,9 @@ final class AuthManager {
             URLQueryItem(name: "grant_type",
                          value: "authorization_code"),
             URLQueryItem(name: "code",
-                         value: "code"),
+                         value: code),
             URLQueryItem(name: "redirect_uri",
-                         value: "\(redirectURL)")
+                         value: "\(redirectURL.absoluteString)")
         ]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
@@ -70,7 +70,7 @@ final class AuthManager {
             return
         }
         
-        request.setValue("Basic \(base64String) ", forHTTPHeaderField: "Authorization")
+        request.setValue("Bearer \(base64String) ", forHTTPHeaderField: "Authorization")
         
         let task = URLSession.shared.dataTask(with: request) { data, _, error in
             guard let data = data, error == nil else {
