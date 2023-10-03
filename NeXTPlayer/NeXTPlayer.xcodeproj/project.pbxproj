@@ -3,236 +3,187 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C4DF003271ED55400B6240E /* ConfiguringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4DF002271ED55400B6240E /* ConfiguringView.swift */; };
-		2C7972D92720339C0095B502 /* AlbumsViewGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7972D82720339C0095B502 /* AlbumsViewGroup.swift */; };
-		2C7CA20527160C4E0044C0FB /* NeXTPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA20427160C4E0044C0FB /* NeXTPlayerApp.swift */; };
-		2C7CA20727160C4E0044C0FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA20627160C4E0044C0FB /* ContentView.swift */; };
-		2C7CA20927160C530044C0FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7CA20827160C530044C0FB /* Assets.xcassets */; };
-		2C7CA20C27160C530044C0FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C7CA20B27160C530044C0FB /* Preview Assets.xcassets */; };
-		2C7CA22727160C530044C0FB /* NeXTPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA22627160C530044C0FB /* NeXTPlayerUITests.swift */; };
-		2C7CA236271610840044C0FB /* AlbumsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA235271610830044C0FB /* AlbumsListView.swift */; };
-		2C7CA2392716122E0044C0FB /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA2382716122E0044C0FB /* ContentViewModel.swift */; };
-		2C7CA23B271612B90044C0FB /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA23A271612B90044C0FB /* StateMachine.swift */; };
-		2C7CA23E27161B810044C0FB /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA23D27161B810044C0FB /* SearchBar.swift */; };
-		2C7CA24127161CCF0044C0FB /* SearchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA24027161CCF0044C0FB /* SearchResultsViewModel.swift */; };
-		2C7CA24327161D020044C0FB /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA24227161D020044C0FB /* Artist.swift */; };
-		2C7CA245271650E70044C0FB /* NeXTPlayerEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CA244271650E70044C0FB /* NeXTPlayerEnvironmentKey.swift */; };
-		2C7FBC572733F53C00F48C62 /* ALbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7FBC562733F53C00F48C62 /* ALbumDetailView.swift */; };
-		2C974EB927176F2500A58858 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C974EB827176F2500A58858 /* ImageLoader.swift */; };
-		2CA968DA271C65C10060AF77 /* NeXTPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA968D9271C65C10060AF77 /* NeXTPlayerTests.swift */; };
-		2CC27A8B271D7C5500626964 /* NeXTApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CC27A8A271D7C5500626964 /* NeXTApi.swift */; };
-		2CF3EDC92718B78600FB3AB4 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF3EDC82718B78600FB3AB4 /* ConfigView.swift */; };
-		CED2F86E2AC8A0EB0001067A /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED2F86D2AC8A0EB0001067A /* SpotifyiOS.framework */; };
-		CED2F8732AC8A4ED0001067A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2F8722AC8A4ED0001067A /* Constants.swift */; };
-		CED2F8782AC8A68A0001067A /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED2F8772AC8A68A0001067A /* SpotifyiOS.framework */; };
+		CEDA94062ACC75E200FE5091 /* NeXTPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */; };
+		CEDA94082ACC75E200FE5091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94072ACC75E200FE5091 /* ContentView.swift */; };
+		CEDA940A2ACC75E300FE5091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA94092ACC75E300FE5091 /* Assets.xcassets */; };
+		CEDA940D2ACC75E400FE5091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA940C2ACC75E400FE5091 /* Preview Assets.xcassets */; };
+		CEDA94172ACC75E400FE5091 /* NeXTPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94162ACC75E400FE5091 /* NeXTPlayerTests.swift */; };
+		CEDA94212ACC75E400FE5091 /* NeXTPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94202ACC75E400FE5091 /* NeXTPlayerUITests.swift */; };
+		CEDA94232ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94222ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift */; };
+		CEDA94312ACC78C700FE5091 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94302ACC78C700FE5091 /* Constants.swift */; };
+		CEDA94342ACC7BCD00FE5091 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94332ACC7BCD00FE5091 /* Album.swift */; };
+		CEDA94372ACC7D3F00FE5091 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */; };
+		CEDA943A2ACC7FD300FE5091 /* AlbumsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */; };
+		CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2C7CA22327160C530044C0FB /* PBXContainerItemProxy */ = {
+		CEDA94132ACC75E400FE5091 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2C7CA1F927160C4E0044C0FB /* Project object */;
+			containerPortal = CEDA93FA2ACC75E200FE5091 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C7CA20027160C4E0044C0FB;
+			remoteGlobalIDString = CEDA94012ACC75E200FE5091;
 			remoteInfo = NeXTPlayer;
 		};
-		2CA968DC271C65C10060AF77 /* PBXContainerItemProxy */ = {
+		CEDA941D2ACC75E400FE5091 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2C7CA1F927160C4E0044C0FB /* Project object */;
+			containerPortal = CEDA93FA2ACC75E200FE5091 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C7CA20027160C4E0044C0FB;
+			remoteGlobalIDString = CEDA94012ACC75E200FE5091;
 			remoteInfo = NeXTPlayer;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2C4DF002271ED55400B6240E /* ConfiguringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfiguringView.swift; sourceTree = "<group>"; };
-		2C7972D82720339C0095B502 /* AlbumsViewGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewGroup.swift; sourceTree = "<group>"; };
-		2C7CA20127160C4E0044C0FB /* NeXTPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C7CA20427160C4E0044C0FB /* NeXTPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerApp.swift; sourceTree = "<group>"; };
-		2C7CA20627160C4E0044C0FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2C7CA20827160C530044C0FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2C7CA20B27160C530044C0FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2C7CA21227160C530044C0FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C7CA22227160C530044C0FB /* NeXTPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeXTPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C7CA22627160C530044C0FB /* NeXTPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerUITests.swift; sourceTree = "<group>"; };
-		2C7CA22827160C530044C0FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C7CA235271610830044C0FB /* AlbumsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListView.swift; sourceTree = "<group>"; };
-		2C7CA2382716122E0044C0FB /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
-		2C7CA23A271612B90044C0FB /* StateMachine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMachine.swift; sourceTree = "<group>"; };
-		2C7CA23D27161B810044C0FB /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		2C7CA24027161CCF0044C0FB /* SearchResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewModel.swift; sourceTree = "<group>"; };
-		2C7CA24227161D020044C0FB /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		2C7CA244271650E70044C0FB /* NeXTPlayerEnvironmentKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerEnvironmentKey.swift; sourceTree = "<group>"; };
-		2C7FBC562733F53C00F48C62 /* ALbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALbumDetailView.swift; sourceTree = "<group>"; };
-		2C974EB827176F2500A58858 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		2CA968D7271C65C10060AF77 /* NeXTPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeXTPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2CA968D9271C65C10060AF77 /* NeXTPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerTests.swift; sourceTree = "<group>"; };
-		2CA968DB271C65C10060AF77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CC27A8A271D7C5500626964 /* NeXTApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTApi.swift; sourceTree = "<group>"; };
-		2CF3EDC82718B78600FB3AB4 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
-		CED2F86D2AC8A0EB0001067A /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
-		CED2F86F2AC8A1AD0001067A /* NeXTPlayer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NeXTPlayer-Bridging-Header.h"; sourceTree = "<group>"; };
-		CED2F8722AC8A4ED0001067A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CED2F8772AC8A68A0001067A /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerApp.swift; sourceTree = "<group>"; };
+		CEDA94072ACC75E200FE5091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEDA94092ACC75E300FE5091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDA940C2ACC75E400FE5091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEDA94122ACC75E400FE5091 /* NeXTPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeXTPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDA94162ACC75E400FE5091 /* NeXTPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerTests.swift; sourceTree = "<group>"; };
+		CEDA941C2ACC75E400FE5091 /* NeXTPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeXTPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDA94202ACC75E400FE5091 /* NeXTPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerUITests.swift; sourceTree = "<group>"; };
+		CEDA94222ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEDA94302ACC78C700FE5091 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEDA94332ACC7BCD00FE5091 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
+		CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListView.swift; sourceTree = "<group>"; };
+		CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2C7CA1FE27160C4E0044C0FB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CED2F8782AC8A68A0001067A /* SpotifyiOS.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2C7CA21F27160C530044C0FB /* Frameworks */ = {
+		CEDA93FF2ACC75E200FE5091 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CA968D4271C65C10060AF77 /* Frameworks */ = {
+		CEDA940F2ACC75E400FE5091 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CED2F86E2AC8A0EB0001067A /* SpotifyiOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDA94192ACC75E400FE5091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2C7CA1F827160C4E0044C0FB = {
+		CEDA93F92ACC75E200FE5091 = {
 			isa = PBXGroup;
 			children = (
-				2C7CA20327160C4E0044C0FB /* NeXTPlayer */,
-				2C7CA22527160C530044C0FB /* NeXTPlayerUITests */,
-				2CA968D8271C65C10060AF77 /* NeXTPlayerTests */,
-				2C7CA20227160C4E0044C0FB /* Products */,
+				CEDA94042ACC75E200FE5091 /* NeXTPlayer */,
+				CEDA94152ACC75E400FE5091 /* NeXTPlayerTests */,
+				CEDA941F2ACC75E400FE5091 /* NeXTPlayerUITests */,
+				CEDA94032ACC75E200FE5091 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2C7CA20227160C4E0044C0FB /* Products */ = {
+		CEDA94032ACC75E200FE5091 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2C7CA20127160C4E0044C0FB /* NeXTPlayer.app */,
-				2C7CA22227160C530044C0FB /* NeXTPlayerUITests.xctest */,
-				2CA968D7271C65C10060AF77 /* NeXTPlayerTests.xctest */,
+				CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */,
+				CEDA94122ACC75E400FE5091 /* NeXTPlayerTests.xctest */,
+				CEDA941C2ACC75E400FE5091 /* NeXTPlayerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2C7CA20327160C4E0044C0FB /* NeXTPlayer */ = {
+		CEDA94042ACC75E200FE5091 /* NeXTPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				CED2F8762AC8A6300001067A /* Files */,
-				2C7CA20427160C4E0044C0FB /* NeXTPlayerApp.swift */,
-				2C7CA21227160C530044C0FB /* Info.plist */,
-				CED2F86F2AC8A1AD0001067A /* NeXTPlayer-Bridging-Header.h */,
-				2C7CA20A27160C530044C0FB /* Preview Content */,
-				2C7CA20627160C4E0044C0FB /* ContentView.swift */,
+				CEDA94382ACC7FC000FE5091 /* view */,
+				CEDA94352ACC7D2B00FE5091 /* viewmodel */,
+				CEDA94322ACC7BC200FE5091 /* model */,
+				CEDA942F2ACC78BB00FE5091 /* resources */,
+				CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */,
+				CEDA94072ACC75E200FE5091 /* ContentView.swift */,
+				CEDA94092ACC75E300FE5091 /* Assets.xcassets */,
+				CEDA940B2ACC75E400FE5091 /* Preview Content */,
 			);
 			path = NeXTPlayer;
 			sourceTree = "<group>";
 		};
-		2C7CA20A27160C530044C0FB /* Preview Content */ = {
+		CEDA940B2ACC75E400FE5091 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2C7CA20B27160C530044C0FB /* Preview Assets.xcassets */,
+				CEDA940C2ACC75E400FE5091 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		2C7CA22527160C530044C0FB /* NeXTPlayerUITests */ = {
+		CEDA94152ACC75E400FE5091 /* NeXTPlayerTests */ = {
 			isa = PBXGroup;
 			children = (
-				2C7CA22627160C530044C0FB /* NeXTPlayerUITests.swift */,
-				2C7CA22827160C530044C0FB /* Info.plist */,
-			);
-			path = NeXTPlayerUITests;
-			sourceTree = "<group>";
-		};
-		2C7CA234271610750044C0FB /* view */ = {
-			isa = PBXGroup;
-			children = (
-				2C7CA23C27161B700044C0FB /* components */,
-				2CF3EDC82718B78600FB3AB4 /* ConfigView.swift */,
-				2C4DF002271ED55400B6240E /* ConfiguringView.swift */,
-				2C7CA235271610830044C0FB /* AlbumsListView.swift */,
-				2C7972D82720339C0095B502 /* AlbumsViewGroup.swift */,
-				2C7FBC562733F53C00F48C62 /* ALbumDetailView.swift */,
-			);
-			path = view;
-			sourceTree = "<group>";
-		};
-		2C7CA237271611F50044C0FB /* model */ = {
-			isa = PBXGroup;
-			children = (
-				2C7CA24027161CCF0044C0FB /* SearchResultsViewModel.swift */,
-				2C7CA24227161D020044C0FB /* Artist.swift */,
-				2CC27A8A271D7C5500626964 /* NeXTApi.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		2C7CA23C27161B700044C0FB /* components */ = {
-			isa = PBXGroup;
-			children = (
-				2C7CA23D27161B810044C0FB /* SearchBar.swift */,
-				2C974EB827176F2500A58858 /* ImageLoader.swift */,
-			);
-			path = components;
-			sourceTree = "<group>";
-		};
-		2CA968D8271C65C10060AF77 /* NeXTPlayerTests */ = {
-			isa = PBXGroup;
-			children = (
-				2CA968D9271C65C10060AF77 /* NeXTPlayerTests.swift */,
-				2CA968DB271C65C10060AF77 /* Info.plist */,
-				CED2F86D2AC8A0EB0001067A /* SpotifyiOS.framework */,
+				CEDA94162ACC75E400FE5091 /* NeXTPlayerTests.swift */,
 			);
 			path = NeXTPlayerTests;
 			sourceTree = "<group>";
 		};
-		2CC27A89271D7C0500626964 /* controller */ = {
+		CEDA941F2ACC75E400FE5091 /* NeXTPlayerUITests */ = {
 			isa = PBXGroup;
 			children = (
-				2C7CA244271650E70044C0FB /* NeXTPlayerEnvironmentKey.swift */,
-				2C7CA2382716122E0044C0FB /* ContentViewModel.swift */,
-				2C7CA23A271612B90044C0FB /* StateMachine.swift */,
+				CEDA94202ACC75E400FE5091 /* NeXTPlayerUITests.swift */,
+				CEDA94222ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift */,
 			);
-			path = controller;
+			path = NeXTPlayerUITests;
 			sourceTree = "<group>";
 		};
-		CED2F8762AC8A6300001067A /* Files */ = {
+		CEDA942F2ACC78BB00FE5091 /* resources */ = {
 			isa = PBXGroup;
 			children = (
-				CED2F8772AC8A68A0001067A /* SpotifyiOS.framework */,
-				CED2F8722AC8A4ED0001067A /* Constants.swift */,
-				2C7CA20827160C530044C0FB /* Assets.xcassets */,
-				2CC27A89271D7C0500626964 /* controller */,
-				2C7CA237271611F50044C0FB /* model */,
-				2C7CA234271610750044C0FB /* view */,
+				CEDA94302ACC78C700FE5091 /* Constants.swift */,
 			);
-			name = Files;
-			path = ..;
+			path = resources;
+			sourceTree = "<group>";
+		};
+		CEDA94322ACC7BC200FE5091 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94332ACC7BCD00FE5091 /* Album.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CEDA94352ACC7D2B00FE5091 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		CEDA94382ACC7FC000FE5091 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */,
+				CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2C7CA20027160C4E0044C0FB /* NeXTPlayer */ = {
+		CEDA94012ACC75E200FE5091 /* NeXTPlayer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C7CA22B27160C530044C0FB /* Build configuration list for PBXNativeTarget "NeXTPlayer" */;
+			buildConfigurationList = CEDA94262ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayer" */;
 			buildPhases = (
-				2C7CA1FD27160C4E0044C0FB /* Sources */,
-				2C7CA1FE27160C4E0044C0FB /* Frameworks */,
-				2C7CA1FF27160C4E0044C0FB /* Resources */,
+				CEDA93FE2ACC75E200FE5091 /* Sources */,
+				CEDA93FF2ACC75E200FE5091 /* Frameworks */,
+				CEDA94002ACC75E200FE5091 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -240,106 +191,106 @@
 			);
 			name = NeXTPlayer;
 			productName = NeXTPlayer;
-			productReference = 2C7CA20127160C4E0044C0FB /* NeXTPlayer.app */;
+			productReference = CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2C7CA22127160C530044C0FB /* NeXTPlayerUITests */ = {
+		CEDA94112ACC75E400FE5091 /* NeXTPlayerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C7CA23127160C530044C0FB /* Build configuration list for PBXNativeTarget "NeXTPlayerUITests" */;
+			buildConfigurationList = CEDA94292ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayerTests" */;
 			buildPhases = (
-				2C7CA21E27160C530044C0FB /* Sources */,
-				2C7CA21F27160C530044C0FB /* Frameworks */,
-				2C7CA22027160C530044C0FB /* Resources */,
+				CEDA940E2ACC75E400FE5091 /* Sources */,
+				CEDA940F2ACC75E400FE5091 /* Frameworks */,
+				CEDA94102ACC75E400FE5091 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2C7CA22427160C530044C0FB /* PBXTargetDependency */,
-			);
-			name = NeXTPlayerUITests;
-			productName = NeXTPlayerUITests;
-			productReference = 2C7CA22227160C530044C0FB /* NeXTPlayerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		2CA968D6271C65C10060AF77 /* NeXTPlayerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CA968DE271C65C10060AF77 /* Build configuration list for PBXNativeTarget "NeXTPlayerTests" */;
-			buildPhases = (
-				2CA968D3271C65C10060AF77 /* Sources */,
-				2CA968D4271C65C10060AF77 /* Frameworks */,
-				2CA968D5271C65C10060AF77 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2CA968DD271C65C10060AF77 /* PBXTargetDependency */,
+				CEDA94142ACC75E400FE5091 /* PBXTargetDependency */,
 			);
 			name = NeXTPlayerTests;
 			productName = NeXTPlayerTests;
-			productReference = 2CA968D7271C65C10060AF77 /* NeXTPlayerTests.xctest */;
+			productReference = CEDA94122ACC75E400FE5091 /* NeXTPlayerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEDA941B2ACC75E400FE5091 /* NeXTPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDA942C2ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayerUITests" */;
+			buildPhases = (
+				CEDA94182ACC75E400FE5091 /* Sources */,
+				CEDA94192ACC75E400FE5091 /* Frameworks */,
+				CEDA941A2ACC75E400FE5091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDA941E2ACC75E400FE5091 /* PBXTargetDependency */,
+			);
+			name = NeXTPlayerUITests;
+			productName = NeXTPlayerUITests;
+			productReference = CEDA941C2ACC75E400FE5091 /* NeXTPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2C7CA1F927160C4E0044C0FB /* Project object */ = {
+		CEDA93FA2ACC75E200FE5091 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					2C7CA20027160C4E0044C0FB = {
-						CreatedOnToolsVersion = 12.5.1;
-						LastSwiftMigration = 1430;
+					CEDA94012ACC75E200FE5091 = {
+						CreatedOnToolsVersion = 14.3.1;
 					};
-					2C7CA22127160C530044C0FB = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = 2C7CA20027160C4E0044C0FB;
+					CEDA94112ACC75E400FE5091 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CEDA94012ACC75E200FE5091;
 					};
-					2CA968D6271C65C10060AF77 = {
-						CreatedOnToolsVersion = 12.5.1;
-						TestTargetID = 2C7CA20027160C4E0044C0FB;
+					CEDA941B2ACC75E400FE5091 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CEDA94012ACC75E200FE5091;
 					};
 				};
 			};
-			buildConfigurationList = 2C7CA1FC27160C4E0044C0FB /* Build configuration list for PBXProject "NeXTPlayer" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = CEDA93FD2ACC75E200FE5091 /* Build configuration list for PBXProject "NeXTPlayer" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 2C7CA1F827160C4E0044C0FB;
-			productRefGroup = 2C7CA20227160C4E0044C0FB /* Products */;
+			mainGroup = CEDA93F92ACC75E200FE5091;
+			productRefGroup = CEDA94032ACC75E200FE5091 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C7CA20027160C4E0044C0FB /* NeXTPlayer */,
-				2C7CA22127160C530044C0FB /* NeXTPlayerUITests */,
-				2CA968D6271C65C10060AF77 /* NeXTPlayerTests */,
+				CEDA94012ACC75E200FE5091 /* NeXTPlayer */,
+				CEDA94112ACC75E400FE5091 /* NeXTPlayerTests */,
+				CEDA941B2ACC75E400FE5091 /* NeXTPlayerUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2C7CA1FF27160C4E0044C0FB /* Resources */ = {
+		CEDA94002ACC75E200FE5091 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7CA20C27160C530044C0FB /* Preview Assets.xcassets in Resources */,
-				2C7CA20927160C530044C0FB /* Assets.xcassets in Resources */,
+				CEDA940D2ACC75E400FE5091 /* Preview Assets.xcassets in Resources */,
+				CEDA940A2ACC75E300FE5091 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C7CA22027160C530044C0FB /* Resources */ = {
+		CEDA94102ACC75E400FE5091 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CA968D5271C65C10060AF77 /* Resources */ = {
+		CEDA941A2ACC75E400FE5091 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -349,69 +300,60 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2C7CA1FD27160C4E0044C0FB /* Sources */ = {
+		CEDA93FE2ACC75E200FE5091 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7CA24327161D020044C0FB /* Artist.swift in Sources */,
-				2C7CA20727160C4E0044C0FB /* ContentView.swift in Sources */,
-				2C7972D92720339C0095B502 /* AlbumsViewGroup.swift in Sources */,
-				2C7CA24127161CCF0044C0FB /* SearchResultsViewModel.swift in Sources */,
-				2C7CA2392716122E0044C0FB /* ContentViewModel.swift in Sources */,
-				2C4DF003271ED55400B6240E /* ConfiguringView.swift in Sources */,
-				2CC27A8B271D7C5500626964 /* NeXTApi.swift in Sources */,
-				CED2F8732AC8A4ED0001067A /* Constants.swift in Sources */,
-				2C7CA20527160C4E0044C0FB /* NeXTPlayerApp.swift in Sources */,
-				2C7CA236271610840044C0FB /* AlbumsListView.swift in Sources */,
-				2C7FBC572733F53C00F48C62 /* ALbumDetailView.swift in Sources */,
-				2C7CA23E27161B810044C0FB /* SearchBar.swift in Sources */,
-				2C7CA23B271612B90044C0FB /* StateMachine.swift in Sources */,
-				2C7CA245271650E70044C0FB /* NeXTPlayerEnvironmentKey.swift in Sources */,
-				2CF3EDC92718B78600FB3AB4 /* ConfigView.swift in Sources */,
-				2C974EB927176F2500A58858 /* ImageLoader.swift in Sources */,
+				CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */,
+				CEDA943A2ACC7FD300FE5091 /* AlbumsListView.swift in Sources */,
+				CEDA94082ACC75E200FE5091 /* ContentView.swift in Sources */,
+				CEDA94062ACC75E200FE5091 /* NeXTPlayerApp.swift in Sources */,
+				CEDA94312ACC78C700FE5091 /* Constants.swift in Sources */,
+				CEDA94342ACC7BCD00FE5091 /* Album.swift in Sources */,
+				CEDA94372ACC7D3F00FE5091 /* AlbumListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2C7CA21E27160C530044C0FB /* Sources */ = {
+		CEDA940E2ACC75E400FE5091 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C7CA22727160C530044C0FB /* NeXTPlayerUITests.swift in Sources */,
+				CEDA94172ACC75E400FE5091 /* NeXTPlayerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2CA968D3271C65C10060AF77 /* Sources */ = {
+		CEDA94182ACC75E400FE5091 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2CA968DA271C65C10060AF77 /* NeXTPlayerTests.swift in Sources */,
+				CEDA94232ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift in Sources */,
+				CEDA94212ACC75E400FE5091 /* NeXTPlayerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2C7CA22427160C530044C0FB /* PBXTargetDependency */ = {
+		CEDA94142ACC75E400FE5091 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2C7CA20027160C4E0044C0FB /* NeXTPlayer */;
-			targetProxy = 2C7CA22327160C530044C0FB /* PBXContainerItemProxy */;
+			target = CEDA94012ACC75E200FE5091 /* NeXTPlayer */;
+			targetProxy = CEDA94132ACC75E400FE5091 /* PBXContainerItemProxy */;
 		};
-		2CA968DD271C65C10060AF77 /* PBXTargetDependency */ = {
+		CEDA941E2ACC75E400FE5091 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2C7CA20027160C4E0044C0FB /* NeXTPlayer */;
-			targetProxy = 2CA968DC271C65C10060AF77 /* PBXContainerItemProxy */;
+			target = CEDA94012ACC75E200FE5091 /* NeXTPlayer */;
+			targetProxy = CEDA941D2ACC75E400FE5091 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2C7CA22927160C530044C0FB /* Debug */ = {
+		CEDA94242ACC75E400FE5091 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -455,7 +397,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -465,14 +407,13 @@
 			};
 			name = Debug;
 		};
-		2C7CA22A27160C530044C0FB /* Release */ = {
+		CEDA94252ACC75E400FE5091 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -510,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -520,199 +461,188 @@
 			};
 			name = Release;
 		};
-		2C7CA22C27160C530044C0FB /* Debug */ = {
+		CEDA94272ACC75E400FE5091 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NeXTPlayer/Preview Content\"";
 				DEVELOPMENT_TEAM = PM5H66UXFY;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = NeXTPlayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
-				OTHER_LDFLAGS = "-ObjC";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NeXTPlayer/NeXTPlayer-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
-		2C7CA22D27160C530044C0FB /* Release */ = {
+		CEDA94282ACC75E400FE5091 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NeXTPlayer/Preview Content\"";
 				DEVELOPMENT_TEAM = PM5H66UXFY;
 				ENABLE_PREVIEWS = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
-				INFOPLIST_FILE = NeXTPlayer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1;
-				OTHER_LDFLAGS = "-ObjC";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "NeXTPlayer/NeXTPlayer-Bridging-Header.h";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
-		2C7CA23227160C530044C0FB /* Debug */ = {
+		CEDA942A2ACC75E400FE5091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM5H66UXFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeXTPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NeXTPlayer";
+			};
+			name = Debug;
+		};
+		CEDA942B2ACC75E400FE5091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM5H66UXFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeXTPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NeXTPlayer";
+			};
+			name = Release;
+		};
+		CEDA942D2ACC75E400FE5091 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PM5H66UXFY;
-				INFOPLIST_FILE = NeXTPlayerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NeXTPlayer;
 			};
 			name = Debug;
 		};
-		2C7CA23327160C530044C0FB /* Release */ = {
+		CEDA942E2ACC75E400FE5091 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PM5H66UXFY;
-				INFOPLIST_FILE = NeXTPlayerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = NeXTPlayer;
-			};
-			name = Release;
-		};
-		2CA968DF271C65C10060AF77 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PM5H66UXFY;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NeXTPlayerTests",
-				);
-				INFOPLIST_FILE = NeXTPlayerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeXTPlayer.app/NeXTPlayer";
-			};
-			name = Debug;
-		};
-		2CA968E0271C65C10060AF77 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = PM5H66UXFY;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NeXTPlayerTests",
-				);
-				INFOPLIST_FILE = NeXTPlayerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeXTPlayer.app/NeXTPlayer";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C7CA1FC27160C4E0044C0FB /* Build configuration list for PBXProject "NeXTPlayer" */ = {
+		CEDA93FD2ACC75E200FE5091 /* Build configuration list for PBXProject "NeXTPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C7CA22927160C530044C0FB /* Debug */,
-				2C7CA22A27160C530044C0FB /* Release */,
+				CEDA94242ACC75E400FE5091 /* Debug */,
+				CEDA94252ACC75E400FE5091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C7CA22B27160C530044C0FB /* Build configuration list for PBXNativeTarget "NeXTPlayer" */ = {
+		CEDA94262ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C7CA22C27160C530044C0FB /* Debug */,
-				2C7CA22D27160C530044C0FB /* Release */,
+				CEDA94272ACC75E400FE5091 /* Debug */,
+				CEDA94282ACC75E400FE5091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2C7CA23127160C530044C0FB /* Build configuration list for PBXNativeTarget "NeXTPlayerUITests" */ = {
+		CEDA94292ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C7CA23227160C530044C0FB /* Debug */,
-				2C7CA23327160C530044C0FB /* Release */,
+				CEDA942A2ACC75E400FE5091 /* Debug */,
+				CEDA942B2ACC75E400FE5091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CA968DE271C65C10060AF77 /* Build configuration list for PBXNativeTarget "NeXTPlayerTests" */ = {
+		CEDA942C2ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2CA968DF271C65C10060AF77 /* Debug */,
-				2CA968E0271C65C10060AF77 /* Release */,
+				CEDA942D2ACC75E400FE5091 /* Debug */,
+				CEDA942E2ACC75E400FE5091 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2C7CA1F927160C4E0044C0FB /* Project object */;
+	rootObject = CEDA93FA2ACC75E200FE5091 /* Project object */;
 }

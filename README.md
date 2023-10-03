@@ -1,2 +1,0 @@
-# NeXTPlayer
-player for music
