@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CEDA94062ACC75E200FE5091 /* NeXTPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */; };
+		CEDA94082ACC75E200FE5091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94072ACC75E200FE5091 /* ContentView.swift */; };
+		CEDA940A2ACC75E300FE5091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA94092ACC75E300FE5091 /* Assets.xcassets */; };
+		CEDA940D2ACC75E400FE5091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA940C2ACC75E400FE5091 /* Preview Assets.xcassets */; };
+		CEDA94172ACC75E400FE5091 /* NeXTPlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94162ACC75E400FE5091 /* NeXTPlayerTests.swift */; };
+		CEDA94212ACC75E400FE5091 /* NeXTPlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94202ACC75E400FE5091 /* NeXTPlayerUITests.swift */; };
+		CEDA94232ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94222ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift */; };
+		CEDA94312ACC78C700FE5091 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94302ACC78C700FE5091 /* Constants.swift */; };
+		CEDA94342ACC7BCD00FE5091 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94332ACC7BCD00FE5091 /* Album.swift */; };
+		CEDA94372ACC7D3F00FE5091 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */; };
+		CEDA943A2ACC7FD300FE5091 /* AlbumsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */; };
+		CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CEDA94132ACC75E400FE5091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDA93FA2ACC75E200FE5091 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDA94012ACC75E200FE5091;
+			remoteInfo = NeXTPlayer;
+		};
+		CEDA941D2ACC75E400FE5091 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEDA93FA2ACC75E200FE5091 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEDA94012ACC75E200FE5091;
+			remoteInfo = NeXTPlayer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerApp.swift; sourceTree = "<group>"; };
+		CEDA94072ACC75E200FE5091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CEDA94092ACC75E300FE5091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEDA940C2ACC75E400FE5091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CEDA94122ACC75E400FE5091 /* NeXTPlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeXTPlayerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDA94162ACC75E400FE5091 /* NeXTPlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerTests.swift; sourceTree = "<group>"; };
+		CEDA941C2ACC75E400FE5091 /* NeXTPlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeXTPlayerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEDA94202ACC75E400FE5091 /* NeXTPlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerUITests.swift; sourceTree = "<group>"; };
+		CEDA94222ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CEDA94302ACC78C700FE5091 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEDA94332ACC7BCD00FE5091 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
+		CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListView.swift; sourceTree = "<group>"; };
+		CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEDA93FF2ACC75E200FE5091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDA940F2ACC75E400FE5091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDA94192ACC75E400FE5091 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEDA93F92ACC75E200FE5091 = {
+			isa = PBXGroup;
+			children = (
+				CEDA94042ACC75E200FE5091 /* NeXTPlayer */,
+				CEDA94152ACC75E400FE5091 /* NeXTPlayerTests */,
+				CEDA941F2ACC75E400FE5091 /* NeXTPlayerUITests */,
+				CEDA94032ACC75E200FE5091 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEDA94032ACC75E200FE5091 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */,
+				CEDA94122ACC75E400FE5091 /* NeXTPlayerTests.xctest */,
+				CEDA941C2ACC75E400FE5091 /* NeXTPlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEDA94042ACC75E200FE5091 /* NeXTPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94382ACC7FC000FE5091 /* view */,
+				CEDA94352ACC7D2B00FE5091 /* viewmodel */,
+				CEDA94322ACC7BC200FE5091 /* model */,
+				CEDA942F2ACC78BB00FE5091 /* resources */,
+				CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */,
+				CEDA94072ACC75E200FE5091 /* ContentView.swift */,
+				CEDA94092ACC75E300FE5091 /* Assets.xcassets */,
+				CEDA940B2ACC75E400FE5091 /* Preview Content */,
+			);
+			path = NeXTPlayer;
+			sourceTree = "<group>";
+		};
+		CEDA940B2ACC75E400FE5091 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA940C2ACC75E400FE5091 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CEDA94152ACC75E400FE5091 /* NeXTPlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94162ACC75E400FE5091 /* NeXTPlayerTests.swift */,
+			);
+			path = NeXTPlayerTests;
+			sourceTree = "<group>";
+		};
+		CEDA941F2ACC75E400FE5091 /* NeXTPlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94202ACC75E400FE5091 /* NeXTPlayerUITests.swift */,
+				CEDA94222ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift */,
+			);
+			path = NeXTPlayerUITests;
+			sourceTree = "<group>";
+		};
+		CEDA942F2ACC78BB00FE5091 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94302ACC78C700FE5091 /* Constants.swift */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		CEDA94322ACC7BC200FE5091 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94332ACC7BCD00FE5091 /* Album.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		CEDA94352ACC7D2B00FE5091 /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */,
+			);
+			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		CEDA94382ACC7FC000FE5091 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */,
+				CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEDA94012ACC75E200FE5091 /* NeXTPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDA94262ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayer" */;
+			buildPhases = (
+				CEDA93FE2ACC75E200FE5091 /* Sources */,
+				CEDA93FF2ACC75E200FE5091 /* Frameworks */,
+				CEDA94002ACC75E200FE5091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NeXTPlayer;
+			productName = NeXTPlayer;
+			productReference = CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEDA94112ACC75E400FE5091 /* NeXTPlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDA94292ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayerTests" */;
+			buildPhases = (
+				CEDA940E2ACC75E400FE5091 /* Sources */,
+				CEDA940F2ACC75E400FE5091 /* Frameworks */,
+				CEDA94102ACC75E400FE5091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDA94142ACC75E400FE5091 /* PBXTargetDependency */,
+			);
+			name = NeXTPlayerTests;
+			productName = NeXTPlayerTests;
+			productReference = CEDA94122ACC75E400FE5091 /* NeXTPlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEDA941B2ACC75E400FE5091 /* NeXTPlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEDA942C2ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayerUITests" */;
+			buildPhases = (
+				CEDA94182ACC75E400FE5091 /* Sources */,
+				CEDA94192ACC75E400FE5091 /* Frameworks */,
+				CEDA941A2ACC75E400FE5091 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEDA941E2ACC75E400FE5091 /* PBXTargetDependency */,
+			);
+			name = NeXTPlayerUITests;
+			productName = NeXTPlayerUITests;
+			productReference = CEDA941C2ACC75E400FE5091 /* NeXTPlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEDA93FA2ACC75E200FE5091 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					CEDA94012ACC75E200FE5091 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					CEDA94112ACC75E400FE5091 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CEDA94012ACC75E200FE5091;
+					};
+					CEDA941B2ACC75E400FE5091 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = CEDA94012ACC75E200FE5091;
+					};
+				};
+			};
+			buildConfigurationList = CEDA93FD2ACC75E200FE5091 /* Build configuration list for PBXProject "NeXTPlayer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEDA93F92ACC75E200FE5091;
+			productRefGroup = CEDA94032ACC75E200FE5091 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEDA94012ACC75E200FE5091 /* NeXTPlayer */,
+				CEDA94112ACC75E400FE5091 /* NeXTPlayerTests */,
+				CEDA941B2ACC75E400FE5091 /* NeXTPlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEDA94002ACC75E200FE5091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDA940D2ACC75E400FE5091 /* Preview Assets.xcassets in Resources */,
+				CEDA940A2ACC75E300FE5091 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDA94102ACC75E400FE5091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDA941A2ACC75E400FE5091 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEDA93FE2ACC75E200FE5091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */,
+				CEDA943A2ACC7FD300FE5091 /* AlbumsListView.swift in Sources */,
+				CEDA94082ACC75E200FE5091 /* ContentView.swift in Sources */,
+				CEDA94062ACC75E200FE5091 /* NeXTPlayerApp.swift in Sources */,
+				CEDA94312ACC78C700FE5091 /* Constants.swift in Sources */,
+				CEDA94342ACC7BCD00FE5091 /* Album.swift in Sources */,
+				CEDA94372ACC7D3F00FE5091 /* AlbumListViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDA940E2ACC75E400FE5091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDA94172ACC75E400FE5091 /* NeXTPlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEDA94182ACC75E400FE5091 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEDA94232ACC75E400FE5091 /* NeXTPlayerUITestsLaunchTests.swift in Sources */,
+				CEDA94212ACC75E400FE5091 /* NeXTPlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEDA94142ACC75E400FE5091 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDA94012ACC75E200FE5091 /* NeXTPlayer */;
+			targetProxy = CEDA94132ACC75E400FE5091 /* PBXContainerItemProxy */;
+		};
+		CEDA941E2ACC75E400FE5091 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEDA94012ACC75E200FE5091 /* NeXTPlayer */;
+			targetProxy = CEDA941D2ACC75E400FE5091 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEDA94242ACC75E400FE5091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEDA94252ACC75E400FE5091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEDA94272ACC75E400FE5091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NeXTPlayer/Preview Content\"";
+				DEVELOPMENT_TEAM = PM5H66UXFY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CEDA94282ACC75E400FE5091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"NeXTPlayer/Preview Content\"";
+				DEVELOPMENT_TEAM = PM5H66UXFY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		CEDA942A2ACC75E400FE5091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM5H66UXFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeXTPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NeXTPlayer";
+			};
+			name = Debug;
+		};
+		CEDA942B2ACC75E400FE5091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM5H66UXFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NeXTPlayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NeXTPlayer";
+			};
+			name = Release;
+		};
+		CEDA942D2ACC75E400FE5091 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM5H66UXFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NeXTPlayer;
+			};
+			name = Debug;
+		};
+		CEDA942E2ACC75E400FE5091 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM5H66UXFY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NeXTPlayer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEDA93FD2ACC75E200FE5091 /* Build configuration list for PBXProject "NeXTPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDA94242ACC75E400FE5091 /* Debug */,
+				CEDA94252ACC75E400FE5091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDA94262ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDA94272ACC75E400FE5091 /* Debug */,
+				CEDA94282ACC75E400FE5091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDA94292ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDA942A2ACC75E400FE5091 /* Debug */,
+				CEDA942B2ACC75E400FE5091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEDA942C2ACC75E400FE5091 /* Build configuration list for PBXNativeTarget "NeXTPlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEDA942D2ACC75E400FE5091 /* Debug */,
+				CEDA942E2ACC75E400FE5091 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEDA93FA2ACC75E200FE5091 /* Project object */;
+}
