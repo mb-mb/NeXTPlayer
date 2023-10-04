@@ -29,10 +29,11 @@ struct Movie: Codable, Identifiable {
     let trackCensoredName: String
     let collectionArtistID: Int?
     let collectionArtistViewURL, collectionViewURL, trackViewURL: String?
-    let previewURL: String
+    let previewURL: String?
     let artworkUrl30, artworkUrl60, artworkUrl100: String
-    let collectionPrice, trackPrice, trackRentalPrice, collectionHDPrice: Double
-    let trackHDPrice, trackHDRentalPrice: Double
+    let collectionPrice, trackPrice, collectionHDPrice: Double?
+    let trackRentalPrice: Double?
+    let trackHDPrice, trackHDRentalPrice: Double?
     let releaseDate: String?
     let collectionExplicitness, trackExplicitness: String
     let trackCount, trackNumber, trackTimeMillis: Int?

@@ -7,6 +7,8 @@
 
 import Foundation
 import Combine
+import MusicKit
+import MediaPlayer
 
 class SongsListViewModel: ObservableObject {
     let service = APIService()
@@ -34,6 +36,15 @@ class SongsListViewModel: ObservableObject {
             }.store(in: &subscription)
     }
     
+    func playSong() async throws {
+        try await ApplicationMusicPlayer.shared.play()
+    }
+    
+  
+    func getSongs() -> [MPMediaItem] {
+        let query = MPMediaQuery.songs()
+        return query.items ?? []
+    }
     
     func fetchSong(for searchTerm: String) {
         guard !searchTerm.isEmpty else {

@@ -12,7 +12,7 @@ struct AlbumsListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.albums, id: \.artistID) { album in
+            ForEach(viewModel.albums, id: \.id) { album in
                 Text(album.collectionName)
             }
             switch viewModel.state {

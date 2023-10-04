@@ -7,11 +7,7 @@
 
 import Foundation
 
-enum EntityType: String {
-    case album
-    case song
-    case movie
-}
+
 
 class APIService {
     
@@ -25,8 +21,8 @@ class APIService {
         fetch(type: SongResult.self, url: url,completion: completion)
     }
 
-    func fetchMovies(searchTerm: String,  page: Int, limit: Int, completion: @escaping (Result<MovieResult, APIError>) -> Void) {
-        let url = createURL(for: searchTerm, type: .movie, page: page, limit: limit)
+    func fetchMovies(searchTerm: String,  completion: @escaping (Result<MovieResult, APIError>) -> Void) {
+        let url = createURL(for: searchTerm, type: .movie, page: nil, limit: nil)
         fetch(type: MovieResult.self, url: url,completion: completion)
     }
 
@@ -56,16 +52,19 @@ class APIService {
         }.resume()
     }
     
-    func createURL(for searchItem: String, type: EntityType = .album, page: Int, limit: Int) -> URL {
+    func createURL(for searchItem: String, type: EntityType = .album, page: Int?, limit: Int?) -> URL {
         
         let baseURL = urlAlbums
-        let offset = page * limit
-        let queryItems = [
+        var queryItems = [
             URLQueryItem(name: "term", value: searchItem),
             URLQueryItem(name: "entity", value: type.rawValue),
-            URLQueryItem(name: "limit", value: String(limit)),
-            URLQueryItem(name: "offset", value: String(offset))
         ]
+        
+        if let page = page, let limit = limit {
+            let offset = page * limit
+            queryItems.append(URLQueryItem(name: "limit", value: String(limit)))
+            queryItems.append(URLQueryItem(name: "offset", value: String(offset)))
+        }
         
         var components = URLComponents(string: baseURL)
         components?.queryItems = queryItems

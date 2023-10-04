@@ -1,34 +1,33 @@
 //
-//  MovieSearchView.swift
+//  LocalMusicSearchView.swift
 //  NeXTPlayer
 //
-//  Created by marcelo bianchi on 03/10/23.
+//  Created by marcelo bianchi on 04/10/23.
 //
 
 import SwiftUI
 
-struct MovieSearchView: View {
-    @StateObject var viewModel = MovieListViewModel()
+struct LocalMusicSearchView: View {
+    @StateObject var viewModel = SongsListViewModel()
     var body: some View {
         NavigationView {
             Group {
                 if viewModel.searchTerm.isEmpty {
-                    MoviePlaceholderView(searchTerm: $viewModel.searchTerm)
+                    LocalMusicSPlaceholderView(searchTerm: $viewModel.searchTerm)
                 } else {
-                    MovieListView(viewModel: viewModel)
+                    LocalMusicListView(viewModel: viewModel)
                 }
             }
             .searchable(text: $viewModel.searchTerm)
-            .navigationTitle("Search Movies")
+            .navigationTitle("Search Songs")
         }
     }
-        
 }
 
-struct MoviePlaceholderView: View {
+struct LocalMusicSPlaceholderView: View {
     @Binding var searchTerm: String
      
-    let suggestions = ["They Live", "Lord of the Rings", "TWD"]
+    let suggestions = ["tool", "animals as leader", "polyphia"]
     
     var body: some View {
         VStack {
@@ -46,8 +45,8 @@ struct MoviePlaceholderView: View {
     }
 }
 
-struct MovieSearchView_Previews: PreviewProvider {
+struct LocalMusicSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieSearchView()
+        LocalMusicSearchView()
     }
 }

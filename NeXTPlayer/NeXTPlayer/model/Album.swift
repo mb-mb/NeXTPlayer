@@ -20,7 +20,7 @@ struct AlbumResult: Codable {
 
 // MARK: - Album
 struct Album: Codable, Identifiable {
-    var id: Int?
+    var id: UUID?
     let wrapperType, collectionType: String
     let artistID: Int?
     let amgArtistId: Int?
@@ -35,7 +35,7 @@ struct Album: Codable, Identifiable {
     let primaryGenreName: String
 
     enum CodingKeys: String, CodingKey {
-        case id = "collectionId"
+        case id
         case wrapperType, collectionType
         case artistID
         case amgArtistId 

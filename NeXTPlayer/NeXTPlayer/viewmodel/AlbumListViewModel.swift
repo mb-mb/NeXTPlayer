@@ -57,7 +57,8 @@ class AlbumListViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):
-                        for album in results.results {
+                        for var album in results.results {
+                            album.id = UUID()
                             self?.albums.append(album)
                         }
                         self?.page += 1
