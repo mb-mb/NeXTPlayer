@@ -19,6 +19,15 @@
 		CEDA94372ACC7D3F00FE5091 /* AlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */; };
 		CEDA943A2ACC7FD300FE5091 /* AlbumsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */; };
 		CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */; };
+		CEDA943E2ACCDCCF00FE5091 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA943D2ACCDCCF00FE5091 /* APIError.swift */; };
+		CEDA94402ACCE4CC00FE5091 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA943F2ACCE4CC00FE5091 /* APIService.swift */; };
+		CEDA94422ACCE85C00FE5091 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94412ACCE85C00FE5091 /* Song.swift */; };
+		CEDA94442ACCED8500FE5091 /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94432ACCED8500FE5091 /* SongListViewModel.swift */; };
+		CEDA94462ACCEDB400FE5091 /* FetchState.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94452ACCEDB400FE5091 /* FetchState.swift */; };
+		CEDA944C2ACCF27D00FE5091 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA944B2ACCF27D00FE5091 /* MovieListViewModel.swift */; };
+		CEDA944F2ACCF33500FE5091 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA944E2ACCF33500FE5091 /* Movie.swift */; };
+		CEDA94512ACCF45200FE5091 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94502ACCF45200FE5091 /* MovieListView.swift */; };
+		CEDA94532ACCF4B400FE5091 /* MovieSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94522ACCF4B400FE5091 /* MovieSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,15 @@
 		CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewModel.swift; sourceTree = "<group>"; };
 		CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListView.swift; sourceTree = "<group>"; };
 		CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumSearchView.swift; sourceTree = "<group>"; };
+		CEDA943D2ACCDCCF00FE5091 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		CEDA943F2ACCE4CC00FE5091 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		CEDA94412ACCE85C00FE5091 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		CEDA94432ACCED8500FE5091 /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		CEDA94452ACCEDB400FE5091 /* FetchState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchState.swift; sourceTree = "<group>"; };
+		CEDA944B2ACCF27D00FE5091 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
+		CEDA944E2ACCF33500FE5091 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		CEDA94502ACCF45200FE5091 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
+		CEDA94522ACCF4B400FE5091 /* MovieSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +171,10 @@
 			isa = PBXGroup;
 			children = (
 				CEDA94332ACC7BCD00FE5091 /* Album.swift */,
+				CEDA943D2ACCDCCF00FE5091 /* APIError.swift */,
+				CEDA94412ACCE85C00FE5091 /* Song.swift */,
+				CEDA94452ACCEDB400FE5091 /* FetchState.swift */,
+				CEDA944E2ACCF33500FE5091 /* Movie.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -160,7 +182,10 @@
 		CEDA94352ACC7D2B00FE5091 /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
+				CEDA944B2ACCF27D00FE5091 /* MovieListViewModel.swift */,
 				CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */,
+				CEDA94432ACCED8500FE5091 /* SongListViewModel.swift */,
+				CEDA943F2ACCE4CC00FE5091 /* APIService.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -168,10 +193,36 @@
 		CEDA94382ACC7FC000FE5091 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CEDA944A2ACCF26800FE5091 /* movie */,
+				CEDA94482ACCEF2600FE5091 /* album */,
+				CEDA94472ACCEF1800FE5091 /* song */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		CEDA94472ACCEF1800FE5091 /* song */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = song;
+			sourceTree = "<group>";
+		};
+		CEDA94482ACCEF2600FE5091 /* album */ = {
+			isa = PBXGroup;
+			children = (
 				CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */,
 				CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */,
 			);
-			path = view;
+			path = album;
+			sourceTree = "<group>";
+		};
+		CEDA944A2ACCF26800FE5091 /* movie */ = {
+			isa = PBXGroup;
+			children = (
+				CEDA94502ACCF45200FE5091 /* MovieListView.swift */,
+				CEDA94522ACCF4B400FE5091 /* MovieSearchView.swift */,
+			);
+			path = movie;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,13 +355,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDA944F2ACCF33500FE5091 /* Movie.swift in Sources */,
+				CEDA94532ACCF4B400FE5091 /* MovieSearchView.swift in Sources */,
 				CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */,
+				CEDA94512ACCF45200FE5091 /* MovieListView.swift in Sources */,
 				CEDA943A2ACC7FD300FE5091 /* AlbumsListView.swift in Sources */,
+				CEDA94442ACCED8500FE5091 /* SongListViewModel.swift in Sources */,
 				CEDA94082ACC75E200FE5091 /* ContentView.swift in Sources */,
 				CEDA94062ACC75E200FE5091 /* NeXTPlayerApp.swift in Sources */,
+				CEDA94422ACCE85C00FE5091 /* Song.swift in Sources */,
 				CEDA94312ACC78C700FE5091 /* Constants.swift in Sources */,
+				CEDA943E2ACCDCCF00FE5091 /* APIError.swift in Sources */,
 				CEDA94342ACC7BCD00FE5091 /* Album.swift in Sources */,
+				CEDA94402ACCE4CC00FE5091 /* APIService.swift in Sources */,
+				CEDA944C2ACCF27D00FE5091 /* MovieListViewModel.swift in Sources */,
 				CEDA94372ACC7D3F00FE5091 /* AlbumListViewModel.swift in Sources */,
+				CEDA94462ACCEDB400FE5091 /* FetchState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

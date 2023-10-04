@@ -1,19 +1,17 @@
 //
-//  AlbumListViewModel.swift
+//  SongListViewModel.swift
 //  NeXTPlayer
 //
 //  Created by marcelo bianchi on 03/10/23.
 //
 
 import Foundation
-import SwiftUI
 import Combine
 
-class AlbumListViewModel: ObservableObject {
-    
+class SongsListViewModel: ObservableObject {
     let service = APIService()
     @Published var searchTerm: String = ""
-    @Published var albums: [Album] = [Album]()
+    @Published var songs: [Song] = [Song]()
     @Published var state: FetchState = .good {
         didSet {
             print("state changed to : \(state)")
@@ -24,7 +22,6 @@ class AlbumListViewModel: ObservableObject {
     let limit: Int = 20
     var page: Int = 0
     
-    
     init() {
         $searchTerm
             .dropFirst()
@@ -32,16 +29,13 @@ class AlbumListViewModel: ObservableObject {
             .sink { [weak self] term in
                 self?.state = .good
                 self?.page = 0
-                self?.albums = []
-                self?.fetchAlbum(for: term)
+                self?.songs = []
+                self?.fetchSong(for: term)
             }.store(in: &subscription)
     }
     
-    func loadMore() {
-        fetchAlbum(for: searchTerm)
-    }
     
-    func fetchAlbum(for searchTerm: String) {
+    func fetchSong(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
             return
         }
@@ -52,16 +46,16 @@ class AlbumListViewModel: ObservableObject {
         
         state = .isLoading
         
-        service.fetchAlbums(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in
+        service.fetchSongs(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in
             
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):
-                        for album in results.results {
-                            self?.albums.append(album)
+                        for album in results.songs {
+                            self?.songs.append(album)
                         }
                         self?.page += 1
-                        self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
+                        self?.state = (results.songs.count == self?.limit) ? .good : .loadedAll
                     
                 case .failure(let error):
                     self?.state = .error("could not load: \(error.localizedDescription)")
@@ -70,8 +64,5 @@ class AlbumListViewModel: ObservableObject {
         }
        
     }
-    
-
-    
-
+ 
 }

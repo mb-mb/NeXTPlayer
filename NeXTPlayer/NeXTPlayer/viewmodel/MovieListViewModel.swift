@@ -1,19 +1,18 @@
 //
-//  AlbumListViewModel.swift
+//  MovieViewModel.swift
 //  NeXTPlayer
 //
 //  Created by marcelo bianchi on 03/10/23.
 //
 
 import Foundation
-import SwiftUI
 import Combine
 
-class AlbumListViewModel: ObservableObject {
+class MovieListViewModel: ObservableObject {
     
     let service = APIService()
     @Published var searchTerm: String = ""
-    @Published var albums: [Album] = [Album]()
+    @Published var movies: [Movie] = [Movie]()
     @Published var state: FetchState = .good {
         didSet {
             print("state changed to : \(state)")
@@ -32,16 +31,16 @@ class AlbumListViewModel: ObservableObject {
             .sink { [weak self] term in
                 self?.state = .good
                 self?.page = 0
-                self?.albums = []
-                self?.fetchAlbum(for: term)
+                self?.movies = []
+                self?.fetchMovie(for: term)
             }.store(in: &subscription)
     }
     
     func loadMore() {
-        fetchAlbum(for: searchTerm)
+        fetchMovie(for: searchTerm)
     }
     
-    func fetchAlbum(for searchTerm: String) {
+    func fetchMovie(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
             return
         }
@@ -52,13 +51,13 @@ class AlbumListViewModel: ObservableObject {
         
         state = .isLoading
         
-        service.fetchAlbums(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in
+        service.fetchMovies(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in
             
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):
-                        for album in results.results {
-                            self?.albums.append(album)
+                    for movie in results.results {
+                            self?.movies.append(movie)
                         }
                         self?.page += 1
                         self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
@@ -75,3 +74,4 @@ class AlbumListViewModel: ObservableObject {
     
 
 }
+
