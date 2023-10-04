@@ -1,5 +1,5 @@
 //
-//  AlbumsListView.swift
+//  MovieListView.swift
 //  NeXTPlayer
 //
 //  Created by marcelo bianchi on 03/10/23.
@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct AlbumsListView: View {
-    @ObservedObject var viewModel: AlbumListViewModel
+struct MovieListView: View {
+    @ObservedObject var viewModel: MovieListViewModel
     
     var body: some View {
         List {
-            ForEach(viewModel.albums) { album in
-                Text(album.collectionName)
+            ForEach(viewModel.movies, id: \.collectionArtistID) { album in
+                Text(album.artistName)
             }
             switch viewModel.state {
             case .good:
@@ -26,8 +26,7 @@ struct AlbumsListView: View {
                     .progressViewStyle(.circular)
                     .frame(maxWidth: .infinity)
             case .loadedAll:
-                //                    EmptyView()
-                Color.gray
+                EmptyView()
             case .error(let message):
                 Text(message)
                     .foregroundColor(.red)
@@ -40,9 +39,8 @@ struct AlbumsListView: View {
 }
 
 
-
-struct AlbumsListView_Previews: PreviewProvider {
+struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumsListView(viewModel: AlbumListViewModel())
+        MovieListView(viewModel: MovieListViewModel())
     }
 }

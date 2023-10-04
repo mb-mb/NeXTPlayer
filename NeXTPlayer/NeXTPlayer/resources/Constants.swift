@@ -8,4 +8,6 @@
 import Foundation
 
 // "httpss://developer.apple.com/library/archive/navigation/documentation/AudioVideo/COnceptual/iTuneSearchAPI/Searching.html"
-let urlAlbums = "https://itunes.apple.com/search?term=[searchTerm]&entity=album&limit=5&limit=[limit]&offset=[offset]"
+let urlAlbums = "https://itunes.apple.com/search?term=[searchTerm]&entity=album&limit=[limit]&offset=[offset]"
+let urlSongs = "https://itunes.apple.com/search?term=[searchTerm]&entity=song&limit=[limit]&offset=[offset]"
+let urlMovies = "https://itunes.apple.com/search?term=[searchTerm]&entity=movie&limit=[limit]&offset=[offset]"
