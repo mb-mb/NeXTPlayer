@@ -7,26 +7,54 @@
 
 import SwiftUI
 
+struct BuySongButton: View {
+    let urlString: String
+    let price: Double?
+    let currency: String
+    
+    var body: some View {
+        if let price = price {
+            BuyButton(urlString: urlString,
+                      price: price,
+                      currency: currency)
+        } else {
+            Text("Album Only")
+                .font(.footnote)
+                .foregroundColor(.gray)
+        }
+    }
+}
+
 struct BuyButton: View {
     let urlString: String
     let price: Double?
     let currency: String
     
     var body: some View {
-        if let url = URL(string: urlString), let price = price {
+        if let url = URL(string: urlString), let priceString = formattedPrice() {
             Link(destination: url) {
-                Text("\(String(format: "%0.2f", price)) \(currency)")
+                Text("\(priceString)")
             }
             .buttonStyle(BuyButtonStyle())
         }
+    }
+    func formattedPrice() -> String? {
+        guard let price = price else { return nil }
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencyCode = currency
+        
+        let priceString = formatter.string(from: NSNumber(value: price))
+        return priceString
+    
     }
 }
 
 
 struct BuyButton_Previews: PreviewProvider {
     static var previews: some View {
-        BuyButton(urlString: Song.mockData().first!.previewURL,
-                  price: 1.0,
-                  currency: "USD")
+        BuyButton(urlString: Song.example().previewURL,
+                  price: Song.example().collectionPrice,
+                  currency: Song.example().currency)
     }
 }

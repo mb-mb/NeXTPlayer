@@ -12,7 +12,7 @@ struct SongListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.songs, id: \.trackID) { song in
+            ForEach(viewModel.songs) { song in
                 SongRowView(song: song)
             }
             switch viewModel.state {
@@ -39,20 +39,7 @@ struct SongListView: View {
 }
 
 
-struct ImageLoadingView: View {
-    let urlString: String
-    let size: CGFloat
-    
-    var body: some View {
-        AsyncImage(url: URL(string: urlString)) { image in
-            image.resizable()
-                .border(Color(white:0.8))
-        } placeholder: {
-            ProgressView()
-        }
-        .frame(width: size, height: size)
-    }
-}
+
                    
 struct SongListView_Previews: PreviewProvider {
     static var previews: some View {

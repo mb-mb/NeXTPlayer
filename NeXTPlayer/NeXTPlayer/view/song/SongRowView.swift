@@ -17,14 +17,16 @@ struct SongRowView: View {
                
             
             VStack(alignment: .leading){
-                Text(song.trackName)
-                Text(song.artistName + " - " + song.collectionName)
+                Text(song.trackName )
+                Text(song.artistName + " - " + (song.collectionName))
                     .font(.caption)
                     .foregroundColor(.gray)
             }
             .lineLimit(1)
             Spacer(minLength: 20)
-            BuyButton(urlString: song.previewURL, price: song.trackPrice, currency: song.currency ?? "USD")
+            BuyButton(urlString: song.previewURL,
+                      price: song.trackPrice,
+                      currency: song.currency)
 
         }
     }
@@ -32,6 +34,6 @@ struct SongRowView: View {
 
 struct SongRowView_Previews: PreviewProvider {
     static var previews: some View {
-        SongRowView(song: Song.mockData().first!)
+        SongRowView(song: Song.example())
     }
 }

@@ -38,6 +38,15 @@ class MovieListViewModel: ObservableObject {
         fetchMovie(for: searchTerm)
     }
     
+    
+    func loadMock() -> MovieListViewModel {
+        let vm = MovieListViewModel()
+        vm.movies = Movie.mocl()
+        return vm
+    }
+    
+    
+    
     func fetchMovie(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
             return

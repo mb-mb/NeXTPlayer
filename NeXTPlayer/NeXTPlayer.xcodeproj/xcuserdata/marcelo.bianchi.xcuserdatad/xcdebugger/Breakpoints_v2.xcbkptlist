@@ -14,8 +14,8 @@
             filePath = "NeXTPlayer/viewmodel/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "fetchMovies(searchTerm:completion:)"
             landmarkType = "7">
             <Locations>
@@ -62,8 +62,8 @@
             filePath = "NeXTPlayer/viewmodel/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "fetch(type:url:completion:)"
             landmarkType = "7">
             <Locations>
@@ -110,8 +110,8 @@
             filePath = "NeXTPlayer/viewmodel/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "fetch(type:url:completion:)"
             landmarkType = "7">
             <Locations>
@@ -173,8 +173,8 @@
             filePath = "NeXTPlayer/viewmodel/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "fetch(type:url:completion:)"
             landmarkType = "7">
             <Locations>

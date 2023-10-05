@@ -16,10 +16,12 @@ struct AlbumRowView: View {
             VStack(alignment: .leading) {
                 Text(album.collectionName)
                 Text(album.artistName)
+                    .font(.caption)
+                    .foregroundColor(.gray)
             }
             .lineLimit(1)
             Spacer(minLength: 20)
-            BuyButton(urlString: album.collectionViewURL ?? "",
+            BuyButton(urlString: album.collectionViewURL,
                       price: album.collectionPrice,
                       currency: album.currency)
         }
@@ -28,6 +30,6 @@ struct AlbumRowView: View {
 
 struct AlbumRowView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumRowView(album: Album.mock().first! )
+        AlbumRowView(album: Album.example() )
     }
 }

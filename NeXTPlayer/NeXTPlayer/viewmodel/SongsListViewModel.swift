@@ -52,6 +52,11 @@ class SongsListViewModel: ObservableObject {
         fetchSong(for: searchTerm)
     }
     
+    func loadMock() -> SongsListViewModel {
+        let vm = SongsListViewModel()
+        vm.songs = [Song.example()]
+        return vm
+    }
     
     func fetchSong(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
@@ -68,8 +73,8 @@ class SongsListViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):
-                        for album in results.results {
-                            self?.songs.append(album)
+                        for songs in results.results {
+                            self?.songs.append(songs)
                         }
                         self?.page += 1
                         self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
@@ -84,7 +89,7 @@ class SongsListViewModel: ObservableObject {
     }
     static func example() -> SongsListViewModel {
         let vm = SongsListViewModel()
-        vm.songs = Song.mockData()
+        vm.songs = [Song.example()]
         return vm
     }
  

@@ -1,96 +1,127 @@
 //
 //  Song.swift
-//  NeXTPlayer
+//  ItunesSearchApp
 //
-//  Created by marcelo bianchi on 03/10/23.
+//  Created by Karin Prater on 25.07.22.
 //
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let albumResult = try? JSONDecoder().decode(AlbumResult.self, from: jsonData)
 
 import Foundation
 
-// MARK: - AlbumResult
+
+// MARK: - SonResult
 struct SongResult: Codable {
     let resultCount: Int
     let results: [Song]
-
-//    enum CodingKeys: String, CodingKey {
-//        case resultCount
-//        case songs = "Songs"
-//    }
 }
 
-// MARK: - Song
-struct Song: Codable {
-    let wrapperType: WrapperType
-    let kind: Kind
-    let artistID, collectionID, trackID: Int
-    let artistName, collectionName, trackName, collectionCensoredName: String
-    let trackCensoredName: String
+// MARK: - Result
+struct Song: Codable, Identifiable {
+    let wrapperType: String
+    let artistID: Int
+    let collectionID: Int
+    let id: Int
+    let artistName, collectionName, trackName: String
     let artistViewURL, collectionViewURL, trackViewURL: String
     let previewURL: String
     let artworkUrl30, artworkUrl60, artworkUrl100: String
     let collectionPrice, trackPrice: Double?
-    let releaseDate: String?
-    let collectionExplicitness: String?
-    let trackExplicitness: String? //Explicitness
-    let discCount, discNumber, trackCount, trackNumber: Int
+    let releaseDate: String
+    let trackCount, trackNumber: Int
     let trackTimeMillis: Int
-    let country: String?
-    let currency: String?
-    let primaryGenreName: String? //PrimaryGenreName?
-    let isStreamable: Bool
-    let contentAdvisoryRating: String?
+    let country, currency, primaryGenreName: String
+    let collectionArtistName: String?
 
     enum CodingKeys: String, CodingKey {
-        case wrapperType, kind
+        case wrapperType
         case artistID = "artistId"
         case collectionID = "collectionId"
-        case trackID = "trackId"
-        case artistName, collectionName, trackName, collectionCensoredName, trackCensoredName
+        case id = "trackId"
+        case artistName, collectionName, trackName
         case artistViewURL = "artistViewUrl"
         case collectionViewURL = "collectionViewUrl"
         case trackViewURL = "trackViewUrl"
         case previewURL = "previewUrl"
-        case artworkUrl30, artworkUrl60, artworkUrl100, collectionPrice, trackPrice, releaseDate, collectionExplicitness, trackExplicitness, discCount, discNumber, trackCount, trackNumber, trackTimeMillis, country, currency, primaryGenreName, isStreamable, contentAdvisoryRating
+        case artworkUrl30, artworkUrl60, artworkUrl100, collectionPrice, trackPrice, releaseDate, trackCount, trackNumber, trackTimeMillis, country, currency, primaryGenreName,  collectionArtistName
     }
     
-    static func mockData() ->[Song] {
-        return  [Song(wrapperType: .track, kind: .song, artistID: 123456789, collectionID: 987654321, trackID: 1234567890, artistName: "Taylor Swift", collectionName: "1989", trackName: "Shake It Off", collectionCensoredName: "1989 (Clean)", trackCensoredName: "Shake It Off (Clean)", artistViewURL: "https://itunes.apple.com/us/artist/taylor-swift/id123456789", collectionViewURL: "https://itunes.apple.com/us/album/shake-it-off/id987654321", trackViewURL: "https://itunes.apple.com/us/song/shake-it-off/id1234567890", previewURL: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview11/v4/38/56/b4/3856b42d-6b83-e43c-4b9d-a50121582e89/mzaf_594406400176088865.aac.m4a", artworkUrl30: "https://is1-ssl.mzstatic.com/image/thumb/Music/e4/c2/ce/mzi.txpkjoey.jpg/30x30bb.jpg", artworkUrl60: "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/db/4b/0b/db4b0be4-02d9-c8ee-3ade-f44a6cdf5ae2/dj.eeqcsgup.jpg/60x60bb.jpg", artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/1d/28/c1/1d28c112-e991-4944-a80c-f3695e9322b0/source/100x100bb.jpg", collectionPrice: 12.99, trackPrice: 1.29, releaseDate: "2014-10-27T00:00:00Z", collectionExplicitness: "explicit", trackExplicitness: "explicit", discCount: 1, discNumber: 1, trackCount: 13, trackNumber: 1, trackTimeMillis: 205124, country: "US", currency: "USD", primaryGenreName: "Pop", isStreamable: true, contentAdvisoryRating: "Explicit"),
-                 Song(wrapperType: .track, kind: .song, artistID: 123456789, collectionID: 987654321, trackID: 1234567890, artistName: "Taylor Swift 2", collectionName: "1989", trackName: "Shake It Off 2", collectionCensoredName: "1989 (Clean)", trackCensoredName: "Shake It Off (Clean)", artistViewURL: "https://itunes.apple.com/us/artist/taylor-swift/id123456789", collectionViewURL: "https://itunes.apple.com/us/album/shake-it-off/id987654321", trackViewURL: "https://itunes.apple.com/us/song/shake-it-off/id1234567890", previewURL: "https://audio-ssl.itunes.apple.com/apple-assets-us-std-000001/AudioPreview11/v4/38/56/b4/3856b42d-6b83-e43c-4b9d-a50121582e89/mzaf_594406400176088865.aac.m4a", artworkUrl30: "https://is1-ssl.mzstatic.com/image/thumb/Music/e4/c2/ce/mzi.txpkjoey.jpg/30x30bb.jpg", artworkUrl60: "https://is1-ssl.mzstatic.com/image/thumb/Features115/v4/db/4b/0b/db4b0be4-02d9-c8ee-3ade-f44a6cdf5ae2/dj.eeqcsgup.jpg/60x60bb.jpg", artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music124/v4/1d/28/c1/1d28c112-e991-4944-a80c-f3695e9322b0/source/100x100bb.jpg", collectionPrice: 12.99, trackPrice: 1.29, releaseDate: "2014-10-27T00:00:00Z", collectionExplicitness: "explicit", trackExplicitness: "explicit", discCount: 1, discNumber: 1, trackCount: 13, trackNumber: 1, trackTimeMillis: 205124, country: "US", currency: "USD", primaryGenreName: "Pop", isStreamable: true, contentAdvisoryRating: "Explicit")
-        ]
+    init(wrapperType: String, artistID: Int, collectionID: Int, id: Int, artistName: String, collectionName: String,
+         trackName: String, artistViewURL: String, collectionViewURL: String, trackViewURL: String, previewURL: String,
+         artworkUrl30: String, artworkUrl60: String, artworkUrl100: String,
+         collectionPrice: Double?, trackPrice: Double?, releaseDate: String, trackCount: Int, trackNumber: Int,
+         trackTimeMillis: Int, country: String, currency: String, primaryGenreName: String, collectionArtistName: String?) {
+        self.wrapperType = wrapperType
+        self.id = id
+        self.artistID = artistID
+        self.collectionID = collectionID
+        self.collectionName = collectionName
+        self.collectionViewURL = collectionViewURL
+        self.collectionArtistName = collectionArtistName
+        self.previewURL = previewURL
+        
+        self.collectionPrice = collectionPrice
+        self.trackPrice = trackPrice
+        self.currency = currency
+        self.country = country
+        self.primaryGenreName = primaryGenreName
+        
+        self.artworkUrl30 = artworkUrl30
+        self.artworkUrl60 = artworkUrl60
+        self.artworkUrl100 = artworkUrl100
+        self.artistViewURL = artistViewURL
+        self.artistName = artistName
+        
+        self.trackName = trackName
+        self.trackCount = trackCount
+        self.trackNumber = trackNumber
+        self.trackTimeMillis = trackTimeMillis
+        self.trackViewURL = trackViewURL
+        self.releaseDate = releaseDate
     }
-                 
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.wrapperType = try container.decode(String.self, forKey: .wrapperType)
+        self.artistID = try container.decode(Int.self, forKey: .artistID)
+        self.collectionID = try container.decode(Int.self, forKey: .collectionID)
+        self.id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
+        self.artistName = try container.decode(String.self, forKey: .artistName)
+        self.collectionName = try container.decode(String.self, forKey: .collectionName)
+        self.trackName = try container.decodeIfPresent(String.self, forKey: .trackName) ?? ""
+        self.artistViewURL = try container.decodeIfPresent(String.self, forKey: .artistViewURL) ?? ""
+        self.collectionViewURL = try container.decode(String.self, forKey: .collectionViewURL)
+        self.trackViewURL = try container.decodeIfPresent(String.self, forKey: .trackViewURL) ?? ""
+        self.previewURL = try container.decodeIfPresent(String.self, forKey: .previewURL) ?? ""
+        self.artworkUrl30 = try container.decodeIfPresent(String.self, forKey: .artworkUrl30) ?? ""
+        self.artworkUrl60 = try container.decode(String.self, forKey: .artworkUrl60)
+        self.artworkUrl100 = try container.decode(String.self, forKey: .artworkUrl100)
+        self.collectionPrice = try container.decodeIfPresent(Double.self, forKey: .collectionPrice)
+        self.trackPrice = try container.decodeIfPresent(Double.self, forKey: .trackPrice)
+        self.releaseDate = try container.decode(String.self, forKey: .releaseDate)
+        self.trackCount = try container.decode(Int.self, forKey: .trackCount)
+        self.trackNumber = try container.decodeIfPresent(Int.self, forKey: .trackNumber) ?? 1
+        self.trackTimeMillis = try container.decodeIfPresent(Int.self, forKey: .trackTimeMillis) ?? 1
+        self.country = try container.decode(String.self, forKey: .country)
+        self.currency = try container.decode(String.self, forKey: .currency)
+        self.primaryGenreName = try container.decode(String.self, forKey: .primaryGenreName)
+        self.collectionArtistName = try container.decodeIfPresent(String.self, forKey: .collectionArtistName)
+    }
+    
+    
+    static func example() -> Song {
+        
+    Song(wrapperType: "Song",
+         artistID: 1, collectionID: 1, id: 1, artistName: "Jack Johnson",
+         collectionName: "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
+         trackName: "Upside Down", artistViewURL: "", collectionViewURL: "", trackViewURL: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4", previewURL: "https://is3-ssl.mzstatic.com",
+         artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg", artworkUrl60: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/60x60bb.jpg", artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg", collectionPrice: 9.88, trackPrice: 1.29, releaseDate: "2005-01-01T12:00:00Z", trackCount: 14, trackNumber: 1, trackTimeMillis: 208643, country: "USA", currency: "USD", primaryGenreName: "Rock", collectionArtistName: nil)
+    }
+    
+    static func example2() -> Song {
+        
+    Song(wrapperType: "Song",
+         artistID: 1, collectionID: 1, id: 10, artistName: "Jack Johnson",
+         collectionName: "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
+         trackName: "Upside", artistViewURL: "", collectionViewURL: "", trackViewURL: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4", previewURL: "https://is3-ssl.mzstatic.com",
+         artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg", artworkUrl60: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/60x60bb.jpg", artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg", collectionPrice: 9.88, trackPrice: 0.99, releaseDate: "2005-01-01T12:00:00Z", trackCount: 14, trackNumber: 10, trackTimeMillis: 108643, country: "USA", currency: "USD", primaryGenreName: "Rock", collectionArtistName: nil)
+    }
 }
-
-enum Explicitness: String, Codable {
-    case explicit = "explicit"
-    case notExplicit = "notExplicit"
-}
-
-enum Country: String, Codable {
-    case usa = "USA"
-}
-
-enum Currency: String, Codable {
-    case usd = "USD"
-}
-
-enum Kind: String, Codable {
-    case song = "song"
-}
-
-enum PrimaryGenreName: String, Codable {
-    case dance = "Dance"
-    case pop = "Pop"
-    case rock = "Rock"
-    case soundtrack = "Soundtrack"
-}
-
-enum WrapperType: String, Codable {
-    case track = "track"
-}
-
-

@@ -13,13 +13,16 @@ struct MoviewRowView: View {
         HStack {
             ImageLoadingView(urlString: moview.artworkUrl60, size: 100)
             VStack(alignment: .leading) {
-                Text(moview.collectionName ?? "")
-                Text(moview.artistName)
+                Text(moview.trackName)
+                Text(moview.primaryGenreName)
+                    .foregroundColor(.gray)
+                Text(moview.releaseDate ?? "")
+                    .foregroundColor(.gray)
             }
             .lineLimit(1)
             Spacer(minLength: 20)
-            BuyButton(urlString: moview.collectionViewURL ?? "",
-                      price: moview.collectionPrice,
+            BuyButton(urlString: moview.previewURL ?? "",
+                      price: moview.trackPrice,
                       currency: moview.currency)
         }
     }

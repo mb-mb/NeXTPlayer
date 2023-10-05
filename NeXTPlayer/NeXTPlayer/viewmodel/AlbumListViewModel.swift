@@ -42,6 +42,12 @@ class AlbumListViewModel: ObservableObject {
         fetchAlbum(for: searchTerm)
     }
     
+    func loadMock() -> AlbumListViewModel {
+        let vm = AlbumListViewModel()
+        vm.albums = [Album.example()]
+        return vm
+    }
+    
     func fetchAlbum(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
             return
@@ -59,7 +65,6 @@ class AlbumListViewModel: ObservableObject {
                 switch results {
                 case .success(let results):
                         for var album in results.results {
-                            album.id = UUID()
                             self?.albums.append(album)
                         }
                         self?.page += 1

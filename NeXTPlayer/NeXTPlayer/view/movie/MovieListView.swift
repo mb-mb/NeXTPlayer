@@ -13,8 +13,7 @@ struct MovieListView: View {
     var body: some View {
         List {
             ForEach(viewModel.movies, id:\.trackID) { movie in
-                Text(movie.trackName)
-//                print(movie.trackName)
+               MoviewRowView(moview: movie)
             }
             switch viewModel.state {
             case .good:
