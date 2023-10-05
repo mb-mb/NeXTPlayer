@@ -27,6 +27,7 @@ class AlbumListViewModel: ObservableObject {
     
     init() {
         $searchTerm
+            .removeDuplicates()
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
@@ -63,7 +64,8 @@ class AlbumListViewModel: ObservableObject {
                         }
                         self?.page += 1
                         self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
-                    
+                        print("fetched Albums : \(results.resultCount)")
+
                 case .failure(let error):
                     self?.state = .error("could not load: \(error.localizedDescription)")
                 }

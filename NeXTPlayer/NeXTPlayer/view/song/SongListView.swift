@@ -1,19 +1,19 @@
 //
-//  AlbumsListView.swift
+//  SongListView.swift
 //  NeXTPlayer
 //
-//  Created by marcelo bianchi on 03/10/23.
+//  Created by marcelo bianchi on 04/10/23.
 //
 
 import SwiftUI
 
-struct AlbumsListView: View {
-    @ObservedObject var viewModel: AlbumListViewModel
+struct SongListView: View {
+    @ObservedObject var viewModel: SongsListViewModel
     
     var body: some View {
         List {
-            ForEach(viewModel.albums, id: \.id) { album in
-                AlbumRowView(album: album)
+            ForEach(viewModel.songs, id: \.trackID) { song in
+                SongRowView(song: song)
             }
             switch viewModel.state {
             case .good:
@@ -39,9 +39,23 @@ struct AlbumsListView: View {
 }
 
 
-
-struct AlbumsListView_Previews: PreviewProvider {
+struct ImageLoadingView: View {
+    let urlString: String
+    let size: CGFloat
+    
+    var body: some View {
+        AsyncImage(url: URL(string: urlString)) { image in
+            image.resizable()
+                .border(Color(white:0.8))
+        } placeholder: {
+            ProgressView()
+        }
+        .frame(width: size, height: size)
+    }
+}
+                   
+struct SongListView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumsListView(viewModel: AlbumListViewModel())
+        SongListView(viewModel: SongsListViewModel.example())
     }
 }

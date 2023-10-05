@@ -26,6 +26,7 @@ class SongsListViewModel: ObservableObject {
     
     init() {
         $searchTerm
+            .removeDuplicates()
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
@@ -40,11 +41,17 @@ class SongsListViewModel: ObservableObject {
         try await ApplicationMusicPlayer.shared.play()
     }
     
+    
   
     func getSongs() -> [MPMediaItem] {
         let query = MPMediaQuery.songs()
         return query.items ?? []
     }
+    
+    func loadMore() {
+        fetchSong(for: searchTerm)
+    }
+    
     
     func fetchSong(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
@@ -57,23 +64,28 @@ class SongsListViewModel: ObservableObject {
         
         state = .isLoading
         
-        service.fetchSongs(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in
-            
+        service.fetchSongs(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in            
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):
-                        for album in results.songs {
+                        for album in results.results {
                             self?.songs.append(album)
                         }
                         self?.page += 1
-                        self?.state = (results.songs.count == self?.limit) ? .good : .loadedAll
-                    
+                        self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
+                        print("fetched songs : \(results.resultCount)")
+
                 case .failure(let error):
                     self?.state = .error("could not load: \(error.localizedDescription)")
                 }
             }
         }
        
+    }
+    static func example() -> SongsListViewModel {
+        let vm = SongsListViewModel()
+        vm.songs = Song.mockData()
+        return vm
     }
  
 }
