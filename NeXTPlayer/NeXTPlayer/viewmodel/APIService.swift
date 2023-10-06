@@ -17,6 +17,12 @@ class APIService {
         fetch(type: AlbumResult.self, url: url,completion: completion)
     }
     
+    func fetchLocalAlbums(searchTerm: String,  page: Int, limit: Int, completion: @escaping (Result<AlbumResult, APIError>) -> Void) {
+        let url = createURL(for: searchTerm, type: .album, page: page, limit: limit)
+        print("url albums detail \(url)")
+        fetch(type: AlbumResult.self, url: url,completion: completion)
+    }
+    
     func fetchSongs(for albumID: Int, completion: @escaping (Result<SongResult, APIError>) -> Void) {
         let url = createURL(for: albumID, type: .song)
         print("url songs detail \(url)")

@@ -20,7 +20,7 @@ struct ImageLoadingView: View {
                     .frame(width: size)
             case .failure(_):
                 Color.gray
-                    .frame(width: size)
+                    .frame(width: CGFloat(size/1.5),height: size)
             case .success(let image):
                 image
                     .border(Color(white:0.8))

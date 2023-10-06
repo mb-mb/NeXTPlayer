@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct LocalMusicSearchView: View {
-    @StateObject var viewModel = SongsListViewModel()
+    @StateObject var viewModel = LocalListViewModel()
     var body: some View {
         NavigationView {
             Group {
-                if viewModel.searchTerm.isEmpty {
-                    LocalMusicSPlaceholderView(searchTerm: $viewModel.searchTerm)
-                } else {
+//                if viewModel.searchTerm.isEmpty {
+//                    LocalMusicSPlaceholderView(searchTerm: $viewModel.searchTerm)
+//                } else {
                     LocalMusicListView(viewModel: viewModel)
-                }
+//                }
             }
             .searchable(text: $viewModel.searchTerm)
             .navigationTitle("Search Songs")

@@ -59,8 +59,7 @@ class AlbumListViewModel: ObservableObject {
         
         state = .isLoading
         
-        service.fetchAlbums(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in
-            
+        service.fetchAlbums(searchTerm: searchTerm, page: page, limit: limit ) {[weak self] results in            
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):

@@ -17,6 +17,7 @@
 		CE7CD62C2ACEEED7000DB8AF /* AlbumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CD62B2ACEEED7000DB8AF /* AlbumDetailView.swift */; };
 		CE7CD62E2ACEFB53000DB8AF /* SongsForAlbumListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CD62D2ACEFB53000DB8AF /* SongsForAlbumListViewModel.swift */; };
 		CE7CD6302ACEFEA5000DB8AF /* SongsForAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CD62F2ACEFEA5000DB8AF /* SongsForAlbumListView.swift */; };
+		CED7DF892ACF919700997766 /* LocalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7DF882ACF919700997766 /* LocalListViewModel.swift */; };
 		CEDA94062ACC75E200FE5091 /* NeXTPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */; };
 		CEDA94082ACC75E200FE5091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94072ACC75E200FE5091 /* ContentView.swift */; };
 		CEDA940A2ACC75E300FE5091 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDA94092ACC75E300FE5091 /* Assets.xcassets */; };
@@ -78,6 +79,7 @@
 		CE7CD62B2ACEEED7000DB8AF /* AlbumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailView.swift; sourceTree = "<group>"; };
 		CE7CD62D2ACEFB53000DB8AF /* SongsForAlbumListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsForAlbumListViewModel.swift; sourceTree = "<group>"; };
 		CE7CD62F2ACEFEA5000DB8AF /* SongsForAlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsForAlbumListView.swift; sourceTree = "<group>"; };
+		CED7DF882ACF919700997766 /* LocalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListViewModel.swift; sourceTree = "<group>"; };
 		CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerApp.swift; sourceTree = "<group>"; };
 		CEDA94072ACC75E200FE5091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				CEDA94432ACCED8500FE5091 /* SongsListViewModel.swift */,
 				CEDA943F2ACCE4CC00FE5091 /* APIService.swift */,
 				CE7CD62D2ACEFB53000DB8AF /* SongsForAlbumListViewModel.swift */,
+				CED7DF882ACF919700997766 /* LocalListViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				CEDA94342ACC7BCD00FE5091 /* Album.swift in Sources */,
 				CE7CD6282ACED3E3000DB8AF /* AlbumSectionView.swift in Sources */,
 				CEDA94402ACCE4CC00FE5091 /* APIService.swift in Sources */,
+				CED7DF892ACF919700997766 /* LocalListViewModel.swift in Sources */,
 				CEDA944C2ACCF27D00FE5091 /* MovieListViewModel.swift in Sources */,
 				CE7CD6242ACECD46000DB8AF /* ImageLoadingView.swift in Sources */,
 				CE5E45A42ACE331E001E80B2 /* AlbumRowView.swift in Sources */,
