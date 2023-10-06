@@ -15,13 +15,15 @@ struct LocalMusicListView: View {
     var body: some View {
         
         List {
+            Text("Music")
+                .font(.title)
+            
             ForEach(viewModel.albums) { album in
-//                NavigationLink {
-//                    AlbumDetailView(album: album)
-//                } label: {
-//                    AlbumRowView(album: album)
-//                }
-                Text("\(album.id)")
+                NavigationLink {
+                    LocalAlbumDetailView(album: album)
+                } label: {
+                    LocalAlbumRowView(album: album)
+                }
             }
             switch viewModel.state {
             case .good:
@@ -48,6 +50,8 @@ struct LocalMusicListView: View {
 
 struct LocalMusicListView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalMusicListView(viewModel: LocalListViewModel())
+        NavigationView {
+            LocalMusicListView(viewModel: LocalListViewModel().loadMock())
+        }
     }
 }

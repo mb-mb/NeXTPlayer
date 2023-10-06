@@ -1,21 +1,20 @@
 //
-//  AlbumDetailView.swift
+//  LocalAlbumDetailView.swift
 //  NeXTPlayer
 //
-//  Created by marcelo bianchi on 05/10/23.
+//  Created by marcelo bianchi on 06/10/23.
 //
 
 import SwiftUI
 
-struct AlbumDetailView: View {
-    @StateObject var songsViewModel: SongsForAlbumListViewModel
+struct LocalAlbumDetailView: View {
+    @StateObject var localViewModel: LocalSongsForAlbumListViewModel
     let album: Album
     
     init( album: Album) {
         self.album = album
-        self._songsViewModel = StateObject(wrappedValue: SongsForAlbumListViewModel(albumID: album.id))
+        self._localViewModel = StateObject(wrappedValue: LocalSongsForAlbumListViewModel(albumID: album.id))
     }
-    
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
@@ -30,29 +29,24 @@ struct AlbumDetailView: View {
                     Text(album.primaryGenreName)
                     Text("\(album.trackCount) songs")
                               
-                    Text("Released: \(String.formattedDate(value: album.releaseDate))")
+                    Text("Released: \(String.formattedDate(value: album.releaseDate))") 
                 }
                 .font(.caption)
                 .foregroundColor(.gray)
                 .lineLimit(1)
                 Spacer(minLength: 20)
-                BuyButton(urlString: album.collectionViewURL,
-                          price: album.collectionPrice,
-                          currency: album.currency)
             }
             .padding()
-            SongsForAlbumListView(songsViewModel: songsViewModel)
+            LocalSongsForAlbumListView(songsViewModel: localViewModel)
         }
         .onAppear {
-            songsViewModel.fetch()
+            localViewModel.fetch()
         }
     }
-    
-
 }
 
-struct AlbumDetailView_Previews: PreviewProvider {
+struct LocalAlbumDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumDetailView(album: Album.example())
+        LocalAlbumDetailView(album: Album.example())
     }
 }

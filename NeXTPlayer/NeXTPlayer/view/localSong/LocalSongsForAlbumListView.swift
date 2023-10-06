@@ -1,14 +1,14 @@
 //
-//  SongsForAlbumListView.swift
+//  LocalSongsForAlbumListView.swift
 //  NeXTPlayer
 //
-//  Created by marcelo bianchi on 05/10/23.
+//  Created by marcelo bianchi on 06/10/23.
 //
 
 import SwiftUI
 
-struct SongsForAlbumListView: View {
-    @ObservedObject var songsViewModel: SongsForAlbumListViewModel
+struct LocalSongsForAlbumListView: View {
+    @ObservedObject var songsViewModel: LocalSongsForAlbumListViewModel
     
     var body: some View {
         ScrollView {
@@ -16,7 +16,7 @@ struct SongsForAlbumListView: View {
             if songsViewModel.state == .isLoading {
                 ProgressView()
                     .progressViewStyle(.circular)
-            } else {                
+            } else {
                 Grid(horizontalSpacing: 20){
                     ForEach(songsViewModel.songs) { song in
                         GridRow {
@@ -31,9 +31,6 @@ struct SongsForAlbumListView: View {
                             Text(Int().formattedDuration(time: song.trackTimeMillis))
                                 .font(.footnote)
                             
-                            BuySongButton(urlString: song.previewURL,
-                                          price: song.trackPrice,
-                                          currency: song.currency)
                             .padding(.trailing)
                         }
                         Divider()
@@ -43,12 +40,10 @@ struct SongsForAlbumListView: View {
             }
         }
     }
-    
-
 }
 
-struct SongsForAlbumListView_Previews: PreviewProvider {
+struct LocalSongsForAlbumListView_Previews: PreviewProvider {
     static var previews: some View {
-        SongsForAlbumListView(songsViewModel: SongsForAlbumListViewModel.example())
+        LocalSongsForAlbumListView(songsViewModel: LocalSongsForAlbumListViewModel.example())
     }
 }

@@ -15,11 +15,10 @@ struct LocalMusicSearchView: View {
 //                if viewModel.searchTerm.isEmpty {
 //                    LocalMusicSPlaceholderView(searchTerm: $viewModel.searchTerm)
 //                } else {
-                    LocalMusicListView(viewModel: viewModel)
+                    LocalMusicListView(viewModel: viewModel.loadMock())
 //                }
             }
-            .searchable(text: $viewModel.searchTerm)
-            .navigationTitle("Search Songs")
+
         }
     }
 }
