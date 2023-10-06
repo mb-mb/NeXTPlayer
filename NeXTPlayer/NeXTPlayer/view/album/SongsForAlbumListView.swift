@@ -35,6 +35,7 @@ struct SongsForAlbumListView: View {
                             BuySongButton(urlString: song.previewURL,
                                           price: song.trackPrice,
                                           currency: song.currency)
+                            .padding(.trailing)
                         }
                         Divider()
                     }
@@ -46,12 +47,14 @@ struct SongsForAlbumListView: View {
     
     func formattedDuration(time: Int) -> String {
         let timeInSeconds = time / 1000
+        
         let interval = TimeInterval(timeInSeconds)
         let formatter = DateComponentsFormatter()
         formatter.zeroFormattingBehavior = .pad
         formatter.allowedUnits = [.minute, .second]
         formatter.unitsStyle = .positional
-        return formatter.string(for: interval) ?? ""
+        
+        return formatter.string(from: interval) ?? ""
     }
 }
 

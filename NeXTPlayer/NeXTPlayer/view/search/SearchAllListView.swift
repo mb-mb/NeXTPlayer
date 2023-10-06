@@ -31,7 +31,7 @@ struct SearchAllListView: View {
                     }
                 }
                 .padding(.horizontal)
-                SongSectionView(songs: songViewModel.songs)
+                SongSectionView(viewModel: songViewModel)
                 
                 Divider()
                     .padding(.bottom)

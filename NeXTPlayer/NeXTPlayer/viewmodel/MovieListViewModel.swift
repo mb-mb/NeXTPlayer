@@ -41,7 +41,7 @@ class MovieListViewModel: ObservableObject {
     
     func loadMock() -> MovieListViewModel {
         let vm = MovieListViewModel()
-        vm.movies = Movie.mocl()
+        vm.movies = [Movie.example()]
         return vm
     }
     

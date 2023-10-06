@@ -13,7 +13,8 @@ struct SongRowView: View {
     var body: some View {
         HStack {
             
-            ImageLoadingView(urlString: song.artworkUrl60, size: 60)
+            ImageLoadingView(urlString: song.artworkUrl60,
+                             size: 60)
                
             
             VStack(alignment: .leading){

@@ -20,6 +20,7 @@ struct Song: Codable, Identifiable {
     let artistID: Int
     let collectionID: Int
     let id: Int
+    let uuid: UUID
     let artistName, collectionName, trackName: String
     let artistViewURL, collectionViewURL, trackViewURL: String
     let previewURL: String
@@ -36,6 +37,7 @@ struct Song: Codable, Identifiable {
         case artistID = "artistId"
         case collectionID = "collectionId"
         case id = "trackId"
+        case uuid
         case artistName, collectionName, trackName
         case artistViewURL = "artistViewUrl"
         case collectionViewURL = "collectionViewUrl"
@@ -51,6 +53,7 @@ struct Song: Codable, Identifiable {
          trackTimeMillis: Int, country: String, currency: String, primaryGenreName: String, collectionArtistName: String?) {
         self.wrapperType = wrapperType
         self.id = id
+        self.uuid = UUID()
         self.artistID = artistID
         self.collectionID = collectionID
         self.collectionName = collectionName
@@ -84,6 +87,7 @@ struct Song: Codable, Identifiable {
         self.artistID = try container.decode(Int.self, forKey: .artistID)
         self.collectionID = try container.decode(Int.self, forKey: .collectionID)
         self.id = try container.decodeIfPresent(Int.self, forKey: .id) ?? 0
+        self.uuid = UUID()
         self.artistName = try container.decode(String.self, forKey: .artistName)
         self.collectionName = try container.decode(String.self, forKey: .collectionName)
         self.trackName = try container.decodeIfPresent(String.self, forKey: .trackName) ?? ""

@@ -12,7 +12,7 @@ struct MovieListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.movies, id:\.trackID) { movie in
+            ForEach(viewModel.movies) { movie in
                MoviewRowView(moview: movie)
             }
             switch viewModel.state {
@@ -29,7 +29,7 @@ struct MovieListView: View {
                 EmptyView()
             case .error(let message):
                 Text(message)
-                    .foregroundColor(.red)
+                    .foregroundColor(.pink)
             }
             
         }

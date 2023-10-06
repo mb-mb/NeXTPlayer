@@ -224,7 +224,6 @@
 			isa = PBXGroup;
 			children = (
 				CEDA94332ACC7BCD00FE5091 /* Album.swift */,
-				CEDA943D2ACCDCCF00FE5091 /* APIError.swift */,
 				CEDA94412ACCE85C00FE5091 /* Song.swift */,
 				CEDA94452ACCEDB400FE5091 /* FetchState.swift */,
 				CEDA944E2ACCF33500FE5091 /* Movie.swift */,
@@ -238,6 +237,7 @@
 			children = (
 				CEDA944B2ACCF27D00FE5091 /* MovieListViewModel.swift */,
 				CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */,
+				CEDA943D2ACCDCCF00FE5091 /* APIError.swift */,
 				CEDA94432ACCED8500FE5091 /* SongsListViewModel.swift */,
 				CEDA943F2ACCE4CC00FE5091 /* APIService.swift */,
 				CE7CD62D2ACEFB53000DB8AF /* SongsForAlbumListViewModel.swift */,
@@ -270,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */,
+				CEEBB07E2ACDC8D200272269 /* SearchPlaceholderView.swift */,
 				CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */,
 				CE5E45A32ACE331E001E80B2 /* AlbumRowView.swift */,
 				CE7CD6272ACED3E3000DB8AF /* AlbumSectionView.swift */,
@@ -303,7 +304,6 @@
 			children = (
 				CEEBB0752ACDA19200272269 /* SearchView.swift */,
 				CEEBB0792ACDA3FB00272269 /* SearchAllListView.swift */,
-				CEEBB07E2ACDC8D200272269 /* SearchPlaceholderView.swift */,
 			);
 			path = search;
 			sourceTree = "<group>";

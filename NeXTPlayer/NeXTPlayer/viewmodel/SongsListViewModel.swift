@@ -16,7 +16,7 @@ class SongsListViewModel: ObservableObject {
     @Published var songs: [Song] = [Song]()
     @Published var state: FetchState = .good {
         didSet {
-            print("state changed to : \(state)")
+            print("SongsListViewModel state changed to : \(state)")
         }
     }
     
@@ -81,6 +81,7 @@ class SongsListViewModel: ObservableObject {
                         print("fetched songs : \(results.resultCount)")
 
                 case .failure(let error):
+                    print("Could not load: \(error)")
                     self?.state = .error("could not load: \(error.localizedDescription)")
                 }
             }

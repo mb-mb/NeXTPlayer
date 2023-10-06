@@ -12,7 +12,7 @@ struct SongListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.songs) { song in
+            ForEach(viewModel.songs, id: \.uuid) { song in
                 SongRowView(song: song)
             }
             switch viewModel.state {
@@ -29,7 +29,7 @@ struct SongListView: View {
                 EmptyView()
             case .error(let message):
                 Text(message)
-                    .foregroundColor(.red)
+                    .foregroundColor(.pink)
             }
             
         }

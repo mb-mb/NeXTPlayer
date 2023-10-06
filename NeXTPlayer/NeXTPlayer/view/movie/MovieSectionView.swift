@@ -13,7 +13,7 @@ struct MovieSectionView: View {
     var body: some View {
         ScrollView(.horizontal) {
             LazyHStack(alignment: .top, spacing: 0) {
-                ForEach(movies, id:\.trackID) { movie in
+                ForEach(movies) { movie in
                     VStack(alignment: .leading) {
                         ImageLoadingView(urlString: movie.artworkUrl100, size: 100)
                         Text(movie.trackName)
@@ -32,6 +32,6 @@ struct MovieSectionView: View {
 
 struct MovieSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieSectionView(movies: MovieListViewModel().loadMock().movies)
+        MovieSectionView(movies: [Movie.example()])
     }
 }
