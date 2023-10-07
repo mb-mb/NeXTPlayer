@@ -63,7 +63,7 @@ class AlbumListViewModel: ObservableObject {
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):
-                        for var album in results.results {
+                        for album in results.results {
                             self?.albums.append(album)
                         }
                         self?.page += 1

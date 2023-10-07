@@ -28,6 +28,8 @@ class APIService {
         print("url songs detail \(url)")
         fetch(type: SongResult.self, url: url,completion: completion)
     }
+
+    
     
     func fetchSongs(searchTerm: String,  page: Int, limit: Int, completion: @escaping (Result<SongResult, APIError>) -> Void) {
         let url = createURL(for: searchTerm, type: .song, page: page, limit: limit)

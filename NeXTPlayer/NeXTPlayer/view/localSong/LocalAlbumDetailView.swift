@@ -37,10 +37,10 @@ struct LocalAlbumDetailView: View {
                 Spacer(minLength: 20)
             }
             .padding()
-            LocalSongsForAlbumListView(songsViewModel: localViewModel)
+            LocalSongsForAlbumListView(songsViewModel: LocalSongsForAlbumListViewModel.example())
         }
         .onAppear {
-            localViewModel.fetch()
+//            localViewModel.fetch()
         }
     }
 }

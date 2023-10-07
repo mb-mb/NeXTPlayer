@@ -18,18 +18,34 @@ struct LocalSongsForAlbumListView: View {
                     .progressViewStyle(.circular)
             } else {
                 Grid(horizontalSpacing: 20){
-                    ForEach(songsViewModel.songs) { song in
+                    ForEach(songsViewModel.songs, id:\.id) { song in
                         GridRow {
-                            Text("\(song.trackNumber)")
-                                .font(.footnote)
-                                .gridColumnAlignment(.trailing)
-                            
-                            Text("\(song.trackName)")
-                                .gridColumnAlignment(.leading)
-                            
-                            Spacer()
-                            Text(Int().formattedDuration(time: song.trackTimeMillis))
-                                .font(.footnote)
+                            HStack {
+                                Button {
+                                    songsViewModel.play(song: song)
+                                } label: {
+                                    Image(systemName: song.songState.rawValue)
+                                        .frame(width: 15)
+    //                                    .background(Color.gray)
+                                        
+                                }
+                                .foregroundColor(.black)
+                            }
+                            .frame(width: 5, height: 15, alignment: .leading)
+//                            .background(Color.gray)
+                            HStack{
+                                Text("\(song.song.trackNumber)")
+                                    .font(.caption)
+                                    .gridColumnAlignment(.trailing)
+                                
+                                Text("\(song.song.trackName)")
+                                    .gridColumnAlignment(.leading)
+                                    .font(.caption)
+                            }
+                            .frame(width: 250, alignment: .leading)
+//                            .background(Color.gray)
+                            Text(Int().formattedDuration(time: song.song.trackTimeMillis))
+                                .font(.caption)
                             
                             .padding(.trailing)
                         }

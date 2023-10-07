@@ -45,6 +45,7 @@
 		CEDA944F2ACCF33500FE5091 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA944E2ACCF33500FE5091 /* Movie.swift */; };
 		CEDA94512ACCF45200FE5091 /* MovieListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94502ACCF45200FE5091 /* MovieListView.swift */; };
 		CEDA94532ACCF4B400FE5091 /* MovieSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94522ACCF4B400FE5091 /* MovieSearchView.swift */; };
+		CEDF2DC82AD0709000F5DA04 /* LocalSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDF2DC72AD0709000F5DA04 /* LocalSong.swift */; };
 		CEEBB06E2ACD72F900272269 /* LocalMusicListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEBB06D2ACD72F900272269 /* LocalMusicListView.swift */; };
 		CEEBB0712ACD73D500272269 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEBB0702ACD73D500272269 /* MediaPlayer.framework */; };
 		CEEBB0732ACD824200272269 /* LocalMusicSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEEBB0722ACD824200272269 /* LocalMusicSearchView.swift */; };
@@ -116,6 +117,7 @@
 		CEDA944E2ACCF33500FE5091 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		CEDA94502ACCF45200FE5091 /* MovieListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListView.swift; sourceTree = "<group>"; };
 		CEDA94522ACCF4B400FE5091 /* MovieSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchView.swift; sourceTree = "<group>"; };
+		CEDF2DC72AD0709000F5DA04 /* LocalSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSong.swift; sourceTree = "<group>"; };
 		CEEBB06D2ACD72F900272269 /* LocalMusicListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMusicListView.swift; sourceTree = "<group>"; };
 		CEEBB0702ACD73D500272269 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		CEEBB0722ACD824200272269 /* LocalMusicSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalMusicSearchView.swift; sourceTree = "<group>"; };
@@ -252,6 +254,7 @@
 				CEDA94452ACCEDB400FE5091 /* FetchState.swift */,
 				CEDA944E2ACCF33500FE5091 /* Movie.swift */,
 				CEEBB0772ACDA20800272269 /* EntityType.swift */,
+				CEDF2DC72AD0709000F5DA04 /* LocalSong.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */,
 				CE7F5D922AD0144A00A02A52 /* LocalSongsForAlbumListView.swift in Sources */,
 				CEDA94512ACCF45200FE5091 /* MovieListView.swift in Sources */,
+				CEDF2DC82AD0709000F5DA04 /* LocalSong.swift in Sources */,
 				CE7F5D8D2AD012BE00A02A52 /* LocalSongsForListViewModel.swift in Sources */,
 				CE7F5D902AD013D700A02A52 /* String+Extension.swift in Sources */,
 				CEEBB0842ACDF0E900272269 /* BuyButtonStyle.swift in Sources */,

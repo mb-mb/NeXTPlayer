@@ -40,7 +40,7 @@ class LocalListViewModel: ObservableObject {
     
     func loadMock() -> LocalListViewModel {
         let vm = LocalListViewModel()
-        vm.albums = [Album.example(),Album.example(),Album.example(),Album.example()]
+        vm.albums = [Album.example(),Album.example(),Album.example(),Album.example(),Album.example(),Album.example()]
         return vm
     }
     
@@ -57,7 +57,7 @@ class LocalListViewModel: ObservableObject {
         state = .isLoading
         
        
-        let query = MPMediaQuery.songs()
+        let query = MPMediaQuery.albums()
         query.items
             .publisher
             .print()
