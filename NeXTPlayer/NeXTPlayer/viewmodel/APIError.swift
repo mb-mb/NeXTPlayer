@@ -21,6 +21,11 @@ enum APIError: Error, CustomStringConvertible {
             return "decoding error \(String(describing: error.errorDescription))"
         case .unknow:
             return "unknow error"
+        case .fetchFailed:
+            return "fetchFailed"
+        case .artistNotFound:
+            return "artistNotFound"
+            
         }
     }
     
@@ -29,4 +34,6 @@ enum APIError: Error, CustomStringConvertible {
     case badResponse(Int)
     case decoding(DecodingError)
     case unknow
+    case fetchFailed
+    case artistNotFound
 }

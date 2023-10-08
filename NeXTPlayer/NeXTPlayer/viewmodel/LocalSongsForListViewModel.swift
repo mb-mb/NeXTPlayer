@@ -13,7 +13,7 @@ import MusicKit
 class LocalSongsForAlbumListViewModel: ObservableObject {
     
     @Published var songs = [LocalSong]()
-    @Published var artists: [<MPMediaItem] = []
+    @Published var artists: [MPMediaItem] = []
     @Published var state: FetchState = .good {
         didSet {
             print("state changed to : \(state)")
@@ -29,7 +29,7 @@ class LocalSongsForAlbumListViewModel: ObservableObject {
     let service = APIService()
     let albumID: Int
     
-    init(albumID: Int) {
+    init(albumID: Int = 0) {
         self.albumID = albumID
         print("LocalSongsForAlbumListViewModel - init for songs for album \(albumID)")
     }
@@ -57,39 +57,30 @@ class LocalSongsForAlbumListViewModel: ObservableObject {
         return vm
     }
     
-    func fechLocalArtists() -> some Publisher<Artist, APIError> {
-        let query = MPMediaQuery.artists()
-        query.items
-            .publisher
-            .assign(to: &artists)
-    }
-
-    func fetchLocalAlbuns(formartist: String) {
-        
-    }
     
+    
+
     func fetchLocalSongs(for albumID: Int) {
-        let query = MPMediaQuery.songs()
-        query
-            .publisher
-            .map
-            .sink {[weak self]  mediaItem in
-                _ = mediaItem.map { item in
-                    let song = Song(wrapperType: "Song",
-                                    artistID: Int(item),
-                                    collectionID: Int(item.composerPersistentID), id: Int(item.persistentID),
-                                    artistName: item.artist ?? "",
-                                    collectionName: item.albumTitle ?? "",
-                                    trackName: "Upside Down", artistViewURL: "", collectionViewURL: "",
-                                    trackViewURL: item.assetURL?.absoluteString ?? "",
-                                    previewURL: "https://is3-ssl.mzstatic.com",
-                                    artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg", artworkUrl60: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/60x60bb.jpg", artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg", collectionPrice: 9.88, trackPrice: 1.29, releaseDate: "2005-01-01T12:00:00Z", trackCount: 14, trackNumber: 1, trackTimeMillis: 208643, country: "USA", currency: "USD", primaryGenreName: "Rock", collectionArtistName: nil)
-                    let localSong = LocalSong(song: song, songState: PlayerState.stop)
-                    self?.songs.append(localSong)
-                }
-                self?.state =  .good
-                print("fetched \(mediaItem.description) songs for albumID: \(albumID)")
-            }.store(in: &cancellables)
+//        let query = MPMediaQuery.songs()
+//        query
+//            .publisher
+//            .sink {[weak self]  mediaItem in
+//                _ = mediaItem.map { item in
+//                    let song = Song(wrapperType: "Song",
+//                                    artistID: Int(item),
+//                                    collectionID: Int(item.composerPersistentID), id: Int(item.persistentID),
+//                                    artistName: item.artist ?? "",
+//                                    collectionName: item.albumTitle ?? "",
+//                                    trackName: "Upside Down", artistViewURL: "", collectionViewURL: "",
+//                                    trackViewURL: item.assetURL?.absoluteString ?? "",
+//                                    previewURL: "https://is3-ssl.mzstatic.com",
+//                                    artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg", artworkUrl60: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/60x60bb.jpg", artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg", collectionPrice: 9.88, trackPrice: 1.29, releaseDate: "2005-01-01T12:00:00Z", trackCount: 14, trackNumber: 1, trackTimeMillis: 208643, country: "USA", currency: "USD", primaryGenreName: "Rock", collectionArtistName: nil)
+//                    let localSong = LocalSong(song: song, songState: PlayerState.stop)
+//                    self?.songs.append(localSong)
+//                }
+//                self?.state =  .good
+//                print("fetched \(mediaItem.description) songs for albumID: \(albumID)")
+//            }.store(in: &cancellables)
     }
 }
 
@@ -129,4 +120,43 @@ extension LocalSongsForAlbumListViewModel {
         }
         songs = localSongs
     }
+}
+
+class MPMediaItemToArtistMapper {
+    static func map(mpMediaItem: MPMediaItem) -> LocalArtist {
+        return LocalArtist(
+            id: mpMediaItem.persistentID,
+            name: mpMediaItem.artist,
+            genre: mpMediaItem.genre,
+            artworkUrl100: mpMediaItem.artwork?.description
+        )
+    }
+}
+
+struct LocalArtist: Identifiable {
+    let id: UInt64
+    let name: String?
+    let genre: String?
+    let artworkUrl100: String?
+}
+
+
+class MPMediaItemToSongMapper {
+    static func map(mpMediaItem: MPMediaItem) -> LocalSong2 {
+        return LocalSong2(
+            id: mpMediaItem.persistentID,
+            name: mpMediaItem.artist,
+            genre: mpMediaItem.genre,
+            title: mpMediaItem.title,
+            artworkUrl100: mpMediaItem.artwork?.description
+        )
+    }
+}
+
+struct LocalSong2 {
+    let id: UInt64
+    let name: String?
+    let genre: String?
+    let title: String?
+    let artworkUrl100: String?
 }

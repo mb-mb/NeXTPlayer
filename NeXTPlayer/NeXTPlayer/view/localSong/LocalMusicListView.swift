@@ -15,13 +15,34 @@ struct LocalMusicListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.albums) { album in
-                    NavigationLink {
-                        LocalAlbumDetailView(album: album)
-                    } label: {
-                        LocalAlbumRowView(album: album)
+                Section(header: Text("Artists")) {
+                    ForEach(viewModel.artists) { artists in
+                        NavigationLink {
+                            LocalArtistDetailView(artist: artists)
+                        } label: {
+                            LocalArtistRowView(artist: artists)
+                        }
                     }
                 }
+                Section(header: Text("Albums")) {
+                    ForEach(viewModel.albums) { album in
+                        NavigationLink {
+                            LocalAlbumDetailView(album: album)
+                        } label: {
+                            LocalAlbumRowView(album: album)
+                        }
+                    }
+                }
+                Section(header: Text("Songs")) {
+                    ForEach(viewModel.songs) { songs in
+                        NavigationLink {
+                            LocalSongsDetailView(album: songs)
+                        } label: {
+                            LocalSongsRowView(album: songs)
+                        }
+                    }
+                }
+    
                 switch viewModel.state {
                 case .good:
                     Color.clear
@@ -40,7 +61,7 @@ struct LocalMusicListView: View {
                 }
             }
             .font(.body)
-
+            
             .listStyle(.plain)
         }
         .font(.title)
