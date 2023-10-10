@@ -19,7 +19,7 @@ struct MovieSearchView: View {
                 }
             }
             .searchable(text: $viewModel.searchTerm)
-            .navigationTitle("Search Albums")
+            .navigationTitle("Search Movies")
         }
     }
         

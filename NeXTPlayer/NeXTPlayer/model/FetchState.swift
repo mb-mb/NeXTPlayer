@@ -13,3 +13,10 @@ enum FetchState: Comparable {
     case loadedAll
     case error(String)
 }
+
+enum PlayerState: String, Decodable {
+    case stop = "play.rectangle"
+    case play = "music.quarternote.3"
+    case pause = "pause.rectangle"
+    case error = "error.playing"
+}

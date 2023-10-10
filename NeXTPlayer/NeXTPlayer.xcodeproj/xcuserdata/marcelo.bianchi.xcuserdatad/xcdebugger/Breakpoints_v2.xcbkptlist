@@ -8,46 +8,200 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "23E940B1-6F75-4AD3-89D1-F026222072D4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NeXTPlayer/viewmodel/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "fetchMovies(searchTerm:page:limit:completion:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchMovies(searchTerm:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "23E940B1-6F75-4AD3-89D1-F026222072D4 - 9b60452f37c02b9f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetchMovies(searchTerm: Swift.String, completion: (Swift.Result&lt;NeXTPlayer.MovieResult, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "23E940B1-6F75-4AD3-89D1-F026222072D4 - 9b60452f37c02b1b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetchMovies(searchTerm: Swift.String, completion: (Swift.Result&lt;NeXTPlayer.MovieResult, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "23E940B1-6F75-4AD3-89D1-F026222072D4 - 9b60452f37c02968"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetchMovies(searchTerm: Swift.String, completion: (Swift.Result&lt;NeXTPlayer.MovieResult, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "23E940B1-6F75-4AD3-89D1-F026222072D4 - 9b60452f37c0292a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetchMovies(searchTerm: Swift.String, completion: (Swift.Result&lt;NeXTPlayer.MovieResult, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "23E940B1-6F75-4AD3-89D1-F026222072D4 - 9b60452f37c0292a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetchMovies(searchTerm: Swift.String, completion: (Swift.Result&lt;NeXTPlayer.MovieResult, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "316">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "551FBA6C-92C5-48CC-8FA9-FAA430BF2B26"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NeXTPlayer/viewmodel/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "fetch(type:url:completion:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "551FBA6C-92C5-48CC-8FA9-FAA430BF2B26 - 7201ecd69690456e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "551FBA6C-92C5-48CC-8FA9-FAA430BF2B26 - 7201ecd6969045ea"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "551FBA6C-92C5-48CC-8FA9-FAA430BF2B26 - 7201ecd696904405"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "551FBA6C-92C5-48CC-8FA9-FAA430BF2B26 - 7201ecd69690bbfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "440">
+               </Location>
+               <Location
+                  uuid = "551FBA6C-92C5-48CC-8FA9-FAA430BF2B26 - 7201ecd69690bbfb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "612">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "65E5699B-ED18-494B-BE41-67C08EF032CB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NeXTPlayer/viewmodel/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "fetch(type:url:completion:)"
             landmarkType = "7">
             <Locations>
@@ -81,6 +235,66 @@
                   endingLineNumber = "43"
                   offsetFromSymbolStart = "764">
                </Location>
+               <Location
+                  uuid = "65E5699B-ED18-494B-BE41-67C08EF032CB - 54713d05d6d97b66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "65E5699B-ED18-494B-BE41-67C08EF032CB - 54713d05d6d984bb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "65E5699B-ED18-494B-BE41-67C08EF032CB - 54713d05d6d98579"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "65E5699B-ED18-494B-BE41-67C08EF032CB - 54713d05d6d98579"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "988">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -88,14 +302,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "83979738-C218-42F3-A245-2FA28D0F7FE3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NeXTPlayer/viewmodel/APIService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "fetch(type:url:completion:)"
             landmarkType = "7">
             <Locations>
@@ -129,7 +343,1959 @@
                   endingLineNumber = "49"
                   offsetFromSymbolStart = "2244">
                </Location>
+               <Location
+                  uuid = "83979738-C218-42F3-A245-2FA28D0F7FE3 - 54713d05d6d97ba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "2244">
+               </Location>
+               <Location
+                  uuid = "83979738-C218-42F3-A245-2FA28D0F7FE3 - 54713d05d6d985f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "58"
+                  endingLineNumber = "58"
+                  offsetFromSymbolStart = "2244">
+               </Location>
+               <Location
+                  uuid = "83979738-C218-42F3-A245-2FA28D0F7FE3 - 54713d05d6d985b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "2244">
+               </Location>
+               <Location
+                  uuid = "83979738-C218-42F3-A245-2FA28D0F7FE3 - 54713d05d6d985b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in NeXTPlayer.APIService.fetch&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(type: &#x3c4;_0_0.Type, url: Swift.Optional&lt;Foundation.URL&gt;, completion: (Swift.Result&lt;&#x3c4;_0_0, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/APIService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "2468">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2BA3B0B-4DE8-48CF-8F7F-094DDFD119E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/view/movie/MovieListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "B2BA3B0B-4DE8-48CF-8F7F-094DDFD119E7 - f0502aeb616792e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (NeXTPlayer.Movie) -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;NeXTPlayer.Movie&gt;, Swift.Optional&lt;Swift.Int&gt;, SwiftUI.Text&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.EmptyView, SwiftUI.Text&gt;&gt;)&gt; in NeXTPlayer.MovieListView.body.getter : some"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/view/movie/MovieListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "B2BA3B0B-4DE8-48CF-8F7F-094DDFD119E7 - f0502aeb616792e4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (NeXTPlayer.Movie) -&gt; SwiftUI.Text in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;NeXTPlayer.Movie&gt;, Swift.Optional&lt;Swift.Int&gt;, SwiftUI.Text&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.EmptyView, SwiftUI.Text&gt;&gt;)&gt; in NeXTPlayer.MovieListView.body.getter : some"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/view/movie/MovieListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  uuid = "B2BA3B0B-4DE8-48CF-8F7F-094DDFD119E7 - f929400630ef7ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (NeXTPlayer.Movie) -&gt; NeXTPlayer.MoviewRowView in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.ForEach&lt;Swift.Array&lt;NeXTPlayer.Movie&gt;, Swift.Int, NeXTPlayer.MoviewRowView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.frame(minWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxWidth: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, minHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, idealHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, maxHeight: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.EmptyView, SwiftUI.Text&gt;&gt;)&gt; in NeXTPlayer.MovieListView.body.getter : some"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/view/movie/MovieListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CFA4C9CE-9C49-4B46-9404-08FFC4A5D0FF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "142"
+            endingLineNumber = "142"
+            landmarkName = "fetchLocalAlbum(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E1D8010-8C1D-4C63-9A59-5FB0AF9AEC88"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "fetchLocalAlbum(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4E1D8010-8C1D-4C63-9A59-5FB0AF9AEC88 - 780f49a32adca5dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;__C.MPMediaItem&gt;) -&gt; () in NeXTPlayer.LocalListViewModel.fetchLocalAlbum(for: Swift.String) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "4E1D8010-8C1D-4C63-9A59-5FB0AF9AEC88 - 780f49a32adca5dd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;__C.MPMediaItem&gt;) -&gt; () in NeXTPlayer.LocalListViewModel.fetchLocalAlbum(for: Swift.String) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "1424">
+               </Location>
+               <Location
+                  uuid = "4E1D8010-8C1D-4C63-9A59-5FB0AF9AEC88 - 780f49a32adca563"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;__C.MPMediaItem&gt;) -&gt; () in NeXTPlayer.LocalListViewModel.fetchLocalAlbum(for: Swift.String) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "84">
+               </Location>
+               <Location
+                  uuid = "4E1D8010-8C1D-4C63-9A59-5FB0AF9AEC88 - 780f49a32adca563"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Array&lt;__C.MPMediaItem&gt;) -&gt; () in NeXTPlayer.LocalListViewModel.fetchLocalAlbum(for: Swift.String) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "1424">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92139BB5-2D9C-4F43-93CE-11C88971E993"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "testfetchArtists()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "92139BB5-2D9C-4F43-93CE-11C88971E993 - 25c1a8235335d469"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "92139BB5-2D9C-4F43-93CE-11C88971E993 - 25c1a8235335d469"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "92139BB5-2D9C-4F43-93CE-11C88971E993 - 25c1a8235335d469"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CADC0261-FF62-4A40-A2C1-7F752CA0EB41"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "testfetchArtists()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CADC0261-FF62-4A40-A2C1-7F752CA0EB41 - 25c1a8235335d3c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "CADC0261-FF62-4A40-A2C1-7F752CA0EB41 - 25c1a8235335d3c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "CADC0261-FF62-4A40-A2C1-7F752CA0EB41 - 25c1a8235335d3c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "136">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "761DCDB5-9E96-4A42-BE4E-601F41518888"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "testfetchArtists()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "761DCDB5-9E96-4A42-BE4E-601F41518888 - 25c1a8235335d1b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "436">
+               </Location>
+               <Location
+                  uuid = "761DCDB5-9E96-4A42-BE4E-601F41518888 - 25c1a8235335d1b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "456">
+               </Location>
+               <Location
+                  uuid = "761DCDB5-9E96-4A42-BE4E-601F41518888 - 25c1a8235335d1b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "384">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A093523B-7677-4AA7-831B-BB910AD5409B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "testfetchArtists()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A093523B-7677-4AA7-831B-BB910AD5409B - 84e15d1a63595abc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;NeXTPlayer.APIError&gt;) -&gt; () in NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "240">
+               </Location>
+               <Location
+                  uuid = "A093523B-7677-4AA7-831B-BB910AD5409B - 84e15d1a63595abc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;NeXTPlayer.APIError&gt;) -&gt; () in NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "280">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9AC5229E-7ED7-4E6C-B5B1-F894C5F25E80"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "testfetchArtists()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9AC5229E-7ED7-4E6C-B5B1-F894C5F25E80 - 84e15d1a63595b1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;NeXTPlayer.APIError&gt;) -&gt; () in NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  uuid = "9AC5229E-7ED7-4E6C-B5B1-F894C5F25E80 - 84e15d1a63595b1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Combine.Subscribers.Completion&lt;NeXTPlayer.APIError&gt;) -&gt; () in NeXTPlayerTests.NeXTPlayerTests.testfetchArtists() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "332">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "38423114-845A-428A-8BB9-CEE70A0163C2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "testfetchArtists()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "905E268B-E73D-4ED1-BF3A-AB466D5599A9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "testfetchSongs()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "905E268B-E73D-4ED1-BF3A-AB466D5599A9 - a5ae190517b1bef0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchSongs() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  uuid = "905E268B-E73D-4ED1-BF3A-AB466D5599A9 - a5ae190517b1bef0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testfetchSongs() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E1C797F-B8F0-4CF1-B3E3-1EB43C99BE06"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "testfetchSongs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "791B2524-21C5-41CB-ACE9-8C85F05EF2FC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "testfetchSongs()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "791B2524-21C5-41CB-ACE9-8C85F05EF2FC - 31b2b746ee2512d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;NeXTPlayer.LocalSong2&gt;) -&gt; () in NeXTPlayerTests.NeXTPlayerTests.testfetchSongs() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "791B2524-21C5-41CB-ACE9-8C85F05EF2FC - 31b2b746ee2512f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;NeXTPlayer.LocalSong2&gt;) -&gt; () in NeXTPlayerTests.NeXTPlayerTests.testfetchSongs() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "448">
+               </Location>
+               <Location
+                  uuid = "791B2524-21C5-41CB-ACE9-8C85F05EF2FC - 6a40fa3dc0193d3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;NeXTPlayer.LocalSong&gt;) -&gt; () in NeXTPlayerTests.NeXTPlayerTests.testfetchSongs() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "456">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "300AE2B7-E1DA-4527-B0B4-C5C13842AA74"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "66CC4BF0-BF44-4C91-9D54-059D5EF00602"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "66CC4BF0-BF44-4C91-9D54-059D5EF00602 - 8085a39f1ca15fa0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (Swift.Array&lt;NeXTPlayer.LocalArtist&gt;) -&gt; () in NeXTPlayer.LocalListViewModel.init() -&gt; NeXTPlayer.LocalListViewModel"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "66CC4BF0-BF44-4C91-9D54-059D5EF00602 - 6fe233115f9744cf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (NeXTPlayer.LocalArtist) -&gt; () in closure #3 (Swift.Array&lt;NeXTPlayer.LocalArtist&gt;) -&gt; () in NeXTPlayer.LocalListViewModel.init() -&gt; NeXTPlayer.LocalListViewModel"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A4B11E45-4C78-41B0-A5BC-B2859E01F038"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA7CB953-3C85-407D-A780-1CC6B2653251"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A83508D-558B-46F6-AFAD-FCB4B71E6004"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "loadMore()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2B2861F0-5D2C-42EC-B891-25725C2E48B7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "fetchLocalArtists2()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54C1860A-0963-4591-B79A-2851FFC6D4DE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90121258-5830-48FC-9D5D-9E70EAE8E096"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "fetchLocalAlbum(for:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BB09EABC-12E6-4BB1-8A24-E154A7A22759"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "174"
+            endingLineNumber = "174"
+            landmarkName = "fetchLocalArtists2()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BB09EABC-12E6-4BB1-8A24-E154A7A22759 - 89c89f33a1b6168"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 ((Swift.Result&lt;Swift.Array&lt;NeXTPlayer.LocalArtist&gt;, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; () in NeXTPlayer.LocalListViewModel.fetchLocalArtists2() -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;NeXTPlayer.LocalArtist&gt;, NeXTPlayer.APIError&gt;"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "167"
+                  endingLineNumber = "167"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "BB09EABC-12E6-4BB1-8A24-E154A7A22759 - ddccee09277a0911"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.MPMediaItemCollection) -&gt; Swift.Optional&lt;NeXTPlayer.LocalArtist&gt; in closure #1 ((Swift.Result&lt;Swift.Array&lt;NeXTPlayer.LocalArtist&gt;, NeXTPlayer.APIError&gt;) -&gt; ()) -&gt; () in NeXTPlayer.LocalListViewModel.fetchLocalArtists2() -&gt; Combine.AnyPublisher&lt;Swift.Array&lt;NeXTPlayer.LocalArtist&gt;, NeXTPlayer.APIError&gt;"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "168"
+                  endingLineNumber = "168"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1F6957AC-00FD-4931-B212-4610ACA3AD2A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "fetchLocalArtists2()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDDBE9C7-4A10-49BF-A51D-D9D6DBC6EBE8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "loadMore()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "529D0A7D-5358-4505-A6B2-FAEEC3174539"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2283AE0C-A6CD-446B-9D6C-5E92DCEB362E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2283AE0C-A6CD-446B-9D6C-5E92DCEB362E - eef6176b183b39b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #7 (Swift.Array&lt;NeXTPlayer.LocalSong2&gt;) -&gt; () in NeXTPlayer.LocalListViewModel.init() -&gt; NeXTPlayer.LocalListViewModel"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "464">
+               </Location>
+               <Location
+                  uuid = "2283AE0C-A6CD-446B-9D6C-5E92DCEB362E - 77582de4ea0bd9b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #7 (Swift.Array&lt;NeXTPlayer.LocalSong&gt;) -&gt; () in NeXTPlayer.LocalListViewModel.init() -&gt; NeXTPlayer.LocalListViewModel"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "472">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78E9CCBB-ACC9-4E64-A252-57560A765771"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/view/localSong/LocalSongsDetailView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "playMedia(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 64545be3a3633eae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMP3(song: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - eea7844beeb741eb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.play(for: inout NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "428">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49b7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49b7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49b05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "688">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49b05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "125"
+                  endingLineNumber = "125"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49bc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49bc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49ba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49ba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 2e5fc0cfa6b49b81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 9481059afa381b79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "FBCC2D6C-F63B-4258-A020-D4971B6FCBFF - 9481059afa381b58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "344">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "playMedia(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 64545be3a3633e0b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMP3(song: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "136"
+                  endingLineNumber = "136"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - eea7844beeb74176"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.play(for: inout NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "548">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 2e5fc0cfa6b49be6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "452">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 2e5fc0cfa6b49be6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 2e5fc0cfa6b49ba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1492">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 2e5fc0cfa6b49ba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "1740">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 2e5fc0cfa6b49a2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1288">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 2e5fc0cfa6b49a0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "816">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 9481059afa381be5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "F4C92119-2F5F-470B-B7AD-C18E5B8D039E - 9481059afa381bc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "142"
+                  endingLineNumber = "142"
+                  offsetFromSymbolStart = "824">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7C2B5987-C195-452C-B66D-4A60449916CD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "playMedia(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 64545be3a3633997"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMP3(song: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "1028">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - eea7844beeb740bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.play(for: inout NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1188">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 2e5fc0cfa6b49a2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "132"
+                  endingLineNumber = "132"
+                  offsetFromSymbolStart = "1092">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 2e5fc0cfa6b49acf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "135"
+                  endingLineNumber = "135"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 2e5fc0cfa6b49aee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "2192">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 2e5fc0cfa6b49aee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "2464">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 2e5fc0cfa6b49d6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "2140">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 2e5fc0cfa6b49d4b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "1476">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 9481059afa381a2f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "149"
+                  endingLineNumber = "149"
+                  offsetFromSymbolStart = "1544">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 9481059afa381acc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "150"
+                  endingLineNumber = "150"
+                  offsetFromSymbolStart = "1832">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 9481059afa381aed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "1832">
+               </Location>
+               <Location
+                  uuid = "7C2B5987-C195-452C-B66D-4A60449916CD - 9481059afa381aed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "151"
+                  endingLineNumber = "151"
+                  offsetFromSymbolStart = "1724">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF93A391-26C7-4402-B935-7ADD784ABC3D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "play(song:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CF93A391-26C7-4402-B935-7ADD784ABC3D - 474abfc6a8646e0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.play(song: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  uuid = "CF93A391-26C7-4402-B935-7ADD784ABC3D - 474abfc6a8646fef"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.play(song: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "616">
+               </Location>
+               <Location
+                  uuid = "CF93A391-26C7-4402-B935-7ADD784ABC3D - 474abfc6a8646f82"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.play(song: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "700">
+               </Location>
+               <Location
+                  uuid = "CF93A391-26C7-4402-B935-7ADD784ABC3D - 474abfc6a8646f25"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.play(song: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "564">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D53811AB-C1D9-4A8B-8BF9-745BC8431316"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "121"
+            endingLineNumber = "121"
+            landmarkName = "playMedia(for:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D53811AB-C1D9-4A8B-8BF9-745BC8431316 - 2e5fc0cfa6b49bc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "D53811AB-C1D9-4A8B-8BF9-745BC8431316 - 2e5fc0cfa6b49bc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "D53811AB-C1D9-4A8B-8BF9-745BC8431316 - 2e5fc0cfa6b49ba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "D53811AB-C1D9-4A8B-8BF9-745BC8431316 - 2e5fc0cfa6b49ba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "128"
+                  endingLineNumber = "128"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "D53811AB-C1D9-4A8B-8BF9-745BC8431316 - 2e5fc0cfa6b49b81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "129"
+                  endingLineNumber = "129"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "D53811AB-C1D9-4A8B-8BF9-745BC8431316 - 9481059afa381b79"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "D53811AB-C1D9-4A8B-8BF9-745BC8431316 - 9481059afa381b58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.playMedia(for: NeXTPlayer.LocalSong) throws -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "344">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6F40179-CF8A-48BE-A83D-DCAD00923FA8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayerTests/NeXTPlayerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "testPlaySong()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C6F40179-CF8A-48BE-A83D-DCAD00923FA8 - f88c9b3978870a3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testPlaySong() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "102"
+                  endingLineNumber = "102"
+                  offsetFromSymbolStart = "348">
+               </Location>
+               <Location
+                  uuid = "C6F40179-CF8A-48BE-A83D-DCAD00923FA8 - f88c9b3978870a1c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayerTests.NeXTPlayerTests.testPlaySong() throws -&gt; ()"
+                  moduleName = "NeXTPlayerTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayerTests/NeXTPlayerTests.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "368">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2FBCC8AB-7C3B-4814-9270-B0323DE017EC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "play(song:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DFD9092D-C817-4330-A358-C56E37DF3077"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "audioPlayerDidFinishPlaying(_:successfully:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DFD9092D-C817-4330-A358-C56E37DF3077 - c9de296e921f6fc4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.audioPlayerDidFinishPlaying(_: __C.AVAudioPlayer, successfully: Swift.Bool) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "159"
+                  endingLineNumber = "159"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "DFD9092D-C817-4330-A358-C56E37DF3077 - c9de296e921f6fe3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NeXTPlayer.LocalSongsForAlbumListViewModel.audioPlayerDidFinishPlaying(_: __C.AVAudioPlayer, successfully: Swift.Bool) -&gt; ()"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "64">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4ABD1095-20A2-48BC-8B7A-567BDF46CBDB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/view/localSong/LocalArtistRowView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "4ABD1095-20A2-48BC-8B7A-567BDF46CBDB - 4ec48d951f1b600"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(NeXTPlayer.ImageLoadingView, &lt;&lt;opaque return type of SwiftUI.View.lineLimit(Swift.Optional&lt;Swift.Int&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in NeXTPlayer.LocalArtistRowView.body.getter : some"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/view/localSong/LocalArtistRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "4ABD1095-20A2-48BC-8B7A-567BDF46CBDB - 4ec48d951f1b600"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(NeXTPlayer.ImageLoadingView, &lt;&lt;opaque return type of SwiftUI.View.lineLimit(Swift.Optional&lt;Swift.Int&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in NeXTPlayer.LocalArtistRowView.body.getter : some"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/view/localSong/LocalArtistRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "288">
+               </Location>
+               <Location
+                  uuid = "4ABD1095-20A2-48BC-8B7A-567BDF46CBDB - 4ec48d951f1b600"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(NeXTPlayer.ImageLoadingView, &lt;&lt;opaque return type of SwiftUI.View.lineLimit(Swift.Optional&lt;Swift.Int&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Spacer)&gt; in NeXTPlayer.LocalArtistRowView.body.getter : some"
+                  moduleName = "NeXTPlayer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marcelo.bianchi/projects/NeXTPlayer/NeXTPlayer/NeXTPlayer/NeXTPlayer/view/localSong/LocalArtistRowView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "280">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93E37F52-164E-4D39-BE1F-4A99091C500C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "MPMediaItemToSongMapper"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C7931F1E-DB7F-42B4-8353-8FA33445DA5A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NeXTPlayer/viewmodel/LocalSongsForListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "fetchSongs(albumID:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

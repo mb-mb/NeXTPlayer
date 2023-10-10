@@ -27,6 +27,7 @@ class AlbumListViewModel: ObservableObject {
     
     init() {
         $searchTerm
+            .removeDuplicates()
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
@@ -41,6 +42,12 @@ class AlbumListViewModel: ObservableObject {
         fetchAlbum(for: searchTerm)
     }
     
+    func loadMock() -> AlbumListViewModel {
+        let vm = AlbumListViewModel()
+        vm.albums = [Album.example()]
+        return vm
+    }
+    
     func fetchAlbum(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
             return
@@ -52,8 +59,7 @@ class AlbumListViewModel: ObservableObject {
         
         state = .isLoading
         
-        service.fetchAlbums(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in
-            
+        service.fetchAlbums(searchTerm: searchTerm, page: page, limit: limit ) {[weak self] results in            
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):
@@ -62,7 +68,8 @@ class AlbumListViewModel: ObservableObject {
                         }
                         self?.page += 1
                         self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
-                    
+                        print("fetched Albums : \(results.resultCount)")
+
                 case .failure(let error):
                     self?.state = .error("could not load: \(error.localizedDescription)")
                 }

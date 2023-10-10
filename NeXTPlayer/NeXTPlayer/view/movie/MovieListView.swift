@@ -12,8 +12,8 @@ struct MovieListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.movies, id: \.collectionArtistID) { album in
-                Text(album.artistName)
+            ForEach(viewModel.movies) { movie in
+               MoviewRowView(moview: movie)
             }
             switch viewModel.state {
             case .good:
@@ -29,7 +29,7 @@ struct MovieListView: View {
                 EmptyView()
             case .error(let message):
                 Text(message)
-                    .foregroundColor(.red)
+                    .foregroundColor(.pink)
             }
             
         }

@@ -7,6 +7,8 @@
 
 import Foundation
 import Combine
+import MusicKit
+import MediaPlayer
 
 class SongsListViewModel: ObservableObject {
     let service = APIService()
@@ -14,7 +16,7 @@ class SongsListViewModel: ObservableObject {
     @Published var songs: [Song] = [Song]()
     @Published var state: FetchState = .good {
         didSet {
-            print("state changed to : \(state)")
+            print("SongsListViewModel state changed to : \(state)")
         }
     }
     
@@ -24,6 +26,7 @@ class SongsListViewModel: ObservableObject {
     
     init() {
         $searchTerm
+            .removeDuplicates()
             .dropFirst()
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
@@ -34,6 +37,26 @@ class SongsListViewModel: ObservableObject {
             }.store(in: &subscription)
     }
     
+    func playSong() async throws {
+        try await ApplicationMusicPlayer.shared.play()
+    }
+    
+    
+  
+    func getSongs() -> [MPMediaItem] {
+        let query = MPMediaQuery.songs()
+        return query.items ?? []
+    }
+    
+    func loadMore() {
+        fetchSong(for: searchTerm)
+    }
+    
+    func loadMock() -> SongsListViewModel {
+        let vm = SongsListViewModel()
+        vm.songs = [Song.example()]
+        return vm
+    }
     
     func fetchSong(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
@@ -46,23 +69,29 @@ class SongsListViewModel: ObservableObject {
         
         state = .isLoading
         
-        service.fetchSongs(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in
-            
+        service.fetchSongs(searchTerm: searchTerm,  page: page, limit: limit ) {[weak self] results in            
             DispatchQueue.main.async {
                 switch results {
                 case .success(let results):
-                        for album in results.songs {
-                            self?.songs.append(album)
+                        for songs in results.results {
+                            self?.songs.append(songs)
                         }
                         self?.page += 1
-                        self?.state = (results.songs.count == self?.limit) ? .good : .loadedAll
-                    
+                        self?.state = (results.results.count == self?.limit) ? .good : .loadedAll
+                        print("fetched songs : \(results.resultCount)")
+
                 case .failure(let error):
+                    print("Could not load: \(error)")
                     self?.state = .error("could not load: \(error.localizedDescription)")
                 }
             }
         }
        
+    }
+    static func example() -> SongsListViewModel {
+        let vm = SongsListViewModel()
+        vm.songs = [Song.example()]
+        return vm
     }
  
 }
