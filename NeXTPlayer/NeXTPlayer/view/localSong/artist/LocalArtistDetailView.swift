@@ -6,26 +6,24 @@
 //
 
 import SwiftUI
+import MediaPlayer
 
 struct LocalArtistDetailView: View {
-    @StateObject var localViewModel: LocalSongsForAlbumListViewModel
+    @StateObject var localViewModel: LocalListViewModel
     let artist: LocalArtist
     
     init(artist: LocalArtist) {
         self.artist = artist
-        self._localViewModel = StateObject(wrappedValue: LocalSongsForAlbumListViewModel(albumID: Int(artist.id)))
+        self._localViewModel = StateObject(wrappedValue: LocalListViewModel())
     }
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
-                ImageLoadingView(urlString: artist.artworkUrl100 ?? "", size: 100)
-                VStack(alignment: .leading) {
-                    Text("\(artist.id)")
-                        .font(.footnote)
-                        .foregroundColor(Color(.label))
+                ImageLoadingView(urlString: artist.artworkUrl100?.absoluteString ?? "", size: 100)
+                HStack(alignment: .center) {
                     Text(artist.name ?? "")
-                        .padding(.bottom, 5)
-                    
+                        .font(.subheadline)
+                        .foregroundColor(Color(.label))
                 }
                 .font(.caption)
                 .foregroundColor(.gray)
@@ -42,8 +40,8 @@ struct LocalArtistDetailView: View {
 
 }
 
-struct LocalArtistListView_Previews: PreviewProvider {
+struct LocalArtistDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalArtistDetailView(artist: LocalArtist(id: 1, name: "test", genre: "metal", artworkUrl100: ""))
+        LocalArtistDetailView(artist: LocalArtist.mockData().first!)
     }
 }

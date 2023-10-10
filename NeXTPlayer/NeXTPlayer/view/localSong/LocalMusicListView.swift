@@ -13,8 +13,9 @@ struct LocalMusicListView: View {
     @ObservedObject var viewModel: LocalListViewModel
     
     var body: some View {
-        NavigationView {
-            List {
+            LazyVStack {
+                NavigationView {
+
                 Section(header: Text("Artists")) {
                     ForEach(viewModel.artists) { artists in
                         NavigationLink {
@@ -23,7 +24,7 @@ struct LocalMusicListView: View {
                             LocalArtistRowView(artist: artists)
                         }
                     }
-                }
+                } 
                 Section(header: Text("Albums")) {
                     ForEach(viewModel.albums) { album in
                         NavigationLink {
@@ -34,11 +35,11 @@ struct LocalMusicListView: View {
                     }
                 }
                 Section(header: Text("Songs")) {
-                    ForEach(viewModel.songs) { songs in
+                    ForEach(viewModel.songs) { song in
                         NavigationLink {
-                            LocalSongsDetailView(album: songs)
+                            LocalSongsDetailView(song: song)
                         } label: {
-                            LocalSongsRowView(album: songs)
+                            LocalSongsRowView(song: song)
                         }
                     }
                 }
@@ -67,7 +68,11 @@ struct LocalMusicListView: View {
         .font(.title)
         .navigationTitle("Local music")
         .navigationBarTitleDisplayMode(.inline)
+        .onAppear {
+            viewModel.loadMore()
+        }
     }
+        
     
 }
 

@@ -22,7 +22,7 @@ struct LocalSongsForAlbumListView: View {
                         GridRow {
                             HStack {
                                 Button {
-                                    songsViewModel.play(song: song)
+                                    //songsViewModel.play(song: song)
                                 } label: {
                                     Image(systemName: song.songState.rawValue)
                                         .frame(width: 15)
@@ -34,17 +34,17 @@ struct LocalSongsForAlbumListView: View {
                             .frame(width: 5, height: 15, alignment: .leading)
 //                            .background(Color.gray)
                             HStack{
-                                Text("\(song.song.trackNumber)")
+                                Text("\(song.trackNumber)")
                                     .font(.caption)
                                     .gridColumnAlignment(.trailing)
                                 
-                                Text("\(song.song.trackName)")
+                                Text("\(song.trackName)")
                                     .gridColumnAlignment(.leading)
                                     .font(.caption)
                             }
                             .frame(width: 250, alignment: .leading)
 //                            .background(Color.gray)
-                            Text(Int().formattedDuration(time: song.song.trackTimeMillis))
+                            Text(song.trackDuration)
                                 .font(.caption)
                             
                             .padding(.trailing)
@@ -60,6 +60,8 @@ struct LocalSongsForAlbumListView: View {
 
 struct LocalSongsForAlbumListView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalSongsForAlbumListView(songsViewModel: LocalSongsForAlbumListViewModel.example())
+        LocalSongsForAlbumListView(
+            songsViewModel: LocalSongsForAlbumListViewModel(
+                albumID: LocalAlbum.mockData().first!.album.id))
     }
 }

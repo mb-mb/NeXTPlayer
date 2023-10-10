@@ -38,7 +38,7 @@ final class NeXTPlayerTests: XCTestCase {
 
     func testfetchArtists() throws {
         
-        let vm = LocalSongsForAlbumListViewModel(albumID: 1)
+        let vm = LocalListViewModel()
         let expectation = XCTestExpectation(description: "Fetch local artists")
         // Perform the publisher operation
         let publisher = vm.fetchLocalArtists2()
@@ -65,7 +65,7 @@ final class NeXTPlayerTests: XCTestCase {
 
     func testfetchSongs() throws {
         
-        let vm = LocalSongsForAlbumListViewModel(albumID: 1)
+        let vm = LocalListViewModel()
         let expectation = XCTestExpectation(description: "Fetch local artists")
         // Perform the publisher operation
         let publisher = vm.fetchLocalSongs2()
@@ -91,5 +91,33 @@ final class NeXTPlayerTests: XCTestCase {
         wait(for: [expectation], timeout: 10.0) // Adjust the timeout as needed
     }
 
+    func testPlaySong() throws {
+        
+        let macTrack = URL(string: "file:///Users/marcelo.bianchi/Music/Music/Media.localized/Music/Unknown%20Artist/Unknown%20Album/stranger-things-124008.mp3")
+        
+        let vm = LocalSongsForAlbumListViewModel()
+        let expectation = XCTestExpectation(description: "Fetch local artists")
+        // Perform the publisher operation
+        let song = LocalSong.example(trackURL: macTrack)
+        
+        vm.play(song: song)
+        switch vm.playerState {
+        case .stop:
+            XCTAssertTrue(true)
+            expectation.fulfill()
+        case .play:
+            XCTAssertTrue(true)
+            expectation.fulfill()
+        case .pause:
+            XCTAssertTrue(true)
+            expectation.fulfill()
+        case .error:
+            XCTAssertTrue(false)
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 10.0)
+        
+    }
     
 }

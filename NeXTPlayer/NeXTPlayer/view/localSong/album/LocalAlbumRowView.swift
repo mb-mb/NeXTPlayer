@@ -9,13 +9,13 @@ import SwiftUI
 
 struct LocalAlbumRowView: View {
     
-    let album: Album
+    let album: LocalAlbum
     var body: some View {
         HStack {
-            ImageLoadingView(urlString: album.artworkUrl60, size: 100)
+            ImageLoadingView(urlString: album.album.artworkUrl60, size: 100)
             VStack(alignment: .leading) {
-                Text(album.collectionName)
-                Text(album.artistName)
+                Text(album.album.collectionName)
+                Text(album.album.artistName)
                     .font(.caption)
                     .foregroundColor(.gray)
             }
@@ -27,6 +27,6 @@ struct LocalAlbumRowView: View {
 
 struct LocalALbumRowView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalAlbumRowView(album: Album.example())
+        LocalAlbumRowView(album: LocalAlbum.mockData().first!)
     }
 }

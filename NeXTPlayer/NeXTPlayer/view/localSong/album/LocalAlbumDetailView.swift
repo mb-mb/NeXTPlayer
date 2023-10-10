@@ -9,27 +9,28 @@ import SwiftUI
 
 struct LocalAlbumDetailView: View {
     @StateObject var localViewModel: LocalSongsForAlbumListViewModel
-    let album: Album
+    let album: LocalAlbum
     
-    init( album: Album) {
+    init( album: LocalAlbum) {
         self.album = album
-        self._localViewModel = StateObject(wrappedValue: LocalSongsForAlbumListViewModel(albumID: album.id))
+        self._localViewModel = StateObject(wrappedValue:
+                                            LocalSongsForAlbumListViewModel(albumID: album.album.id))
     }
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
-                ImageLoadingView(urlString: album.artworkUrl100, size: 100)
+                ImageLoadingView(urlString: album.album.artworkUrl100, size: 100)
                 VStack(alignment: .leading) {
-                    Text(album.collectionName)
+                    Text(album.album.collectionName)
                         .font(.footnote)
                         .foregroundColor(Color(.label))
-                    Text(album.artistName)
+                    Text(album.album.artistName)
                         .padding(.bottom, 5)
                     
-                    Text(album.primaryGenreName)
-                    Text("\(album.trackCount) songs")
+                    Text(album.album.primaryGenreName)
+                    Text("\(album.album.trackCount) songs")
                               
-                    Text("Released: \(String.formattedDate(value: album.releaseDate))") 
+                    Text("Released: \(String.formattedDate(value: album.album.releaseDate))")
                 }
                 .font(.caption)
                 .foregroundColor(.gray)
@@ -47,6 +48,6 @@ struct LocalAlbumDetailView: View {
 
 struct LocalAlbumDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalAlbumDetailView(album: Album.example())
+        LocalAlbumDetailView(album: LocalAlbum.mockData().first!)
     }
 }
