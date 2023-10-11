@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct LocalMusicSearchView: View {
-    @StateObject var viewModel = LocalListViewModel()
+    @StateObject var localViewModel = LocalListViewModel()
     var body: some View {
         NavigationView {
             Group {
 //                if viewModel.searchTerm.isEmpty {
 //                    LocalMusicSPlaceholderView(searchTerm: $viewModel.searchTerm)
 //                } else {
-                    LocalMusicListView(viewModel: viewModel.loadMock())
+                LocalSearchAllListView(localViewModel: localViewModel.loadMock())
 //                }
             }
 

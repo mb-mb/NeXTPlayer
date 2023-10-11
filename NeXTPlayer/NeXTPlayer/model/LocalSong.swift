@@ -8,6 +8,11 @@
 import Foundation
 import MediaPlayer
 
+
+struct ID<T>: Equatable, Identifiable {
+    let id = UUID()
+}
+
 // MARK: - SonResult
 struct LocalSongResult: Codable {
     let resultCount: Int

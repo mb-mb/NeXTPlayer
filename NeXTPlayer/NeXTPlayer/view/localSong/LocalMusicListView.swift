@@ -21,7 +21,7 @@ struct LocalMusicListView: View {
                         NavigationLink {
                             LocalArtistDetailView(artist: artists)
                         } label: {
-                            LocalArtistRowView(artist: artists)
+                            LocalArtistRowView(viewModel: viewModel, artist: artists)
                         }
                     }
                 } 
@@ -39,7 +39,7 @@ struct LocalMusicListView: View {
                         NavigationLink {
                             LocalSongsDetailView(song: song)
                         } label: {
-                            LocalSongsRowView(song: song)
+                            LocalSongsRowView(viewModel: LocalSongsForAlbumListViewModel(albumID: 0), song: song)
                         }
                     }
                 }

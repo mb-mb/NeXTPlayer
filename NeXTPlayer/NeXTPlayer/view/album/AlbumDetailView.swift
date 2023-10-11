@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AlbumDetailView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var songsViewModel: SongsForAlbumListViewModel
     let album: Album
     
@@ -41,11 +42,26 @@ struct AlbumDetailView: View {
                           currency: album.currency)
             }
             .padding()
+            
             SongsForAlbumListView(songsViewModel: songsViewModel)
         }
         .onAppear {
             songsViewModel.fetch()
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
+                    .frame(width: 28, height: 32)
+//                    .background(Color.black.opacity(0.7))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                Text("back")
+                    .font(.caption2)
+            }
+            .foregroundColor(.black)
+        })
     }
     
 
@@ -53,6 +69,8 @@ struct AlbumDetailView: View {
 
 struct AlbumDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumDetailView(album: Album.example())
+        NavigationStack {
+            AlbumDetailView(album: Album.example())
+        }
     }
 }

@@ -8,25 +8,67 @@
 import SwiftUI
 
 struct LocalSongsRowView: View {
+    @ObservedObject var viewModel: LocalSongsForAlbumListViewModel
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var song: LocalSong
     
     var body: some View {
         
+        
         HStack {
-            Text("\(song.trackName)") 
+            Button {
+                viewModel.play(song: song)
+            } label: {
+                Image(systemName: viewModel.songState(for: song))
+                    .font(.largeTitle)
+                    .frame(width: 48, height: 42)
+                    .background(Color.black.opacity(0.7))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                    .foregroundColor(.orange)
+            }
+            .foregroundColor(.black)
+//            .padding()
+            
+            Text("\(song.trackName)-\( song.id)") 
                 .gridColumnAlignment(.leading)
                 .font(.caption)
                 .frame(width: 250, alignment: .leading)
+                .padding(.leading, 5)
             //                            .background(Color.gray)
-            Text(song.trackDuration)
-                .font(.caption)            
-                .padding(.trailing)
+            if let timeLabel = viewModel.songTimeLabel(for: song) {
+                Text(timeLabel)
+                    .frame(width: 35, alignment: .leading)
+                    .font(.caption)
+                    .foregroundColor(Color.blue)
+                    .padding(.trailing)
+            } else {
+                Text(song.trackDuration)
+                    .frame(width: 35, alignment: .leading)
+                    .font(.caption)
+                    .padding(.trailing)
+            }
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
+                    .frame(width: 28, height: 32)
+//                    .background(Color.black.opacity(0.7))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                Text("back")
+                    .font(.caption2)
+            }
+            .foregroundColor(.black)
+        })
     }
 }
 
 struct LocalSongsRowView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalSongsRowView(song: LocalSong.mock().first!)
+        NavigationStack {
+            LocalSongsRowView(viewModel: LocalSongsForAlbumListViewModel(albumID: 0), song: LocalSong.mock().first!)
+        }
     }
 }
