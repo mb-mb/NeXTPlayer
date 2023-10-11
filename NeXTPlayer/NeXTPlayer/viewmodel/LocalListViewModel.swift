@@ -62,7 +62,7 @@ class LocalListViewModel: ObservableObject {
             .store(in: &cancellables)
         
         
-        albumsPublisher = self.fetchLocalAlbuns(for: "")
+        albumsPublisher = self.fetchLocalAlbuns(artist: "")
         albumsPublisher?
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
@@ -123,6 +123,14 @@ class LocalListViewModel: ObservableObject {
         return vm
     }
     
+    func setSelectedArtist(artist: LocalArtist) {
+        if let name = artist.name {
+            // it's not nevessary do sink or set albums, it's already done in
+            // publisher albumsPublisher
+            _ = fetchLocalAlbuns(artist: name)
+                
+        }
+    }
     
     func fetchLocalAlbum(for searchTerm: String) {
         guard !searchTerm.isEmpty else {
@@ -214,7 +222,7 @@ class LocalListViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
 
-    func fetchLocalAlbuns(for artist: String) -> AnyPublisher<[Album], APIError> {
+    func fetchLocalAlbuns(artist: String) -> AnyPublisher<[Album], APIError> {
         return fetchLocalArtists2()
             .map { artists in
                 return artists.filter { $0.name == artist }

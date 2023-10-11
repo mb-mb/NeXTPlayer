@@ -9,13 +9,13 @@ import SwiftUI
 
 struct LocalArtistSectionView: View {
     @ObservedObject var viewModel: LocalListViewModel
-    let rows = Array(repeating: GridItem(.fixed(60), spacing:0, alignment: .leading), count: 1)
+    let rows = Array(repeating: GridItem(.fixed(110), spacing:0, alignment: .leading), count: 1)
         
     var body: some View {
         ScrollView(.horizontal) {
             LazyHGrid(rows: rows, spacing: 55) {
                 ForEach(viewModel.artists, id:\.id) { artist in
-                    LocalArtistRowView(artist: artist)
+                    LocalArtistRowView(viewModel: viewModel, artist: artist)
                         .frame(width: 300, height: 50)
                 }
                 
@@ -44,6 +44,8 @@ struct LocalArtistSectionView: View {
 
 struct LocalArtistSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalArtistSectionView(viewModel: LocalListViewModel().loadMock())
+        NavigationStack {
+            LocalArtistSectionView(viewModel: LocalListViewModel().loadMock())
+        }
     }
 }

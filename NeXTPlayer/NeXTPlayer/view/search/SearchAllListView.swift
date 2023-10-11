@@ -25,8 +25,16 @@ struct SearchAllListView: View {
                         SongListView(viewModel: songViewModel)
                     } label: {
                         HStack {
-                            Text("See all")
-                            Image(systemName: "chevron.right")
+                            HStack {
+                                Text("See all")
+                                    .font(.caption2)
+                                Image(systemName: "arrowshape.turn.up.right.fill")
+                                    .font(.caption)
+                              .frame(width: 18, height: 32)
+                              .clipShape(RoundedRectangle(cornerRadius: 6))
+                              .foregroundColor(.black)
+                            }
+                            .foregroundColor(.black)
                         }
                     }
                 }
@@ -44,8 +52,15 @@ struct SearchAllListView: View {
                         AlbumsListView(viewModel: albumViewModel)
                     } label: {
                         HStack {
-                            Text("See all")
-                            Image(systemName: "chevron.right")
+                            HStack {
+                                Text("See all")
+                                    .font(.caption2)
+                                Image(systemName: "arrowshape.turn.up.right.fill")
+                                    .font(.caption)
+                              .frame(width: 18, height: 32)
+                              .clipShape(RoundedRectangle(cornerRadius: 6))
+                            }
+                            .foregroundColor(.black)
                         }
                     }
                 }
@@ -62,8 +77,15 @@ struct SearchAllListView: View {
                         MovieListView(viewModel: movieViewModel)
                     } label: {
                         HStack {
-                            Text("See all")
-                            Image(systemName: "chevron.right")
+                            HStack {
+                                Text("See all")
+                                    .font(.caption2)
+                                Image(systemName: "arrowshape.turn.up.right.fill")
+                                    .font(.caption)
+                              .frame(width: 18, height: 32)
+                              .clipShape(RoundedRectangle(cornerRadius: 6))
+                            }
+                            .foregroundColor(.black)
                         }
                     }
                 }

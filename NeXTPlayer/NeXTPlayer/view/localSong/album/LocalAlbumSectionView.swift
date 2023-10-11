@@ -9,15 +9,17 @@ import SwiftUI
 
 struct LocalAlbumSectionView: View {
     @ObservedObject var viewModel: LocalListViewModel
-    let rows = Array(repeating: GridItem(.fixed(60), spacing:0, alignment: .leading), count: 4)
+    let rows = Array(repeating: GridItem(.fixed(110), spacing:0, alignment: .leading), count: 4)
 
     var body: some View {
         ScrollView(.horizontal) {
-            LazyHGrid(rows: rows, spacing: 55) {
+            LazyHGrid(rows: rows, spacing: 65) {
                 ForEach(viewModel.albums, id:\.id) { album in
                     LocalAlbumRowView(album: album)
-                        .frame(width: 300, height: 50)
+//                        .frame(width: 300, height: 70)
                 }
+//                .frame(width: 300, height: 120)
+//                .background(Color.green)
                 
                 switch viewModel.state {
                 case .good:
@@ -44,6 +46,8 @@ struct LocalAlbumSectionView: View {
 
 struct LocalAlbumSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalAlbumSectionView(viewModel: LocalListViewModel())
+        NavigationStack {
+            LocalAlbumSectionView(viewModel: LocalListViewModel().loadMock())
+        }
     }
 }

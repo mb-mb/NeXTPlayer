@@ -32,6 +32,8 @@ struct AlbumSectionView: View {
 
 struct AlbumSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumSectionView(albums: [Album.example()])
+        NavigationStack {
+            AlbumSectionView(albums: [Album.example()])
+        }
     }
 }

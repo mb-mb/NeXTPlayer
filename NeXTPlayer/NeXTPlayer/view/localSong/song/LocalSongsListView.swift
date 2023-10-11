@@ -9,11 +9,12 @@ import SwiftUI
 
 struct LocalSongsListView: View {
     @ObservedObject var viewModel: LocalListViewModel
+    @ObservedObject var localSongsViewModel = LocalSongsForAlbumListViewModel(albumID: 0)
     
     var body: some View {
         List {
             ForEach(viewModel.songs, id: \.id) { song in
-                LocalSongsRowView(song: song)
+                LocalSongsRowView(viewModel: localSongsViewModel, song: song)
             }
             switch viewModel.state {
             case .good:

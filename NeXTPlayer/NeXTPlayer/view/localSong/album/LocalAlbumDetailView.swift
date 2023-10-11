@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LocalAlbumDetailView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var localViewModel: LocalSongsForAlbumListViewModel
     let album: LocalAlbum
     
@@ -43,11 +44,28 @@ struct LocalAlbumDetailView: View {
         .onAppear {
 //            localViewModel.fetch()
         }
+        .navigationBarBackButtonHidden(true)
+        .navigationBarItems(leading: Button(action: {
+            self.presentationMode.wrappedValue.dismiss()
+        }) {
+            HStack {
+                Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
+                    .frame(width: 28, height: 32)
+//                    .background(Color.black.opacity(0.7))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                Text("back")
+                    .font(.caption2)
+            }
+            .foregroundColor(.black)
+
+        })
     }
 }
 
 struct LocalAlbumDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalAlbumDetailView(album: LocalAlbum.mockData().first!)
+        NavigationStack {
+            LocalAlbumDetailView(album: LocalAlbum.mockData().first!)
+        }
     }
 }

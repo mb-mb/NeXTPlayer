@@ -23,31 +23,18 @@ struct LocalSearchAllListView: View {
                     } label: {
                         HStack {
                             Text("See all")
-                            Image(systemName: "chevron.right")
+                                .font(.caption2)
+                            Image(systemName: "arrowshape.turn.up.right.fill")
+                                .font(.caption)
+                          .frame(width: 18, height: 32)
+                          .clipShape(RoundedRectangle(cornerRadius: 6))
                         }
+                        .foregroundColor(.black)
+
                     }
                 }
                 .padding(.horizontal)                
                 LocalArtistSectionView(viewModel: localViewModel)
-                Divider()
-                    .padding(.bottom)
-                
-                
-                HStack {
-                    Text("Songs")
-                        .font(.title2)
-                    Spacer()
-                    NavigationLink {
-                        LocalSongsListView(viewModel: localViewModel)
-                    } label: {
-                        HStack {
-                            Text("See all")
-                            Image(systemName: "chevron.right")
-                        }
-                    }
-                }
-                .padding(.horizontal)
-                LocalSongsSectionView(viewModel: localViewModel)
                 Divider()
                     .padding(.bottom)
                 
@@ -60,14 +47,46 @@ struct LocalSearchAllListView: View {
                     } label: {
                         HStack {
                             Text("See all")
-                            Image(systemName: "chevron.right")
+                                .font(.caption2)
+                            Image(systemName: "arrowshape.turn.up.right.fill")
+                                .font(.caption)
+                          .frame(width: 18, height: 32)
+                          .clipShape(RoundedRectangle(cornerRadius: 6))
                         }
+                        .foregroundColor(.black)
+
                     }
                 }
                 .padding(.horizontal)
                 LocalAlbumSectionView(viewModel: localViewModel)
                 Divider()
                     .padding(.bottom)
+
+                
+                HStack {
+                    Text("Songs")
+                        .font(.title2)
+                    Spacer()
+                    NavigationLink {
+                        LocalSongsListView(viewModel: localViewModel)
+                    } label: {
+                        HStack {
+                            Text("See all")
+                                .font(.caption2)
+                            Image(systemName: "arrowshape.turn.up.right.fill")
+                                .font(.caption)
+                          .frame(width: 18, height: 32)
+                          .clipShape(RoundedRectangle(cornerRadius: 6))
+                        }
+                        .foregroundColor(.black)
+
+                    }
+                }
+                .padding(.horizontal)
+                LocalSongsSectionView(viewModel: localViewModel)
+                Divider()
+                    .padding(.bottom)
+                
                 
             }
         }

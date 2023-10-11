@@ -31,6 +31,7 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
     let service = APIService()
     var audioPlayer: AVAudioPlayer?
     var timer: Timer?
+    var startTime: Date?
     var albumID: Int
     
     
@@ -81,35 +82,99 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
 }
 
 extension LocalSongsForAlbumListViewModel {
-    func play(song: LocalSong) {
-        var localSongs: [LocalSong]=[]
-        switch playerState {
-        case .stop:
-            do {
-                try playMedia(for: song)
-            } catch {
-                print(error)
-                playerState = .error
-            }
-        case .play:
-            playerState = PlayerState.stop
-            songState = PlayerState.stop.rawValue
-            audioPlayer?.stop()
-            stopPlayback()
-        case .pause:
-            playerState = PlayerState.stop
-            songState = PlayerState.stop.rawValue
-            for var item in songs {
-                if item.id == song.id {
-                    item.songState = .stop
-                }
-                localSongs.append(item)
-            }
-        case .error:
-            print("not playing at all")
+
+    func songTimeLabel(for song: LocalSong) -> String? {
+        if let _song = songs.first( where: { $0.id == song.id && $0.songState == .play}) {
+            return timeLabel
+        } else {
+            return nil
         }
+    }
+    func songState(for song: LocalSong) -> String {
+        for item in songs {
+            if item.id == song.id {
+                return item.songState.rawValue
+            }
+        }
+        return PlayerState.stop.rawValue
+    }
     
-        songs = localSongs
+    func play(song: LocalSong) {
+        var found = false
+        for index in songs.indices {
+            var _localSong = songs[index]
+            if  _localSong.id == song.id {
+                switch _localSong.songState {
+                case .stop:
+                    _localSong.songState = .play
+                    startPlaybackMock()                    
+                case .play:
+                    _localSong.songState = .stop
+                    stopPlayback()
+                case .pause:
+                    break
+                case .error:
+                    break
+                }
+                songs[index] = _localSong
+                found = true
+            } else {
+                _localSong.songState = .stop
+                timeLabel = "00:00"
+                songs[index] = _localSong
+            }
+        }
+        if !found {
+            var localSong = song
+            localSong.songState = .play
+            startPlaybackMock()
+            songs.append(localSong)
+        }
+                
+                
+//        switch song.songState {
+//        case .stop:
+//            do {
+////                try playMedia(for: song)
+//                playerState = PlayerState.play
+//                songState = PlayerState.play.rawValue
+//                if var localSong = songs.first( where: { $0.id == song.id }) {
+//                    localSong.songState = .play
+//                } else {
+//                    var localSong = song
+//                    localSong.songState = .play
+//                    localSongs.append(localSong)
+//                }
+//            } catch {
+//                print(error)
+//                playerState = .error
+//            }
+//        case .play:
+//            playerState = PlayerState.stop
+//            songState = PlayerState.stop.rawValue
+//            audioPlayer?.stop()
+//            stopPlayback()
+//            if var localSong = songs.first( where: { $0.id == song.id }) {
+//                localSong.songState = .stop
+//            } else {
+//                var localSong = song
+//                localSong.songState = .stop
+//                localSongs.append(localSong)
+//            }
+//        case .pause:
+//            playerState = PlayerState.stop
+//            songState = PlayerState.stop.rawValue
+//            for var item in songs {
+//                if item.id == song.id {
+//                    item.songState = .stop
+//                }
+//                localSongs.append(item)
+//            }
+//        case .error:
+//            print("not playing at all")
+//        }
+    
+//        songs = localSongs
     }
     
     func playMedia(for song: LocalSong) throws {
@@ -151,14 +216,30 @@ extension LocalSongsForAlbumListViewModel: AVAudioPlayerDelegate {
             timeLabel = currentTime.formatTime()
         }
     }
+
+    @objc func updatePlaybackTimeMock() {
+        guard let _startTime = startTime else { return }
+
+         let currentTime = Date().timeIntervalSince(_startTime)
+         timeLabel = currentTime.formatTime()
+    }
+
     
     func startPlayback() {
         audioPlayer?.play()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlaybackTime), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlaybackTimeMock), userInfo: nil, repeats: true)
     }
 
+    func startPlaybackMock() {
+        audioPlayer?.play()
+        startTime = Date()
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlaybackTimeMock), userInfo: nil, repeats: true)
+    }
+
+    
     func stopPlayback() {
         audioPlayer?.stop()
+        timeLabel = "00:00"
         timer?.invalidate()
     }
     
