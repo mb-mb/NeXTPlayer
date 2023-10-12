@@ -10,7 +10,7 @@ import MediaPlayer
 import MusicKit
 
 struct LocalMusicListView: View {
-    @ObservedObject var viewModel: LocalListViewModel
+    @EnvironmentObject var viewModel: LocalListViewModel
     
     var body: some View {
             LazyVStack {
@@ -69,17 +69,18 @@ struct LocalMusicListView: View {
         .navigationTitle("Local music")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
-            viewModel.loadMore()
+            //viewModel.loadMore()
         }
     }
         
     
 }
 
-struct LocalMusicListView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationView {
-            LocalMusicListView(viewModel: LocalListViewModel().loadMock())
-        }
-    }
-}
+//struct LocalMusicListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationView {
+//            LocalMusicListView()
+//                .environmentObject(viewModel: LocalListViewModel().loadMock())
+//        }
+//    }
+//}

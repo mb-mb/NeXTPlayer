@@ -14,7 +14,7 @@ class LocalListViewModel: ObservableObject {
     let player = MPMusicPlayerController.applicationMusicPlayer
     @Published var searchTerm: String = ""
     @Published private var artistPublisher: AnyPublisher<[LocalArtist], APIError>?
-    @Published private var albumsPublisher: AnyPublisher<[Album], APIError>?
+    @Published private var albumsPublisher: AnyPublisher<[LocalAlbum], APIError>?
     @Published private var songPublisher: AnyPublisher<[LocalSong], APIError>?
     @Published var artists: [LocalArtist] = []
     @Published var albums: [LocalAlbum] = [LocalAlbum]()
@@ -38,80 +38,93 @@ class LocalListViewModel: ObservableObject {
                 self?.fetchLocalAlbum(for: term)
             }.store(in: &cancellables)
 
-        artistPublisher = self.fetchLocalArtists2()
-        artistPublisher?
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    print("artistPublisher finished")
-                case .failure(let receivedError):
-                   print(receivedError) // Handle the error
-                }
-            }, receiveValue: {[weak self] arti in
-                print("artistPublisher receiveValue: \(arti.count)")
-                if arti.count >= 0 {
-                    _ = arti.map { art in
-                        print(art)
-                        self?.fetchLocalAlbum(for: art.name ?? "")
-                    }
-                } else {
-                    self?.fetchLocalAlbum(for: "")
-                }
-            })
-            .store(in: &cancellables)
+        //artistPublisher = self.fetchLocalArtists2()
+//        artistPublisher?
+//            .receive(on: DispatchQueue.main)
+//            .sink(receiveCompletion: { completion in
+//                switch completion {
+//                case .finished:
+//                    print("artistPublisher finished")
+//                case .failure(let receivedError):
+//                   print(receivedError) // Handle the error
+//                }
+//            }, receiveValue: {[weak self] artists in
+//                print("artistPublisher receiveValue: \(artists.count)")
+//                for artist in artists {
+//                    print(artist)
+//                    self?.fetchLocalAlbum(for: artist.name ?? "")
+//                }
+//            })
+//            .store(in: &cancellables)
+//
         
-        
-        albumsPublisher = self.fetchLocalAlbuns(artist: "")
-        albumsPublisher?
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    print("albumsPublisher finished")
-                case .failure(let receivedError):
-                   print(receivedError) // Handle the error
-                }
-            }, receiveValue: { albums in
-                print("albumsPublisher receiveValue: \(albums.count)")
-                if albums.count >= 0 {
-                    _ = albums.map { album in
-                        print(album)
-                    }
-                } else {
-                    _ = fetchLocalSongs()
-                }
-            })
-            .store(in: &cancellables)
-
-        songPublisher = fetchLocalSongs()
-        songPublisher?
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    print("songPublisher finished")
-                case .failure(let receivedError):
-                   print(receivedError) // Handle the error
-                }
-            }, receiveValue: {[weak self] songs in
-                print("songPublisher receiveValue: \(songs.count)")
-                if songs.count >= 0 {
-                    _ = songs.map { song in
-                        print(song)
-                        self?.songs.append(song)
-                    }
-                }
-            })
-            .store(in: &cancellables)
+//        albumsPublisher = self.fetchLocalAlbuns(artist: "")
+//        albumsPublisher?
+//            .receive(on: DispatchQueue.main)
+//            .sink(receiveCompletion: { completion in
+//                switch completion {
+//                case .finished:
+//                    print("albumsPublisher finished")
+//                case .failure(let receivedError):
+//                   print(receivedError) // Handle the error
+//                }
+//            }, receiveValue: { albums in
+//                print("albumsPublisher receiveValue: \(albums.count)")
+//                if albums.count >= 0 {
+//                    _ = albums.map { album in
+//                        print(album)
+//                    }
+//                } else {
+//                    _ = fetchLocalSongs()
+//                }
+//            })
+//            .store(in: &cancellables)
+//
+//        songPublisher = fetchLocalSongs()
+//        songPublisher?
+//            .receive(on: DispatchQueue.main)
+//            .sink(receiveCompletion: { completion in
+//                switch completion {
+//                case .finished:
+//                    print("songPublisher finished")
+//                case .failure(let receivedError):
+//                   print(receivedError) // Handle the error
+//                }
+//            }, receiveValue: {[weak self] songs in
+//                print("songPublisher receiveValue: \(songs.count)")
+//                if songs.count >= 0 {
+//                    _ = songs.map { song in
+//                        print(song)
+//                        self?.songs.append(song)
+//                    }
+//                }
+//            })
+//            .store(in: &cancellables)
 
     }
     
     
     func loadMore() {
-        _ = self.fetchLocalArtists2()
-        _ = fetchLocalSongs()
-
+        self.fetchLocalArtists2()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .finished:
+                    print("fetchLocalArtists2 finished")
+                case .failure(let receivedError):
+                    print(receivedError) // Handle the error
+                }
+            }, receiveValue: {[weak self] localArtists in
+                print("fetchLocalArtists2 receiveValue: \(localArtists.count)")
+                if localArtists.count >= 0 {
+                    _ = localArtists.map { song in
+                        print(localArtists)
+                        self?.artists.append(contentsOf: localArtists)
+                    }
+                }
+            })
+            .store(in: &cancellables)
+        
+       
         
     }
     
@@ -127,8 +140,25 @@ class LocalListViewModel: ObservableObject {
         if let name = artist.name {
             // it's not nevessary do sink or set albums, it's already done in
             // publisher albumsPublisher
-            _ = fetchLocalAlbuns(artist: name)
-                
+            self.fetchLocalAlbuns(artistName: name)
+                .sink ( receiveCompletion: { completion in
+                    switch completion {
+                    case .finished:
+                        print("fetchLocalAlbuns finished")
+                    case .failure(let receivedError):
+                       print(receivedError) // Handle the error
+                    }
+                }, receiveValue: {[weak self] localAlbums in
+                    print("fetchLocalAlbuns receiveValue: \(localAlbums.count)")
+                    if localAlbums.count >= 0 {
+                        for album in localAlbums {
+                            print(album)
+                            self?.albums.append(album)
+                        }
+                    }
+                })
+                .store(in: &cancellables)
+
         }
     }
     
@@ -222,7 +252,7 @@ class LocalListViewModel: ObservableObject {
             .eraseToAnyPublisher()
     }
 
-    func fetchLocalAlbuns(artist: String) -> AnyPublisher<[Album], APIError> {
+    func fetchAlbuns(artist: String) -> AnyPublisher<[Album], APIError> {
         return fetchLocalArtists2()
             .map { artists in
                 return artists.filter { $0.name == artist }
@@ -273,5 +303,32 @@ class LocalListViewModel: ObservableObject {
             
     }
 
+    func fetchLocalAlbuns(artistName: String) -> AnyPublisher<[LocalAlbum], APIError> {
+        return Future<[LocalAlbum], APIError> { promise in
+            // Use MPMediaQuery to fetch albums for the selected artist
+            let albumQuery = MPMediaQuery.albums()
+            albumQuery.addFilterPredicate(MPMediaPropertyPredicate(
+                value: artistName,
+                forProperty: MPMediaItemPropertyArtist, // MPMediaItemPropertyArtistPersistentID,
+                comparisonType: .equalTo
+            ))
+            
+            if let albumItems = albumQuery.collections {
+                let albums = albumItems.compactMap { collection -> LocalAlbum? in
+                    guard let representativeItem = collection.representativeItem else {
+                        return nil
+                    }
+                    // Map MPMediaItem to your Album struct
+                    return LocalAlbum(album: representativeItem, artistState: .stop)
+                }
+                return promise(.success(albums))
+            } else {
+                promise(.failure(APIError.fetchFailed))
+            }
+
+        }
+        .eraseToAnyPublisher()
+    }
+    
     
 }

@@ -29,7 +29,7 @@ struct LocalSongsForAlbumListView: View {
     //                                    .background(Color.gray)
                                         
                                 }
-                                .foregroundColor(.black)
+                                .foregroundColor(Color("buttonNavColor"))
                             }
                             .frame(width: 5, height: 15, alignment: .leading)
 //                            .background(Color.gray)

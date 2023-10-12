@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocalArtistSectionView: View {
-    @ObservedObject var viewModel: LocalListViewModel
+    @EnvironmentObject var viewModel: LocalListViewModel
     let rows = Array(repeating: GridItem(.fixed(110), spacing:0, alignment: .leading), count: 1)
         
     var body: some View {
@@ -42,10 +42,10 @@ struct LocalArtistSectionView: View {
     }
 }
 
-struct LocalArtistSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            LocalArtistSectionView(viewModel: LocalListViewModel().loadMock())
-        }
-    }
-}
+//struct LocalArtistSectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationStack {
+//            LocalArtistSectionView(viewModel: LocalListViewModel().loadMock())
+//        }
+//    }
+//}

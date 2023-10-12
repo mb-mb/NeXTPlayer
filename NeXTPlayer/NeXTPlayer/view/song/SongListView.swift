@@ -46,7 +46,7 @@ struct SongListView: View {
                 Text("back")
                     .font(.caption2)
             }
-            .foregroundColor(.black)
+            .foregroundColor(Color("buttonNavColor"))
         })
     }
   

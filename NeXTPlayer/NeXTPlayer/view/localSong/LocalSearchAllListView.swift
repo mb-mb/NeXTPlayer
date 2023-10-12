@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocalSearchAllListView: View {
-    @ObservedObject var localViewModel: LocalListViewModel
+    @EnvironmentObject var localViewModel: LocalListViewModel
     
     var body: some View {
         ScrollView {
@@ -29,7 +29,7 @@ struct LocalSearchAllListView: View {
                           .frame(width: 18, height: 32)
                           .clipShape(RoundedRectangle(cornerRadius: 6))
                         }
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("buttonNavColor"))
 
                     }
                 }
@@ -53,7 +53,7 @@ struct LocalSearchAllListView: View {
                           .frame(width: 18, height: 32)
                           .clipShape(RoundedRectangle(cornerRadius: 6))
                         }
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("buttonNavColor"))
 
                     }
                 }
@@ -78,7 +78,7 @@ struct LocalSearchAllListView: View {
                           .frame(width: 18, height: 32)
                           .clipShape(RoundedRectangle(cornerRadius: 6))
                         }
-                        .foregroundColor(.black)
+                        .foregroundColor(Color("buttonNavColor"))
 
                     }
                 }
@@ -89,14 +89,17 @@ struct LocalSearchAllListView: View {
                 
                 
             }
+            .onAppear {
+                localViewModel.loadMore()
+            }
         }
     }
 }
 
-struct LocalSearchAllListView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            LocalSearchAllListView(localViewModel: LocalListViewModel().loadMock())
-        }
-    }
-}
+//struct LocalSearchAllListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationStack {
+//            LocalSearchAllListView(localViewModel: LocalListViewModel().loadMock())
+//        }
+//    }
+//}

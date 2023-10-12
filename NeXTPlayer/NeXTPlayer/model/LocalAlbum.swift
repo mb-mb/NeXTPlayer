@@ -29,7 +29,7 @@ struct LocalAlbum: Codable, Identifiable {
         self.id = UUID()
         let _album = Album(wrapperType: "collection", collectionType: "Album",
                            id: Int(album.albumPersistentID),
-                           artistID: Int(album.artistPersistentID),
+                           artistID: UInt64(album.artistPersistentID),
                            amgArtistID: Int(album.composerPersistentID),
                            artistName: album.artist ?? "",
                            collectionName: album.title ?? "",

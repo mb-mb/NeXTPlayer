@@ -32,9 +32,8 @@ struct SearchAllListView: View {
                                     .font(.caption)
                               .frame(width: 18, height: 32)
                               .clipShape(RoundedRectangle(cornerRadius: 6))
-                              .foregroundColor(.black)
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("buttonNavColor"))
                         }
                     }
                 }
@@ -60,7 +59,7 @@ struct SearchAllListView: View {
                               .frame(width: 18, height: 32)
                               .clipShape(RoundedRectangle(cornerRadius: 6))
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("buttonNavColor"))
                         }
                     }
                 }
@@ -85,7 +84,7 @@ struct SearchAllListView: View {
                               .frame(width: 18, height: 32)
                               .clipShape(RoundedRectangle(cornerRadius: 6))
                             }
-                            .foregroundColor(.black)
+                            .foregroundColor(Color("buttonNavColor"))
                         }
                     }
                 }

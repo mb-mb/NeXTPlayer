@@ -9,7 +9,7 @@ import SwiftUI
 import MediaPlayer
 
 struct LocalArtistDetailView: View {
-    @StateObject var localViewModel: LocalListViewModel
+    @EnvironmentObject var localViewModel: LocalListViewModel
     let artist: LocalArtist
     
     init(artist: LocalArtist) {
@@ -40,8 +40,8 @@ struct LocalArtistDetailView: View {
 
 }
 
-struct LocalArtistDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocalArtistDetailView(artist: LocalArtist.mockData().first!)
-    }
-}
+//struct LocalArtistDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LocalArtistDetailView(artist: LocalArtist.mockData().first!)
+//    }
+//}

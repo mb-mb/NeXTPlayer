@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocalArtistRowView: View {
-    @ObservedObject var viewModel: LocalListViewModel
+    @EnvironmentObject var viewModel: LocalListViewModel
     let artist: LocalArtist
     var body: some View {
         HStack {
@@ -30,10 +30,10 @@ struct LocalArtistRowView: View {
         }
     }
 }
-
-struct LocalArtistDetailRowView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocalArtistRowView(viewModel:
-                            LocalListViewModel().loadMock(), artist: LocalArtist.mockData().first!)
-    }
-}
+//
+//struct LocalArtistDetailRowView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LocalArtistRowView(viewModel:
+//                            LocalListViewModel().loadMock(), artist: LocalArtist.mockData().first!)
+//    }
+//}

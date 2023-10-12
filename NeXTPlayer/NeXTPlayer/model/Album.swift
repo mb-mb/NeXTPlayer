@@ -21,7 +21,7 @@ struct AlbumResult: Codable {
 struct Album: Codable, Identifiable {
     let wrapperType, collectionType: String
     let id: Int
-    let artistID: Int
+    let artistID: UInt64
     let amgArtistID: Int?
     let artistName, collectionName, collectionCensoredName: String
     let artistViewURL: String?

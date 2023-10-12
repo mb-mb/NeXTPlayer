@@ -356,12 +356,12 @@
 		CEDA94472ACCEF1800FE5091 /* localSong */ = {
 			isa = PBXGroup;
 			children = (
+				CEEBB0722ACD824200272269 /* LocalMusicSearchView.swift */,
 				CEEBB06D2ACD72F900272269 /* LocalMusicListView.swift */,
 				CE802A422AD47BE600FCB7F8 /* LocalSearchAllListView.swift */,
 				CE802A442AD47C9F00FCB7F8 /* artist */,
 				CE802A462AD47CD300FCB7F8 /* album */,
 				CE802A452AD47CB400FCB7F8 /* song */,
-				CEEBB0722ACD824200272269 /* LocalMusicSearchView.swift */,
 				CE7F5D912AD0144A00A02A52 /* LocalSongsForAlbumListView.swift */,
 			);
 			path = localSong;

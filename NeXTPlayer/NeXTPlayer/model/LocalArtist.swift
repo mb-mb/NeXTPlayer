@@ -17,7 +17,7 @@ struct LocalArtistResult: Codable {
 }
 
 struct LocalArtist: Identifiable, Codable {
-    let id: UUID
+    let id: UInt64
     let name: String?
     let genre: String?
 //    let artist: MPMediaItem?
@@ -26,7 +26,7 @@ struct LocalArtist: Identifiable, Codable {
    
     
     init(artist: MPMediaItem, artistState: PlayerState) {
-        self.id = UUID()
+        self.id = artist.persistentID
         self.name = artist.artist
         self.genre = artist.genre
 //        self.artist = artist
@@ -36,7 +36,7 @@ struct LocalArtist: Identifiable, Codable {
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(UUID.self, forKey: .id)
+        id = try container.decode(UInt64.self, forKey: .id)
         name = try container.decodeIfPresent(String.self, forKey: .name)
         genre = try container.decodeIfPresent(String.self, forKey: .genre)
         artworkUrl100 = try container.decodeIfPresent(URL.self, forKey: .artworkUrl100)
