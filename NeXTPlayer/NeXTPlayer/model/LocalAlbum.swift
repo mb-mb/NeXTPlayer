@@ -19,6 +19,7 @@ struct LocalAlbumResult: Codable {
 struct LocalAlbum: Codable, Identifiable {
     let id: UUID
     var album: Album
+    var artwork: Data?
     
     enum CodingKeys: String, CodingKey {
         case album, id
@@ -44,6 +45,12 @@ struct LocalAlbum: Codable, Identifiable {
                            copyright: "", country: "", currency: "",
                            releaseDate: album.releaseDate?.formatted(date: .long, time: .complete) ?? "",
                            primaryGenreName: album.genre ?? "")
+        if let artWork = album.artwork,
+            let data = artWork.image(at: CGSize(width: 100, height: 100))?.pngData() {
+            self.artwork = data
+        } else {
+            self.artwork = nil
+        }
         self.album = _album
         
     }

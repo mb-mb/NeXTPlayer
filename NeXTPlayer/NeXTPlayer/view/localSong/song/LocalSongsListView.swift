@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocalSongsListView: View {
-    @ObservedObject var viewModel: LocalListViewModel
+    @EnvironmentObject var viewModel: LocalListViewModel
     @ObservedObject var localSongsViewModel = LocalSongsForAlbumListViewModel(albumID: 0)
     
     var body: some View {
@@ -38,8 +38,8 @@ struct LocalSongsListView: View {
     }
 }
 
-struct LocalSongsListView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocalSongsListView(viewModel: LocalListViewModel().loadMock())
-    }
-}
+//struct LocalSongsListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LocalSongsListView(viewModel: LocalListViewModel().loadMock())
+//    }
+//}

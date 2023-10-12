@@ -14,12 +14,21 @@ struct LocalArtistDetailView: View {
     
     init(artist: LocalArtist) {
         self.artist = artist
-        self._localViewModel = StateObject(wrappedValue: LocalListViewModel())
     }
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
-                ImageLoadingView(urlString: artist.artworkUrl100?.absoluteString ?? "", size: 100)
+                if let data = artist.artwork,
+                let image = UIImage(data: data) {
+                    Image(uiImage: image )
+                        .resizable()
+                        .frame(width:100, height: 100)
+                        .cornerRadius(8)
+                } else {
+                    Image(systemName: "music.note.house")
+                        .frame(width:100, height: 100)
+                }
+                
                 HStack(alignment: .center) {
                     Text(artist.name ?? "")
                         .font(.subheadline)
@@ -33,15 +42,13 @@ struct LocalArtistDetailView: View {
             .padding()
             LocalSongsForAlbumListView(songsViewModel: LocalSongsForAlbumListViewModel.example())
         }
-        .onAppear {
-//            localViewModel.fetch()
-        }
+
     }
 
 }
 
-//struct LocalArtistDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LocalArtistDetailView(artist: LocalArtist.mockData().first!)
-//    }
-//}
+struct LocalArtistDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        LocalArtistDetailView(artist: LocalArtist.mockData().first!)
+    }
+}

@@ -20,7 +20,16 @@ struct LocalAlbumDetailView: View {
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
-                ImageLoadingView(urlString: album.album.artworkUrl100, size: 100)
+                if let data = album.artwork,
+                let image = UIImage(data: data) {
+                    Image(uiImage: image )
+                        .resizable()
+                        .frame(width:100, height: 100)
+                        .cornerRadius(8)
+                } else {
+                    Image(systemName: "music.note.house")
+                        .frame(width:100, height: 100)
+                }
                 VStack(alignment: .leading) {
                     Text(album.album.collectionName)
                         .font(.footnote)

@@ -150,6 +150,7 @@ class LocalListViewModel: ObservableObject {
                     }
                 }, receiveValue: {[weak self] localAlbums in
                     print("fetchLocalAlbuns receiveValue: \(localAlbums.count)")
+                    self?.albums = []
                     if localAlbums.count >= 0 {
                         for album in localAlbums {
                             print(album)

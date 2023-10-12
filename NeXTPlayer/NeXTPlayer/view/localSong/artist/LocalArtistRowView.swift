@@ -16,7 +16,17 @@ struct LocalArtistRowView: View {
                 viewModel.setSelectedArtist(artist: artist)
             } label: {
                 HStack {
-                    ImageLoadingView(urlString: artist.artworkUrl100?.absoluteString ?? "", size: 100)
+                    if let data = artist.artwork,
+                       let image = UIImage(data: data) {
+                        Image(uiImage: image )
+                            .resizable()
+                            .frame(width:100, height: 100)
+                            .cornerRadius(8)
+
+                    } else {
+                        Image(systemName: "music.note.house")
+                            .frame(width:100, height: 100)
+                    }
                     VStack(alignment: .leading) {
                         //                Text("\(artist.id)")
                         Text(artist.name ?? "")
@@ -28,12 +38,14 @@ struct LocalArtistRowView: View {
                 }
             }
         }
+        .frame(width: 300, alignment: .leading)
+        .padding(.leading, 0)
     }
 }
-//
-//struct LocalArtistDetailRowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LocalArtistRowView(viewModel:
-//                            LocalListViewModel().loadMock(), artist: LocalArtist.mockData().first!)
-//    }
-//}
+
+struct LocalArtistDetailRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        LocalArtistRowView(artist: LocalArtist.mockData().first!)
+            .environmentObject(LocalViewModelView.viewModel)
+    }
+}

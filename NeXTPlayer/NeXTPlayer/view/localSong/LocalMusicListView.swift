@@ -21,7 +21,8 @@ struct LocalMusicListView: View {
                         NavigationLink {
                             LocalArtistDetailView(artist: artists)
                         } label: {
-                            LocalArtistRowView(viewModel: viewModel, artist: artists)
+                            LocalArtistRowView(artist: artists)
+                                .environmentObject(viewModel)
                         }
                     }
                 } 

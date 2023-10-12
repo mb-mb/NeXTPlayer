@@ -17,7 +17,16 @@ struct LocalAlbumRowView: View {
                 LocalAlbumDetailView(album: album)
             } label: {
                 Group {
-                    ImageLoadingView(urlString: album.album.artworkUrl60, size: 100)
+                    if let data = album.artwork,
+                    let image = UIImage(data: data) {
+                        Image(uiImage: image )
+                            .resizable()
+                            .frame(width:100, height: 100)
+                            .cornerRadius(8)
+                    } else {
+                        Image(systemName: "music.note.house")
+                            .frame(width:100, height: 100)
+                    }
                     VStack(alignment: .leading) {
                         Text(album.album.collectionName)
                         Text(album.album.artistName)

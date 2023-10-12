@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LocalAlbumSectionView: View {
-    @ObservedObject var viewModel: LocalListViewModel
+    @EnvironmentObject var viewModel: LocalListViewModel
     let rows = Array(repeating: GridItem(.fixed(110), spacing:0, alignment: .leading), count: 2)
 
     var body: some View {
@@ -24,9 +24,6 @@ struct LocalAlbumSectionView: View {
                 switch viewModel.state {
                 case .good:
                     Color.clear
-                        .onAppear {
-                            viewModel.loadMore()
-                        }
                 case .isLoading:
                     ProgressView()
                         .progressViewStyle(.circular)
@@ -43,11 +40,11 @@ struct LocalAlbumSectionView: View {
         .padding([.horizontal, .bottom])
     }
 }
-
-struct LocalAlbumSectionView_Previews: PreviewProvider {
-    static var previews: some View {
-        NavigationStack {
-            LocalAlbumSectionView(viewModel: LocalListViewModel().loadMock())
-        }
-    }
-}
+//
+//struct LocalAlbumSectionView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        NavigationStack {
+//            LocalAlbumSectionView(viewModel: LocalListViewModel().loadMock())
+//        }
+//    }
+//}

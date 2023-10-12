@@ -19,7 +19,8 @@ struct LocalSearchAllListView: View {
                         .font(.title2)
                     Spacer()
                     NavigationLink {
-                        LocalArtistListView(viewModel: localViewModel)
+                        LocalArtistListView()
+                            .environmentObject(localViewModel)
                     } label: {
                         HStack {
                             Text("See all")
@@ -34,7 +35,8 @@ struct LocalSearchAllListView: View {
                     }
                 }
                 .padding(.horizontal)                
-                LocalArtistSectionView(viewModel: localViewModel)
+                LocalArtistSectionView()
+                    .environmentObject(localViewModel)
                 Divider()
                     .padding(.bottom)
                 
@@ -43,7 +45,8 @@ struct LocalSearchAllListView: View {
                         .font(.title2)
                     Spacer()
                     NavigationLink {
-                        LocalAlbumListView(viewModel: localViewModel)
+                        LocalAlbumListView()
+                            .environmentObject(localViewModel)
                     } label: {
                         HStack {
                             Text("See all")
@@ -58,7 +61,8 @@ struct LocalSearchAllListView: View {
                     }
                 }
                 .padding(.horizontal)
-                LocalAlbumSectionView(viewModel: localViewModel)
+                LocalAlbumSectionView()
+                    .environmentObject(localViewModel)
                 Divider()
                     .padding(.bottom)
 
@@ -68,7 +72,8 @@ struct LocalSearchAllListView: View {
                         .font(.title2)
                     Spacer()
                     NavigationLink {
-                        LocalSongsListView(viewModel: localViewModel)
+                        LocalSongsListView()
+                            .environmentObject(localViewModel)
                     } label: {
                         HStack {
                             Text("See all")
@@ -83,7 +88,8 @@ struct LocalSearchAllListView: View {
                     }
                 }
                 .padding(.horizontal)
-                LocalSongsSectionView(viewModel: localViewModel)
+                LocalSongsSectionView()
+                    .environmentObject(localViewModel)
                 Divider()
                     .padding(.bottom)
                 
@@ -96,10 +102,11 @@ struct LocalSearchAllListView: View {
     }
 }
 
-//struct LocalSearchAllListView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationStack {
-//            LocalSearchAllListView(localViewModel: LocalListViewModel().loadMock())
-//        }
-//    }
-//}
+struct LocalSearchAllListView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            LocalSearchAllListView()
+                .environmentObject(LocalViewModelView.viewModel)
+        }
+    }
+}

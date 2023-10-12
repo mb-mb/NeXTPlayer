@@ -21,7 +21,7 @@ struct LocalArtist: Identifiable, Codable {
     let name: String?
     let genre: String?
 //    let artist: MPMediaItem?
-    let artworkUrl100: URL?
+    let artwork: Data?
     let artistState: PlayerState
    
     
@@ -29,8 +29,12 @@ struct LocalArtist: Identifiable, Codable {
         self.id = artist.persistentID
         self.name = artist.artist
         self.genre = artist.genre
-//        self.artist = artist
-        self.artworkUrl100 = artist.assetURL
+        if let artWork = artist.artwork,
+            let data = artWork.image(at: CGSize(width: 100, height: 100))?.pngData() {
+            self.artwork = data
+        } else {
+            self.artwork = nil
+        }
         self.artistState = artistState
     }
     
@@ -39,7 +43,7 @@ struct LocalArtist: Identifiable, Codable {
         id = try container.decode(UInt64.self, forKey: .id)
         name = try container.decodeIfPresent(String.self, forKey: .name)
         genre = try container.decodeIfPresent(String.self, forKey: .genre)
-        artworkUrl100 = try container.decodeIfPresent(URL.self, forKey: .artworkUrl100)
+        artwork = try container.decode(Data.self, forKey: .artwork)
         artistState = try container.decode(PlayerState.self, forKey: .artistState)
     }
    
@@ -49,7 +53,7 @@ struct LocalArtist: Identifiable, Codable {
         case id
         case name
         case genre
-        case artworkUrl100
+        case artwork
         case artistState
     }
     
@@ -59,7 +63,7 @@ struct LocalArtist: Identifiable, Codable {
         try container.encode(id, forKey: .id)
         try container.encode(name, forKey: .name)
         try container.encode(genre, forKey: .genre)
-        try container.encode(artworkUrl100, forKey: .artworkUrl100)
+        try container.encode(artwork, forKey: .artwork)
         try container.encode(artistState.rawValue, forKey: .artistState)
     }
 }

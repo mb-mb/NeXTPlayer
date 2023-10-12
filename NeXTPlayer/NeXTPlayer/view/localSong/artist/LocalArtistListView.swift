@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct LocalArtistListView: View {
-    @ObservedObject var viewModel: LocalListViewModel
+    @EnvironmentObject var viewModel: LocalListViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         List {
             ForEach(viewModel.artists, id: \.id) { artist in
-                LocalArtistRowView(viewModel: viewModel, artist: artist)
+                LocalArtistRowView(artist: artist)
+                    .environmentObject(viewModel)
             }
             switch viewModel.state {
             case .good:
                 Color.clear
-                    .onAppear {
-                        viewModel.loadMore()
-                    }
             case .isLoading:
                 ProgressView()
                     .progressViewStyle(.circular)
@@ -57,7 +55,8 @@ struct LocalArtistListView: View {
 struct LocalArtistListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            LocalArtistListView(viewModel: LocalListViewModel())
+            LocalArtistListView()
+                .environmentObject(LocalViewModelView.viewModel)
         }
     }
 }
