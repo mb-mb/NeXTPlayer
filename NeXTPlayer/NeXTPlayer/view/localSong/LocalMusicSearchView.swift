@@ -15,7 +15,8 @@ struct LocalMusicSearchView: View {
 //                if viewModel.searchTerm.isEmpty {
 //                    LocalMusicSPlaceholderView(searchTerm: $viewModel.searchTerm)
 //                } else {
-                LocalSearchAllListView(localViewModel: localViewModel.loadMock())
+                LocalSearchAllListView(localViewModel: localViewModel)
+                    .environmentObject(localViewModel)
 //                }
             }
 

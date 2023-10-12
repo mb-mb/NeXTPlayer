@@ -31,7 +31,7 @@ struct LocalSongsDetailView: View {
                 Image(systemName: localViewModel.songState)
                     .font(.largeTitle)
             }
-            .foregroundColor(.black)
+            .foregroundColor(Color("buttonNavColor"))
             .padding()
             HStack {
                 Text(song.trackDuration)

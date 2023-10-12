@@ -26,7 +26,7 @@ struct LocalSongsRowView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 6))
                     .foregroundColor(.orange)
             }
-            .foregroundColor(.black)
+            .foregroundColor(Color("buttonNavColor"))
 //            .padding()
             
             Text("\(song.trackName)-\( song.id)") 
@@ -60,7 +60,7 @@ struct LocalSongsRowView: View {
                 Text("back")
                     .font(.caption2)
             }
-            .foregroundColor(.black)
+            .foregroundColor(Color("buttonNavColor"))
         })
     }
 }
