@@ -78,10 +78,18 @@ struct LocalSong: Identifiable, Codable {
 extension LocalSong {
     
     static func mock() -> [LocalSong] {
+        let mockData = UIImage(systemName: "music.note.tv.fill")?.pngData()! // Mock artwork data
+        let mockMPMediaItem = MockMediaItem()        
+        mockMPMediaItem.mockArtist = "Artist 1"
+        mockMPMediaItem.mockGenre = "Pop"
+        mockMPMediaItem.mockCollectionName = "album 1"
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return UIImage(systemName: "music.mic.circle")!
+        })
 
-        let song0 = LocalSong(song: MockMediaItem(), songState: .stop)
-        let song1 = LocalSong(song: MockMediaItem(), songState: .stop)
-        let song2 = LocalSong(song: MockMediaItem(), songState: .stop)
+        let song0 = LocalSong(song: mockMPMediaItem, songState: .stop)
+        let song1 = LocalSong(song: mockMPMediaItem, songState: .stop)
+        let song2 = LocalSong(song: mockMPMediaItem, songState: .stop)
         
         return [song0, song1, song2 ]
     }

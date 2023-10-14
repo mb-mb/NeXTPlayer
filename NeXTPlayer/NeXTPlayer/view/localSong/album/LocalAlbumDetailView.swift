@@ -15,13 +15,13 @@ struct LocalAlbumDetailView: View {
     init( album: LocalAlbum) {
         self.album = album
         self._localViewModel = StateObject(wrappedValue:
-                                            LocalSongsForAlbumListViewModel(albumID: album.album.id))
+                                            LocalSongsForAlbumListViewModel(albumID: album.id))
     }
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
-                if let data = album.artwork,
-                let image = UIImage(data: data) {
+
+                if let image = UIImage(data: album.artwork) {
                     Image(uiImage: image )
                         .resizable()
                         .frame(width:100, height: 100)
@@ -31,16 +31,16 @@ struct LocalAlbumDetailView: View {
                         .frame(width:100, height: 100)
                 }
                 VStack(alignment: .leading) {
-                    Text(album.album.collectionName)
+                    Text(album.collectionName)
                         .font(.footnote)
                         .foregroundColor(Color(.label))
-                    Text(album.album.artistName)
+                    Text(album.artistName ?? "")
                         .padding(.bottom, 5)
                     
-                    Text(album.album.primaryGenreName)
-                    Text("\(album.album.trackCount) songs")
+                    Text(album.primaryGenreName)
+                    Text("\(album.trackCount) songs")
                               
-                    Text("Released: \(String.formattedDate(value: album.album.releaseDate))")
+                    Text("Released: \(String.formattedDate(value: album.releaseDate))")
                 }
                 .font(.caption)
                 .foregroundColor(.gray)
@@ -48,7 +48,7 @@ struct LocalAlbumDetailView: View {
                 Spacer(minLength: 20)
             }
             .padding()
-            LocalSongsForAlbumListView(songsViewModel: LocalSongsForAlbumListViewModel.example())
+            LocalSongsForAlbumListView(songsViewModel: localViewModel)
         }
         .onAppear {
 //            localViewModel.fetch()

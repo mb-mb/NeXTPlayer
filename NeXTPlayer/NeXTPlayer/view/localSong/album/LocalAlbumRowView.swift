@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct LocalAlbumRowView: View {
     
@@ -17,19 +18,12 @@ struct LocalAlbumRowView: View {
                 LocalAlbumDetailView(album: album)
             } label: {
                 Group {
-                    if let data = album.artwork,
-                    let image = UIImage(data: data) {
-                        Image(uiImage: image )
-                            .resizable()
-                            .frame(width:100, height: 100)
-                            .cornerRadius(8)
-                    } else {
-                        Image(systemName: "music.note.house")
-                            .frame(width:100, height: 100)
-                    }
+                    
+                    ArtWorkView(artWork: album.artwork)
+                    
                     VStack(alignment: .leading) {
-                        Text(album.album.collectionName)
-                        Text(album.album.artistName)
+                        Text(album.collectionName)
+                        Text(album.artistName ?? "")
                             .font(.caption)
                             .foregroundColor(.gray)
                     }
@@ -40,10 +34,29 @@ struct LocalAlbumRowView: View {
                     Spacer(minLength: 20)
                 }
             }
-            
-            
         }
     }
+
+}
+
+struct ArtWorkView: View {
+    
+    var artWork: Data
+    
+    var body: some View {
+        VStack {
+            if let uiImage = UIImage(data: artWork) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(8)
+            } else {
+                Image(systemName: "music.note.house")
+                    .frame(width: 100, height: 100)
+            }
+        }
+    }
+    
 }
 
 struct LocalALbumRowView_Previews: PreviewProvider {

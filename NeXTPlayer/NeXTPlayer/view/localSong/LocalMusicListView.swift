@@ -19,7 +19,7 @@ struct LocalMusicListView: View {
                 Section(header: Text("Artists")) {
                     ForEach(viewModel.artists) { artists in
                         NavigationLink {
-                            LocalArtistDetailView(artist: artists)
+                            LocalArtistDetailView()
                         } label: {
                             LocalArtistRowView(artist: artists)
                                 .environmentObject(viewModel)

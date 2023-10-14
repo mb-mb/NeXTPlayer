@@ -42,6 +42,7 @@ struct LocalArtistSectionView: View {
 
 struct LocalViewModelView: View {
     static var viewModel = LocalListViewModel().loadMock()
+    static var artistList = LocalArtist.mockData().first!
     var body: some View {
         HStack {}
     }

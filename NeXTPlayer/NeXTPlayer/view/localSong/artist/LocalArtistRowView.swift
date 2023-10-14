@@ -9,24 +9,16 @@ import SwiftUI
 
 struct LocalArtistRowView: View {
     @EnvironmentObject var viewModel: LocalListViewModel
-    let artist: LocalArtist
+    var artist: LocalArtist = LocalViewModelView.artistList
     var body: some View {
         HStack {
             Button {
                 viewModel.setSelectedArtist(artist: artist)
             } label: {
                 HStack {
-                    if let data = artist.artwork,
-                       let image = UIImage(data: data) {
-                        Image(uiImage: image )
-                            .resizable()
-                            .frame(width:100, height: 100)
-                            .cornerRadius(8)
-
-                    } else {
-                        Image(systemName: "music.note.house")
-                            .frame(width:100, height: 100)
-                    }
+                    
+                    ArtWorkView(artWork: artist.artwork)
+                    
                     VStack(alignment: .leading) {
                         //                Text("\(artist.id)")
                         Text(artist.name ?? "")
@@ -45,7 +37,7 @@ struct LocalArtistRowView: View {
 
 struct LocalArtistDetailRowView_Previews: PreviewProvider {
     static var previews: some View {
-        LocalArtistRowView(artist: LocalArtist.mockData().first!)
+        LocalArtistRowView()
             .environmentObject(LocalViewModelView.viewModel)
     }
 }

@@ -32,11 +32,11 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
     var audioPlayer: AVAudioPlayer?
     var timer: Timer?
     var startTime: Date?
-    var albumID: Int
+    var albumID: UInt64
     
     
-    init(albumID: Int ) {
-        self.albumID = albumID
+    init(albumID: UInt64) {
+        self.albumID = 0
         super.init()
         self.fetchSongs(albumID: albumID)
         print("LocalSongsForAlbumListViewModel - init songs for albumID \(albumID)")
@@ -57,14 +57,15 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
         }
     }()
     
-    static func example() -> LocalSongsForAlbumListViewModel {
-        let vm = LocalSongsForAlbumListViewModel(albumID: 0)
+    func example() -> LocalSongsForAlbumListViewModel {
+        let vm = LocalSongsForAlbumListViewModel(albumID: UInt64(0))
+        vm.songs = LocalSong.mock()
         print("mock songs for album \(1) has \(vm.songs.count) item")
         return vm
     }
     
     
-    func fetchSongs(albumID: Int) {
+    func fetchSongs(albumID: UInt64) {
         fetchLocalSongsForAlbumID(albumID: albumID)
             .sink ( receiveCompletion: { receive in
                 switch receive {
@@ -84,7 +85,7 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
 extension LocalSongsForAlbumListViewModel {
 
     func songTimeLabel(for song: LocalSong) -> String? {
-        if let _song = songs.first( where: { $0.id == song.id && $0.songState == .play}) {
+        if let _ = songs.first( where: { $0.id == song.id && $0.songState == .play}) {
             return timeLabel
         } else {
             return nil
@@ -107,7 +108,13 @@ extension LocalSongsForAlbumListViewModel {
                 switch _localSong.songState {
                 case .stop:
                     _localSong.songState = .play
-                    startPlaybackMock()                    
+//                    startPlayback()
+                    do {
+                        try playMedia(for: _localSong)
+                    } catch {
+                        // change state of message error
+                        print(error)
+                    }
                 case .play:
                     _localSong.songState = .stop
                     stopPlayback()
@@ -127,7 +134,8 @@ extension LocalSongsForAlbumListViewModel {
         if !found {
             var localSong = song
             localSong.songState = .play
-            startPlaybackMock()
+            playerState = .play
+            startPlayback()
             songs.append(localSong)
         }
                 
@@ -227,7 +235,7 @@ extension LocalSongsForAlbumListViewModel: AVAudioPlayerDelegate {
     
     func startPlayback() {
         audioPlayer?.play()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlaybackTimeMock), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlaybackTime), userInfo: nil, repeats: true)
     }
 
     func startPlaybackMock() {

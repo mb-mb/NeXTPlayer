@@ -67,33 +67,35 @@ struct LocalSearchAllListView: View {
                     .padding(.bottom)
 
                 
-                HStack {
-                    Text("Songs")
-                        .font(.title2)
-                    Spacer()
-                    NavigationLink {
-                        LocalSongsListView()
-                            .environmentObject(localViewModel)
-                    } label: {
-                        HStack {
-                            Text("See all")
-                                .font(.caption2)
-                            Image(systemName: "arrowshape.turn.up.right.fill")
-                                .font(.caption)
-                          .frame(width: 18, height: 32)
-                          .clipShape(RoundedRectangle(cornerRadius: 6))
-                        }
-                        .foregroundColor(Color("buttonNavColor"))
-
-                    }
-                }
-                .padding(.horizontal)
-                LocalSongsSectionView()
-                    .environmentObject(localViewModel)
-                Divider()
-                    .padding(.bottom)
-                
-                
+//                HStack {
+//                    Text("Songs")
+//                        .font(.title2)
+//                    Spacer()
+//                    NavigationLink {
+//                        LocalSongsListView()
+//                            .environmentObject(localViewModel)
+//                    } label: {
+//                        HStack {
+//                            Text("See all")
+//                                .font(.caption2)
+//                            Image(systemName: "arrowshape.turn.up.right.fill")
+//                                .font(.caption)
+//                          .frame(width: 18, height: 32)
+//                          .clipShape(RoundedRectangle(cornerRadius: 6))
+//                        }
+//                        .foregroundColor(Color("buttonNavColor"))
+//
+//                    }
+//                }
+//                .padding(.horizontal)
+//                LocalSongsSectionView()
+//                    .environmentObject(localViewModel)
+//                Divider()
+//                    .padding(.bottom)
+//
+                SwiftUIBannerAd(adPosition: .bottom,
+                                adUnitId: SwiftUIMobileAds.bannerIdProd)
+                            .padding(.bottom, 49)
             }
             .onAppear {
                 localViewModel.loadMore()
@@ -106,7 +108,7 @@ struct LocalSearchAllListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
             LocalSearchAllListView()
-                .environmentObject(LocalViewModelView.viewModel)
+                .environmentObject(LocalListViewModel().loadMock())
         }
     }
 }

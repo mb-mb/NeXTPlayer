@@ -48,3 +48,8 @@ struct LocalAlbumSectionView: View {
 //        }
 //    }
 //}
+
+#Preview {
+    LocalAlbumSectionView()
+        .environmentObject(LocalListViewModel().loadMock())
+}

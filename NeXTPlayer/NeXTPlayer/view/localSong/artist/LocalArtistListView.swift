@@ -18,7 +18,7 @@ struct LocalArtistListView: View {
             }
             switch viewModel.state {
             case .good:
-                Color.clear
+                EmptyView()
             case .isLoading:
                 ProgressView()
                     .progressViewStyle(.circular)
@@ -38,7 +38,8 @@ struct LocalArtistListView: View {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-                Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
+                Image(systemName: "arrowshape.turn.up.backward.fill")              
+                    .font(.caption)
                     .frame(width: 28, height: 32)
 //                    .background(Color.black.opacity(0.7))
                     .clipShape(RoundedRectangle(cornerRadius: 6))

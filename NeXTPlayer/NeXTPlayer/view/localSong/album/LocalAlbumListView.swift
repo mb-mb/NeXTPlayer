@@ -20,9 +20,6 @@ struct LocalAlbumListView: View {
             switch viewModel.state {
             case .good:
                 Color.clear
-                    .onAppear {
-                        viewModel.loadMore()
-                    }
             case .isLoading:
                 ProgressView()
                     .progressViewStyle(.circular)
