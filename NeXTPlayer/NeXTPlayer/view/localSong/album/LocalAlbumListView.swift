@@ -19,7 +19,7 @@ struct LocalAlbumListView: View {
             }
             switch viewModel.state {
             case .good:
-                Color.clear
+                EmptyView()
             case .isLoading:
                 ProgressView()
                     .progressViewStyle(.circular)
@@ -47,7 +47,23 @@ struct LocalAlbumListView: View {
             }
             .foregroundColor(Color("buttonNavColor"))
         })
+        HStack(alignment: .bottom) {
+            Spacer()
+            SwiftUIBannerAd(adPosition: .bottom,
+                            adUnitId: SwiftUIMobileAds.testBannerId)
+            .padding(.bottom, 15)
+        }
+//        .background(.green)
+        .frame(height: 50)
     }
 }
 
 
+struct LocalAlbumListView_Preview:  PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            LocalAlbumListView()
+                .environmentObject(LocalViewModelView.viewModel)
+        }
+    }
+}

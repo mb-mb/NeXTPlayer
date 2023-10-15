@@ -4816,8 +4816,8 @@
             filePath = "NeXTPlayer/view/localSong/artist/LocalArtistRowView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -7027,8 +7027,8 @@
             filePath = "NeXTPlayer/model/LocalAlbum.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "mockData()"
             landmarkType = "7">
             <Locations>

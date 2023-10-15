@@ -12,11 +12,21 @@ struct AlbumSearchView: View {
     var body: some View {
         NavigationView {
             Group {
+                Spacer()
                 if viewModel.searchTerm.isEmpty {
                     SearchPlaceholderView(searchTerm: $viewModel.searchTerm)
                 } else {
                     AlbumsListView(viewModel: viewModel)
                 }
+                Spacer()
+                HStack(alignment: .bottom) {
+                    Spacer()
+                    SwiftUIBannerAd(adPosition: .bottom,
+                                    adUnitId: SwiftUIMobileAds.testBannerId)
+                    .padding(.bottom, 15)
+                }
+                //        .background(.green)
+                .frame(height: 50)
             }
             .searchable(text: $viewModel.searchTerm)
             .navigationTitle("Search Albums")

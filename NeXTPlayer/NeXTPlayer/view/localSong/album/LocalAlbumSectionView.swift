@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocalAlbumSectionView: View {
     @EnvironmentObject var viewModel: LocalListViewModel
-    let rows = Array(repeating: GridItem(.fixed(110), spacing:0, alignment: .leading), count: 2)
+    let rows = Array(repeating: GridItem(.fixed(110), spacing:0, alignment: .leading), count: 4)
 
     var body: some View {
         ScrollView(.horizontal) {
@@ -23,7 +23,7 @@ struct LocalAlbumSectionView: View {
                 
                 switch viewModel.state {
                 case .good:
-                    Color.clear
+                    EmptyView()
                 case .isLoading:
                     ProgressView()
                         .progressViewStyle(.circular)

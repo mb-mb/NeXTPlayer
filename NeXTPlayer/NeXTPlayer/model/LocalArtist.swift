@@ -72,7 +72,6 @@ struct LocalArtist: Identifiable, Codable {
 extension LocalArtist {
     static func mockData() -> [LocalArtist] {
 
-        let mockData = Data(count: 100) // Mock artwork data
         let mockMPMediaItem = MockMediaItem()
         mockMPMediaItem.mockArtist = "Artist 1"
         mockMPMediaItem.mockGenre = "Pop"        

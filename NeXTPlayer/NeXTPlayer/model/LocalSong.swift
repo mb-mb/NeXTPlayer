@@ -78,7 +78,6 @@ struct LocalSong: Identifiable, Codable {
 extension LocalSong {
     
     static func mock() -> [LocalSong] {
-        let mockData = UIImage(systemName: "music.note.tv.fill")?.pngData()! // Mock artwork data
         let mockMPMediaItem = MockMediaItem()        
         mockMPMediaItem.mockArtist = "Artist 1"
         mockMPMediaItem.mockGenre = "Pop"

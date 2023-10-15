@@ -41,6 +41,11 @@
 		CE9B8D612ADA20F7009E47B8 /* SwiftUIBannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B8D5F2ADA20F7009E47B8 /* SwiftUIBannerAd.swift */; };
 		CE9B8D622ADA20F7009E47B8 /* SwiftUIMobileAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B8D602ADA20F7009E47B8 /* SwiftUIMobileAds.swift */; };
 		CE9B8D652ADA2182009E47B8 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B8D642ADA2182009E47B8 /* GoogleMobileAds */; };
+		CE9B8D672ADA2433009E47B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9B8D662ADA2433009E47B8 /* GoogleService-Info.plist */; };
+		CE9B8D6B2ADA283D009E47B8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B8D6A2ADA283D009E47B8 /* FirebaseAnalytics */; };
+		CE9B8D6D2ADA283D009E47B8 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B8D6C2ADA283D009E47B8 /* FirebaseAnalyticsOnDeviceConversion */; };
+		CE9B8D6F2ADA283D009E47B8 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B8D6E2ADA283D009E47B8 /* FirebaseAnalyticsSwift */; };
+		CE9B8D712ADA283D009E47B8 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B8D702ADA283D009E47B8 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		CED7DF892ACF919700997766 /* LocalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7DF882ACF919700997766 /* LocalListViewModel.swift */; };
 		CEDA94062ACC75E200FE5091 /* NeXTPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */; };
 		CEDA94082ACC75E200FE5091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94072ACC75E200FE5091 /* ContentView.swift */; };
@@ -100,6 +105,7 @@
 		CE617FE02AD23E1F00E09001 /* LocalArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArtistDetailView.swift; sourceTree = "<group>"; };
 		CE617FE22AD2419A00E09001 /* LocalArtistRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArtistRowView.swift; sourceTree = "<group>"; };
 		CE617FE42AD245D600E09001 /* LocalSongsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongsDetailView.swift; sourceTree = "<group>"; };
+		CE7152072ADB040F0095249B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		CE77A4A12AD2BD2F003DA194 /* LocalSongsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongsRowView.swift; sourceTree = "<group>"; };
 		CE77A4A32AD345A7003DA194 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		CE77A4A52AD34E4A003DA194 /* LocalArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArtist.swift; sourceTree = "<group>"; };
@@ -127,6 +133,7 @@
 		CE802A532AD4DC1200FCB7F8 /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
 		CE9B8D5F2ADA20F7009E47B8 /* SwiftUIBannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIBannerAd.swift; sourceTree = "<group>"; };
 		CE9B8D602ADA20F7009E47B8 /* SwiftUIMobileAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIMobileAds.swift; sourceTree = "<group>"; };
+		CE9B8D662ADA2433009E47B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CED7DF882ACF919700997766 /* LocalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListViewModel.swift; sourceTree = "<group>"; };
 		CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerApp.swift; sourceTree = "<group>"; };
@@ -171,7 +178,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9B8D652ADA2182009E47B8 /* GoogleMobileAds in Frameworks */,
+				CE9B8D712ADA283D009E47B8 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				CEEBB0712ACD73D500272269 /* MediaPlayer.framework in Frameworks */,
+				CE9B8D6B2ADA283D009E47B8 /* FirebaseAnalytics in Frameworks */,
+				CE9B8D6D2ADA283D009E47B8 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				CE9B8D6F2ADA283D009E47B8 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +288,8 @@
 		CEDA94042ACC75E200FE5091 /* NeXTPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				CE7152072ADB040F0095249B /* Info.plist */,
+				CE9B8D662ADA2433009E47B8 /* GoogleService-Info.plist */,
 				CE7F5D8E2AD013C200A02A52 /* extension */,
 				CE5E45A52ACE48C5001E80B2 /* helper */,
 				CEEBB0822ACDF0CC00272269 /* style */,
@@ -386,11 +399,11 @@
 		CEDA94482ACCEF2600FE5091 /* album */ = {
 			isa = PBXGroup;
 			children = (
+				CE7CD6272ACED3E3000DB8AF /* AlbumSectionView.swift */,
 				CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */,
 				CEEBB07E2ACDC8D200272269 /* SearchPlaceholderView.swift */,
 				CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */,
 				CE5E45A32ACE331E001E80B2 /* AlbumRowView.swift */,
-				CE7CD6272ACED3E3000DB8AF /* AlbumSectionView.swift */,
 				CE7CD62B2ACEEED7000DB8AF /* AlbumDetailView.swift */,
 				CE7CD62F2ACEFEA5000DB8AF /* SongsForAlbumListView.swift */,
 			);
@@ -400,10 +413,10 @@
 		CEDA944A2ACCF26800FE5091 /* movie */ = {
 			isa = PBXGroup;
 			children = (
+				CE7CD6292ACED3F0000DB8AF /* MovieSectionView.swift */,
 				CEDA94502ACCF45200FE5091 /* MovieListView.swift */,
 				CEDA94522ACCF4B400FE5091 /* MovieSearchView.swift */,
 				CE5E45A82ACE4BA5001E80B2 /* MoviewRowView.swift */,
-				CE7CD6292ACED3F0000DB8AF /* MovieSectionView.swift */,
 			);
 			path = movie;
 			sourceTree = "<group>";
@@ -428,9 +441,9 @@
 		CEEBB07B2ACDA5A100272269 /* song */ = {
 			isa = PBXGroup;
 			children = (
+				CE7CD6252ACED3CB000DB8AF /* SongSectionView.swift */,
 				CEEBB07C2ACDA5BE00272269 /* SongListView.swift */,
 				CEEBB0802ACDEFDB00272269 /* SongRowView.swift */,
-				CE7CD6252ACED3CB000DB8AF /* SongSectionView.swift */,
 			);
 			path = song;
 			sourceTree = "<group>";
@@ -461,6 +474,10 @@
 			name = NeXTPlayer;
 			packageProductDependencies = (
 				CE9B8D642ADA2182009E47B8 /* GoogleMobileAds */,
+				CE9B8D6A2ADA283D009E47B8 /* FirebaseAnalytics */,
+				CE9B8D6C2ADA283D009E47B8 /* FirebaseAnalyticsOnDeviceConversion */,
+				CE9B8D6E2ADA283D009E47B8 /* FirebaseAnalyticsSwift */,
+				CE9B8D702ADA283D009E47B8 /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = NeXTPlayer;
 			productReference = CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */;
@@ -510,7 +527,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					CEDA94012ACC75E200FE5091 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -536,6 +553,7 @@
 			mainGroup = CEDA93F92ACC75E200FE5091;
 			packageReferences = (
 				CE9B8D632ADA2182009E47B8 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				CE9B8D692ADA283D009E47B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CEDA94032ACC75E200FE5091 /* Products */;
 			projectDirPath = "";
@@ -554,6 +572,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDA940D2ACC75E400FE5091 /* Preview Assets.xcassets in Resources */,
+				CE9B8D672ADA2433009E47B8 /* GoogleService-Info.plist in Resources */,
 				CEDA940A2ACC75E300FE5091 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -711,6 +730,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -771,6 +791,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -800,6 +821,7 @@
 				DEVELOPMENT_TEAM = PM5H66UXFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NeXTPlayer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your music library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -812,6 +834,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -834,6 +857,7 @@
 				DEVELOPMENT_TEAM = PM5H66UXFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NeXTPlayer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your music library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -846,6 +870,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 2.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -983,6 +1008,14 @@
 				minimumVersion = 10.12.0;
 			};
 		};
+		CE9B8D692ADA283D009E47B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -990,6 +1023,26 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CE9B8D632ADA2182009E47B8 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
+		};
+		CE9B8D6A2ADA283D009E47B8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B8D692ADA283D009E47B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CE9B8D6C2ADA283D009E47B8 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B8D692ADA283D009E47B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		CE9B8D6E2ADA283D009E47B8 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B8D692ADA283D009E47B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		CE9B8D702ADA283D009E47B8 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B8D692ADA283D009E47B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

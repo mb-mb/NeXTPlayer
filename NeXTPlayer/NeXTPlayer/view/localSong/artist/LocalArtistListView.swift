@@ -49,6 +49,15 @@ struct LocalArtistListView: View {
             .foregroundColor(Color("buttonNavColor"))
 
         })
+        HStack(alignment: .bottom) {
+            Spacer()
+            SwiftUIBannerAd(adPosition: .bottom,
+                            adUnitId: SwiftUIMobileAds.testBannerId)
+            .padding(.bottom, 15)
+        }
+//        .background(.green)
+        .frame(height: 50)
+
     }
     
 }
