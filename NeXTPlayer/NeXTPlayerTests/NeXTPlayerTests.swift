@@ -134,10 +134,10 @@ final class NeXTPlayerTests: XCTestCase {
         
         let macTrack = URL(string: "file:///Users/marcelo.bianchi/Music/Music/Media.localized/Music/Unknown%20Artist/Unknown%20Album/stranger-things-124008.mp3")
         
-        let vm = LocalSongsForAlbumListViewModel(albumID: UInt64(0))
+        let vm = LocalSongsForAlbumListViewModel(albumID: 0).example()
         let expectation = XCTestExpectation(description: "Fetch local artists")
         // Perform the publisher operation
-        let song = LocalSong.mock().first!
+        let song = vm.songs.first!
         
         vm.play(song: song)
         switch vm.playerState {

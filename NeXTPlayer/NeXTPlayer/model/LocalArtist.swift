@@ -142,6 +142,10 @@ class MockMediaItem: MPMediaItem {
         return URL(string: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4")!
     }
     
+    override var assetURL: URL? {
+        return URL(string: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4")!
+    }
+    
     var trackDuration: String {
         return "03:54"
     }
@@ -156,5 +160,13 @@ class MockMediaItem: MPMediaItem {
 
     override var artwork: MPMediaItemArtwork? {
         return mockArtwork
+    }
+    
+    override var playbackDuration: Double {
+        return Double.random(in: 0 ... 60.0)
+    }
+    
+    override var albumTrackNumber: Int {
+        return Int.random(in: 1...16)
     }
 }

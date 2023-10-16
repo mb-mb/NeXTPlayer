@@ -48,7 +48,9 @@ struct Album: Codable, Identifiable {
     
     static func example() -> Album {
         
-        Album(wrapperType: "collection", collectionType: "Album", id: 2, artistID: 2, amgArtistID: 3,
+        Album(wrapperType: "collection", collectionType: "Album", 
+              id: Int.random(in: 1...9999),
+              artistID: 2, amgArtistID: 3,
               artistName: "Jack Johnson & Friends",
               collectionName: "Best of Kokua Festival (A Benefit for the Kokua Hawaii Foundation)", collectionCensoredName: "",
               artistViewURL: nil, collectionViewURL: "https://music.apple.com/us/album/jack-johnson-friends-best-of-kokua-festival-a/1440752312?uo=4",

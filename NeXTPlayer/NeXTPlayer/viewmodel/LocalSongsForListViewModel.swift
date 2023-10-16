@@ -12,7 +12,6 @@ import MusicKit
 
 
 class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
-    
     @Published var songs = [LocalSong]()
     @Published var artists: [LocalArtist] = []
     @Published var state: FetchState = .good {
@@ -29,9 +28,6 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
     @Published var timeLabel: String = "00:00"
     var cancellables = Set<AnyCancellable>()
     let service = APIService()
-    var audioPlayer: AVAudioPlayer?
-    var timer: Timer?
-    var startTime: Date?
     var albumID: UInt64
     
     
@@ -39,6 +35,16 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
         self.albumID = 0
         super.init()
         self.fetchSongs(albumID: albumID)
+        
+        AudioPlayerManager.shared.playbackFinishedPublisher
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] in
+                // Handle the audio playback completion event here
+                print("Audio playback finished")
+                self?.playNextSong()
+            }
+            .store(in: &cancellables)
+        
         print("LocalSongsForAlbumListViewModel - init songs for albumID \(albumID)")
     }
     
@@ -57,7 +63,7 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
         }
     }()
     
-    func example() -> LocalSongsForAlbumListViewModel {
+    static func example() -> LocalSongsForAlbumListViewModel {
         let vm = LocalSongsForAlbumListViewModel(albumID: UInt64(0))
         vm.songs = LocalSong.mock()
         print("mock songs for album \(1) has \(vm.songs.count) item")
@@ -138,67 +144,12 @@ extension LocalSongsForAlbumListViewModel {
             startPlayback()
             songs.append(localSong)
         }
-                
-                
-//        switch song.songState {
-//        case .stop:
-//            do {
-////                try playMedia(for: song)
-//                playerState = PlayerState.play
-//                songState = PlayerState.play.rawValue
-//                if var localSong = songs.first( where: { $0.id == song.id }) {
-//                    localSong.songState = .play
-//                } else {
-//                    var localSong = song
-//                    localSong.songState = .play
-//                    localSongs.append(localSong)
-//                }
-//            } catch {
-//                print(error)
-//                playerState = .error
-//            }
-//        case .play:
-//            playerState = PlayerState.stop
-//            songState = PlayerState.stop.rawValue
-//            audioPlayer?.stop()
-//            stopPlayback()
-//            if var localSong = songs.first( where: { $0.id == song.id }) {
-//                localSong.songState = .stop
-//            } else {
-//                var localSong = song
-//                localSong.songState = .stop
-//                localSongs.append(localSong)
-//            }
-//        case .pause:
-//            playerState = PlayerState.stop
-//            songState = PlayerState.stop.rawValue
-//            for var item in songs {
-//                if item.id == song.id {
-//                    item.songState = .stop
-//                }
-//                localSongs.append(item)
-//            }
-//        case .error:
-//            print("not playing at all")
-//        }
-    
-//        songs = localSongs
     }
     
     func playMedia(for song: LocalSong) throws {
-        //        if let mp3FilePath = Bundle.main.path(forResource: song.song.trackName, ofType: "mp3") {
-        //        let mp3FileURL = URL(fileURLWithPath: song.song.trackViewURL)
-        //            let mp3FileURL = URL(fileURLWithPath: song.song.trackViewURL)
-        //        if let url = URL(string:  song.song.trackViewURL),
-        //           let mp3FileURL = URL(string: url.absoluteString.replacing("Unknown%20", with: "") ?? "") {
-//        if let mp3FileURL = Bundle.main.path(forResource: song.song.trackName, ofType: "mp3") {
         if let assetURL = song.trackURL {
             do {
-                try AVAudioSession.sharedInstance().setMode(.default)
-                try AVAudioSession.sharedInstance().setActive(true, options: .notifyOthersOnDeactivation)
-                audioPlayer = try AVAudioPlayer(contentsOf: assetURL)
-                audioPlayer?.delegate = self
-                audioPlayer?.play()
+                try AudioPlayerManager.shared.playAudio(from: assetURL)
                 playerState = PlayerState.play
                 songState = PlayerState.play.rawValue
                 startPlayback()
@@ -206,51 +157,41 @@ extension LocalSongsForAlbumListViewModel {
                 print(error)
                 print("Error playing the MP3 file: \(error.localizedDescription)")
             }
-            
         }
     }
 }
 
-extension LocalSongsForAlbumListViewModel: AVAudioPlayerDelegate {
-    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        if flag {
-            timer?.invalidate()
+extension LocalSongsForAlbumListViewModel {
+    
+    func playNextSong() {
+        if let currentlyPlayingIndex = songs.firstIndex(where: { $0.songState == .play }) {
+            songs[currentlyPlayingIndex].songState = .stop
+            stopPlayback()
+            let nextIndex = currentlyPlayingIndex + 1
+
+            if nextIndex < songs.count {
+                play(song: songs[nextIndex])
+            }
         }
     }
     
+    
+    func stopPlayback() {
+        AudioPlayerManager.shared.stopAudio()
+        timeLabel = "00:00"
+        AudioPlayerManager.shared.timer?.invalidate()
+    }
+    
     @objc func updatePlaybackTime() {
-        if let currentTime = audioPlayer?.currentTime {
+        if let currentTime = AudioPlayerManager.shared.audioPlayer?.currentTime {
             // Handle the current playback time, e.g., update a label
             timeLabel = currentTime.formatTime()
         }
     }
-
-    @objc func updatePlaybackTimeMock() {
-        guard let _startTime = startTime else { return }
-
-         let currentTime = Date().timeIntervalSince(_startTime)
-         timeLabel = currentTime.formatTime()
-    }
-
     
     func startPlayback() {
-        audioPlayer?.play()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlaybackTime), userInfo: nil, repeats: true)
+        AudioPlayerManager.shared.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlaybackTime), userInfo: nil, repeats: true)
     }
-
-    func startPlaybackMock() {
-        audioPlayer?.play()
-        startTime = Date()
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updatePlaybackTimeMock), userInfo: nil, repeats: true)
-    }
-
-    
-    func stopPlayback() {
-        audioPlayer?.stop()
-        timeLabel = "00:00"
-        timer?.invalidate()
-    }
-    
 }
 
 class MPMediaItemToArtistMapper {

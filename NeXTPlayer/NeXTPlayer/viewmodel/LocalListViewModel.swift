@@ -68,7 +68,7 @@ class LocalListViewModel: ObservableObject {
         let vm = LocalListViewModel()
         vm.artists = LocalArtist.mockData()
         vm.albums = LocalAlbum.mockData()
-//        vm.songs = LocalSong.mock()
+        vm.songs = LocalSong.mock()
         vm.songs = []
         return vm
     }

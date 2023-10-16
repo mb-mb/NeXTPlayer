@@ -28,7 +28,9 @@ struct SearchView: View {
                 Divider()
                 
                 if searchTerm.count == 0 {
-                    SearchPlaceholderView(searchTerm: $searchTerm)
+//                    SearchPlaceholderView(searchTerm: $searchTerm)
+//                        .frame(maxHeight: .infinity)
+                    Spacer()
                         .frame(maxHeight: .infinity)
                 } else {
                     switch selectEntityType {
@@ -59,14 +61,14 @@ struct SearchView: View {
                             }
                     }
                 }
-                HStack(alignment: .bottom) {
-                    Spacer()
-                    SwiftUIBannerAd(adPosition: .bottom,
-                                    adUnitId: SwiftUIMobileAds.testBannerId)
-                    .padding(.bottom, 15)
-                }
-                //        .background(.green)
-                .frame(height: 50)
+//                HStack(alignment: .bottom) {
+//                    Spacer()
+//                    SwiftUIBannerAd(adPosition: .bottom,
+//                                    adUnitId: SwiftUIMobileAds.testBannerId)
+//                    .padding(.bottom, 15)
+//                }
+//                //        .background(.green)
+//                .frame(height: 50)
             }
             .searchable(text: $searchTerm)
             .navigationTitle("Search")

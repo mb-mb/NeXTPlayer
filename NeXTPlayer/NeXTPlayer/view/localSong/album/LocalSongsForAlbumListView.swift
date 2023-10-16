@@ -32,8 +32,7 @@ struct LocalSongsForAlbumListView: View {
                                         .foregroundColor(.orange)
 
                                 }
-                                .padding([.bottom, .top
-                                         ])
+                                .padding([.bottom, .top])
                                 .foregroundColor(Color("buttonNavColor"))
                                 .frame(width: 35, height: 19, alignment: .leading)
                                 //                            .background(Color.gray)
@@ -50,14 +49,26 @@ struct LocalSongsForAlbumListView: View {
                             }
                             .frame(width: 215, alignment: .leading)
 //                            .background(Color.gray)
-                            Text(song.trackDuration)
-                                .font(.caption)
-                                .frame(width: 45, alignment: .leading)
-                            .padding(.trailing)
+                            
+                            if let timeLabel = songsViewModel.songTimeLabel(for: song) {
+                                Text(timeLabel)
+                                    .font(.caption)
+                                    .frame(width: 45, alignment: .leading)
+                                    .foregroundColor(.blue)
+                                    .padding(.trailing)
+                            } else {
+                                Text(song.trackDuration)
+                                    .font(.caption)
+                                    .frame(width: 45, alignment: .leading)
+                                    .padding(.trailing)
+                            }
                             
                         }
                         Divider()
                     }
+                }
+                .onAppear {
+                    AudioPlayerManager.shared.audioPlayer?.stop()
                 }
                 .padding([.vertical, .leading])
             }
@@ -66,10 +77,9 @@ struct LocalSongsForAlbumListView: View {
 }
 
 struct LocalSongsForAlbumListView_Previews: PreviewProvider {
-    static var album = LocalAlbum.mockData().first!
     static var previews: some View {
         LocalSongsForAlbumListView(
-            songsViewModel: LocalSongsForAlbumListViewModel(albumID: 0).example())
+            songsViewModel: LocalSongsForAlbumListViewModel.example())
     }
 }
 

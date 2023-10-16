@@ -12,8 +12,15 @@ struct MovieListView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         List {
-            ForEach(viewModel.movies) { movie in
-               MoviewRowView(moview: movie)
+            if !(viewModel.movies.isEmpty) {
+                ForEach(viewModel.movies) { movie in
+                    MoviewRowView(moview: movie)
+                }
+            } else {
+                HStack{
+                    Text("No data available")
+                        .font(.title2)
+                }
             }
             switch viewModel.state {
             case .good:

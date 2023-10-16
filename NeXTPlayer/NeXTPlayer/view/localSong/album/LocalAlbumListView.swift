@@ -47,14 +47,16 @@ struct LocalAlbumListView: View {
             }
             .foregroundColor(Color("buttonNavColor"))
         })
-        HStack(alignment: .bottom) {
-            Spacer()
-            SwiftUIBannerAd(adPosition: .bottom,
-                            adUnitId: SwiftUIMobileAds.testBannerId)
-            .padding(.bottom, 15)
-        }
-//        .background(.green)
-        .frame(height: 50)
+        // #1
+
+//        HStack(alignment: .bottom) {
+//            Spacer()
+//            SwiftUIBannerAd(adPosition: .bottom,
+//                            adUnitId: SwiftUIMobileAds.testBannerId)
+//            .padding(.bottom, 15)
+//        }
+////        .background(.green)
+//        .frame(height: 50)
     }
 }
 

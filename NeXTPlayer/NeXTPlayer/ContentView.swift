@@ -9,27 +9,42 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TabView {
+        Group {
+            VStack{
+                
+                TabView {
+                    SearchView()
+                        .tabItem {
+                            Label("Search", systemImage: "magnifyingglass")
+                        }
+                    
+                    AlbumSearchView()
+                        .tabItem {
+                            Label("Albums", systemImage: "music.note")
+                        }
+                    
+                    MovieSearchView()
+                        .tabItem {
+                            Label("Movies", systemImage: "tv")
+                        }
+                    
+                    LocalMusicSearchView()
+                        .tabItem {
+                            Label("Local media", systemImage: "tv")
+                        }
+                }
+                // #1
 
-            SearchView()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
+                HStack(alignment: .bottom) {
+                    Spacer()
+                    SwiftUIBannerAd(adPosition: .bottom,
+                                    adUnitId: SwiftUIMobileAds.testBannerId)
+//                    .padding(.bottom, 0)
                 }
+                //        .background(.green)
+                .frame(height: 50)
 
-            AlbumSearchView()
-                .tabItem {
-                    Label("Albums", systemImage: "music.note")
-                }
-            
-            MovieSearchView()
-                .tabItem {
-                    Label("Movies", systemImage: "tv")
-                }
-
-            LocalMusicSearchView()
-                .tabItem {
-                    Label("Local media", systemImage: "tv")
-                }
+            }
         }
     }
 }

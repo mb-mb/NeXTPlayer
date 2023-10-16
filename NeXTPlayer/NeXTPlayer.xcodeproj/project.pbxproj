@@ -13,6 +13,7 @@
 		CE617FE12AD23E1F00E09001 /* LocalArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE617FE02AD23E1F00E09001 /* LocalArtistDetailView.swift */; };
 		CE617FE32AD2419A00E09001 /* LocalArtistRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE617FE22AD2419A00E09001 /* LocalArtistRowView.swift */; };
 		CE617FE52AD245D600E09001 /* LocalSongsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE617FE42AD245D600E09001 /* LocalSongsDetailView.swift */; };
+		CE72D8602ADC6F9300A32B23 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72D85F2ADC6F9300A32B23 /* AudioPlayerManager.swift */; };
 		CE77A4A22AD2BD2F003DA194 /* LocalSongsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77A4A12AD2BD2F003DA194 /* LocalSongsRowView.swift */; };
 		CE77A4A42AD345A7003DA194 /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77A4A32AD345A7003DA194 /* TimeInterval+Extension.swift */; };
 		CE77A4A62AD34E4A003DA194 /* LocalArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77A4A52AD34E4A003DA194 /* LocalArtist.swift */; };
@@ -106,6 +107,7 @@
 		CE617FE22AD2419A00E09001 /* LocalArtistRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArtistRowView.swift; sourceTree = "<group>"; };
 		CE617FE42AD245D600E09001 /* LocalSongsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongsDetailView.swift; sourceTree = "<group>"; };
 		CE7152072ADB040F0095249B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE72D85F2ADC6F9300A32B23 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		CE77A4A12AD2BD2F003DA194 /* LocalSongsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongsRowView.swift; sourceTree = "<group>"; };
 		CE77A4A32AD345A7003DA194 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		CE77A4A52AD34E4A003DA194 /* LocalArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArtist.swift; sourceTree = "<group>"; };
@@ -335,6 +337,7 @@
 			children = (
 				CE802A532AD4DC1200FCB7F8 /* ServiceAPI.swift */,
 				CEDA94302ACC78C700FE5091 /* Constants.swift */,
+				CE72D85F2ADC6F9300A32B23 /* AudioPlayerManager.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				CE802A482AD4832F00FCB7F8 /* LocalAlbumSectionView.swift in Sources */,
 				CEDA94532ACCF4B400FE5091 /* MovieSearchView.swift in Sources */,
 				CE9B8D622ADA20F7009E47B8 /* SwiftUIMobileAds.swift in Sources */,
+				CE72D8602ADC6F9300A32B23 /* AudioPlayerManager.swift in Sources */,
 				CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */,
 				CE7F5D922AD0144A00A02A52 /* LocalSongsForAlbumListView.swift in Sources */,
 				CEDA94512ACCF45200FE5091 /* MovieListView.swift in Sources */,
@@ -816,14 +820,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NeXTPlayer/Preview Content\"";
 				DEVELOPMENT_TEAM = PM5H66UXFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NeXTPlayer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your music library";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your iTunes library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -833,9 +837,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -852,14 +856,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NeXTPlayer/Preview Content\"";
 				DEVELOPMENT_TEAM = PM5H66UXFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NeXTPlayer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your music library";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your iTunes library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -869,9 +873,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 1.0;
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

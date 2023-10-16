@@ -32,7 +32,7 @@ struct LocalSong: Identifiable, Codable {
         self.id = UUID()
         self.trackName = song.title ?? "-.-"
         self.trackURL = song.assetURL
-        self.songState = songState
+        self.songState = .stop
         self.trackDuration = song.playbackDuration.formatTime()
         self.trackNumber = song.albumTrackNumber
     }
@@ -82,6 +82,7 @@ extension LocalSong {
         mockMPMediaItem.mockArtist = "Artist 1"
         mockMPMediaItem.mockGenre = "Pop"
         mockMPMediaItem.mockCollectionName = "album 1"
+        
         mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
             return UIImage(systemName: "music.mic.circle")!
         })
