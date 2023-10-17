@@ -24,7 +24,9 @@ struct AlbumRowView: View {
             BuyButton(urlString: album.collectionViewURL,
                       price: album.collectionPrice,
                       currency: album.currency)
+            .padding(.trailing, 5)
         }
+        .frame(height: 65)
     }
 }
 

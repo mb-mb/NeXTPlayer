@@ -13,7 +13,7 @@ struct LocalSongsDetailView: View {
     
     init(song: LocalSong) {
         self.song = song
-        self._localViewModel = StateObject(wrappedValue: LocalSongsForAlbumListViewModel(albumID: LocalAlbum.mockData().first?.album.id ?? 0))
+        self._localViewModel = StateObject(wrappedValue: LocalSongsForAlbumListViewModel(albumID: 0))
     }
     var body: some View {
         

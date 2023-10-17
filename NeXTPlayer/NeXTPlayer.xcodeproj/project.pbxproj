@@ -7,12 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0663142ADD566400CFC2A9 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE0663132ADD566400CFC2A9 /* FirebaseAnalytics */; };
+		CE0663162ADD566400CFC2A9 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE0663152ADD566400CFC2A9 /* FirebaseAnalyticsSwift */; };
+		CE0663182ADD566400CFC2A9 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = CE0663172ADD566400CFC2A9 /* FirebaseAppCheck */; };
+		CE06631A2ADD566400CFC2A9 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = CE0663192ADD566400CFC2A9 /* FirebaseCrashlytics */; };
+		CE06631C2ADD566400CFC2A9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CE06631B2ADD566400CFC2A9 /* FirebaseFirestore */; };
+		CE06631E2ADD566400CFC2A9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE06631D2ADD566400CFC2A9 /* FirebaseFirestoreSwift */; };
+		CE0663202ADD566400CFC2A9 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = CE06631F2ADD566400CFC2A9 /* FirebasePerformance */; };
+		CE0663222ADD566400CFC2A9 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = CE0663212ADD566400CFC2A9 /* FirebaseRemoteConfig */; };
+		CE0663242ADD566400CFC2A9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CE0663232ADD566400CFC2A9 /* FirebaseStorage */; };
+		CE0663262ADD56B800CFC2A9 /* FeatureGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0663252ADD56B800CFC2A9 /* FeatureGate.swift */; };
+		CE06632A2ADD630400CFC2A9 /* RemoteConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0663292ADD630400CFC2A9 /* RemoteConfigManager.swift */; };
+		CE06632C2ADD911200CFC2A9 /* LaunchScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06632B2ADD911200CFC2A9 /* LaunchScreenView.swift */; };
+		CE06632E2ADD916900CFC2A9 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE06632D2ADD916900CFC2A9 /* Fonts.swift */; };
 		CE5E45A42ACE331E001E80B2 /* AlbumRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E45A32ACE331E001E80B2 /* AlbumRowView.swift */; };
 		CE5E45A72ACE48DC001E80B2 /* BuyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E45A62ACE48DC001E80B2 /* BuyButton.swift */; };
 		CE5E45A92ACE4BA5001E80B2 /* MoviewRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5E45A82ACE4BA5001E80B2 /* MoviewRowView.swift */; };
 		CE617FE12AD23E1F00E09001 /* LocalArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE617FE02AD23E1F00E09001 /* LocalArtistDetailView.swift */; };
 		CE617FE32AD2419A00E09001 /* LocalArtistRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE617FE22AD2419A00E09001 /* LocalArtistRowView.swift */; };
 		CE617FE52AD245D600E09001 /* LocalSongsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE617FE42AD245D600E09001 /* LocalSongsDetailView.swift */; };
+		CE72D8602ADC6F9300A32B23 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72D85F2ADC6F9300A32B23 /* AudioPlayerManager.swift */; };
 		CE77A4A22AD2BD2F003DA194 /* LocalSongsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77A4A12AD2BD2F003DA194 /* LocalSongsRowView.swift */; };
 		CE77A4A42AD345A7003DA194 /* TimeInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77A4A32AD345A7003DA194 /* TimeInterval+Extension.swift */; };
 		CE77A4A62AD34E4A003DA194 /* LocalArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE77A4A52AD34E4A003DA194 /* LocalArtist.swift */; };
@@ -38,6 +52,11 @@
 		CE802A502AD4C6A400FCB7F8 /* LocalSongsSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE802A4F2AD4C6A400FCB7F8 /* LocalSongsSectionView.swift */; };
 		CE802A522AD4C71400FCB7F8 /* LocalAlbumListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE802A512AD4C71400FCB7F8 /* LocalAlbumListView.swift */; };
 		CE802A542AD4DC1200FCB7F8 /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE802A532AD4DC1200FCB7F8 /* ServiceAPI.swift */; };
+		CE9B8D612ADA20F7009E47B8 /* SwiftUIBannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B8D5F2ADA20F7009E47B8 /* SwiftUIBannerAd.swift */; };
+		CE9B8D622ADA20F7009E47B8 /* SwiftUIMobileAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9B8D602ADA20F7009E47B8 /* SwiftUIMobileAds.swift */; };
+		CE9B8D652ADA2182009E47B8 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = CE9B8D642ADA2182009E47B8 /* GoogleMobileAds */; };
+		CE9B8D672ADA2433009E47B8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE9B8D662ADA2433009E47B8 /* GoogleService-Info.plist */; };
+		CEB37DAE2ADDD03F003BD91E /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB37DAD2ADDD03F003BD91E /* ContentViewModel.swift */; };
 		CED7DF892ACF919700997766 /* LocalListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED7DF882ACF919700997766 /* LocalListViewModel.swift */; };
 		CEDA94062ACC75E200FE5091 /* NeXTPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */; };
 		CEDA94082ACC75E200FE5091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEDA94072ACC75E200FE5091 /* ContentView.swift */; };
@@ -91,12 +110,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0663252ADD56B800CFC2A9 /* FeatureGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureGate.swift; sourceTree = "<group>"; };
+		CE0663292ADD630400CFC2A9 /* RemoteConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigManager.swift; sourceTree = "<group>"; };
+		CE06632B2ADD911200CFC2A9 /* LaunchScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenView.swift; sourceTree = "<group>"; };
+		CE06632D2ADD916900CFC2A9 /* Fonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		CE5E45A32ACE331E001E80B2 /* AlbumRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumRowView.swift; sourceTree = "<group>"; };
 		CE5E45A62ACE48DC001E80B2 /* BuyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyButton.swift; sourceTree = "<group>"; };
 		CE5E45A82ACE4BA5001E80B2 /* MoviewRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviewRowView.swift; sourceTree = "<group>"; };
 		CE617FE02AD23E1F00E09001 /* LocalArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArtistDetailView.swift; sourceTree = "<group>"; };
 		CE617FE22AD2419A00E09001 /* LocalArtistRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArtistRowView.swift; sourceTree = "<group>"; };
 		CE617FE42AD245D600E09001 /* LocalSongsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongsDetailView.swift; sourceTree = "<group>"; };
+		CE7152072ADB040F0095249B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		CE72D85F2ADC6F9300A32B23 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
 		CE77A4A12AD2BD2F003DA194 /* LocalSongsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongsRowView.swift; sourceTree = "<group>"; };
 		CE77A4A32AD345A7003DA194 /* TimeInterval+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extension.swift"; sourceTree = "<group>"; };
 		CE77A4A52AD34E4A003DA194 /* LocalArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalArtist.swift; sourceTree = "<group>"; };
@@ -122,6 +147,10 @@
 		CE802A4F2AD4C6A400FCB7F8 /* LocalSongsSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSongsSectionView.swift; sourceTree = "<group>"; };
 		CE802A512AD4C71400FCB7F8 /* LocalAlbumListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAlbumListView.swift; sourceTree = "<group>"; };
 		CE802A532AD4DC1200FCB7F8 /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		CE9B8D5F2ADA20F7009E47B8 /* SwiftUIBannerAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIBannerAd.swift; sourceTree = "<group>"; };
+		CE9B8D602ADA20F7009E47B8 /* SwiftUIMobileAds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIMobileAds.swift; sourceTree = "<group>"; };
+		CE9B8D662ADA2433009E47B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CEB37DAD2ADDD03F003BD91E /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 		CED7DF882ACF919700997766 /* LocalListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalListViewModel.swift; sourceTree = "<group>"; };
 		CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeXTPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEDA94052ACC75E200FE5091 /* NeXTPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeXTPlayerApp.swift; sourceTree = "<group>"; };
@@ -165,7 +194,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0663162ADD566400CFC2A9 /* FirebaseAnalyticsSwift in Frameworks */,
+				CE9B8D652ADA2182009E47B8 /* GoogleMobileAds in Frameworks */,
+				CE0663202ADD566400CFC2A9 /* FirebasePerformance in Frameworks */,
 				CEEBB0712ACD73D500272269 /* MediaPlayer.framework in Frameworks */,
+				CE06631A2ADD566400CFC2A9 /* FirebaseCrashlytics in Frameworks */,
+				CE0663182ADD566400CFC2A9 /* FirebaseAppCheck in Frameworks */,
+				CE0663142ADD566400CFC2A9 /* FirebaseAnalytics in Frameworks */,
+				CE06631C2ADD566400CFC2A9 /* FirebaseFirestore in Frameworks */,
+				CE0663242ADD566400CFC2A9 /* FirebaseStorage in Frameworks */,
+				CE06631E2ADD566400CFC2A9 /* FirebaseFirestoreSwift in Frameworks */,
+				CE0663222ADD566400CFC2A9 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,6 +225,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE06630D2ADD54CA00CFC2A9 /* configuration */ = {
+			isa = PBXGroup;
+			children = (
+				CE0663252ADD56B800CFC2A9 /* FeatureGate.swift */,
+				CE0663292ADD630400CFC2A9 /* RemoteConfigManager.swift */,
+			);
+			path = configuration;
+			sourceTree = "<group>";
+		};
 		CE5E45A52ACE48C5001E80B2 /* helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,6 +246,7 @@
 		CE7F5D8E2AD013C200A02A52 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				CE06632D2ADD916900CFC2A9 /* Fonts.swift */,
 				CE7F5D8F2AD013D700A02A52 /* String+Extension.swift */,
 				CE7F5D932AD0151E00A02A52 /* Int+Extension.swift */,
 				CE77A4A32AD345A7003DA194 /* TimeInterval+Extension.swift */,
@@ -209,9 +258,8 @@
 			isa = PBXGroup;
 			children = (
 				CE802A402AD4782F00FCB7F8 /* LocalArtistSectionView.swift */,
-				CE617FE22AD2419A00E09001 /* LocalArtistRowView.swift */,
-				CE617FE02AD23E1F00E09001 /* LocalArtistDetailView.swift */,
 				CE802A4B2AD4959C00FCB7F8 /* LocalArtistListView.swift */,
+				CE617FE22AD2419A00E09001 /* LocalArtistRowView.swift */,
 			);
 			path = artist;
 			sourceTree = "<group>";
@@ -234,8 +282,18 @@
 				CE7F5D8A2AD0121D00A02A52 /* LocalAlbumDetailView.swift */,
 				CE7F5D882AD0062100A02A52 /* LocalAlbumRowView.swift */,
 				CE802A512AD4C71400FCB7F8 /* LocalAlbumListView.swift */,
+				CE7F5D912AD0144A00A02A52 /* LocalSongsForAlbumListView.swift */,
 			);
 			path = album;
+			sourceTree = "<group>";
+		};
+		CE9B8D5E2ADA20F7009E47B8 /* googleads */ = {
+			isa = PBXGroup;
+			children = (
+				CE9B8D5F2ADA20F7009E47B8 /* SwiftUIBannerAd.swift */,
+				CE9B8D602ADA20F7009E47B8 /* SwiftUIMobileAds.swift */,
+			);
+			path = googleads;
 			sourceTree = "<group>";
 		};
 		CEDA93F92ACC75E200FE5091 = {
@@ -262,6 +320,8 @@
 		CEDA94042ACC75E200FE5091 /* NeXTPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				CE7152072ADB040F0095249B /* Info.plist */,
+				CE9B8D662ADA2433009E47B8 /* GoogleService-Info.plist */,
 				CE7F5D8E2AD013C200A02A52 /* extension */,
 				CE5E45A52ACE48C5001E80B2 /* helper */,
 				CEEBB0822ACDF0CC00272269 /* style */,
@@ -305,8 +365,10 @@
 		CEDA942F2ACC78BB00FE5091 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				CE06630D2ADD54CA00CFC2A9 /* configuration */,
 				CE802A532AD4DC1200FCB7F8 /* ServiceAPI.swift */,
 				CEDA94302ACC78C700FE5091 /* Constants.swift */,
+				CE72D85F2ADC6F9300A32B23 /* AudioPlayerManager.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -337,6 +399,7 @@
 				CE7CD62D2ACEFB53000DB8AF /* SongsForAlbumListViewModel.swift */,
 				CED7DF882ACF919700997766 /* LocalListViewModel.swift */,
 				CE7F5D8C2AD012BE00A02A52 /* LocalSongsForListViewModel.swift */,
+				CEB37DAD2ADDD03F003BD91E /* ContentViewModel.swift */,
 			);
 			path = viewmodel;
 			sourceTree = "<group>";
@@ -344,6 +407,8 @@
 		CEDA94382ACC7FC000FE5091 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				CE06632B2ADD911200CFC2A9 /* LaunchScreenView.swift */,
+				CE9B8D5E2ADA20F7009E47B8 /* googleads */,
 				CEEBB07B2ACDA5A100272269 /* song */,
 				CEEBB0742ACDA17F00272269 /* search */,
 				CEDA944A2ACCF26800FE5091 /* movie */,
@@ -356,13 +421,13 @@
 		CEDA94472ACCEF1800FE5091 /* localSong */ = {
 			isa = PBXGroup;
 			children = (
+				CE617FE02AD23E1F00E09001 /* LocalArtistDetailView.swift */,
 				CEEBB0722ACD824200272269 /* LocalMusicSearchView.swift */,
 				CEEBB06D2ACD72F900272269 /* LocalMusicListView.swift */,
 				CE802A422AD47BE600FCB7F8 /* LocalSearchAllListView.swift */,
 				CE802A442AD47C9F00FCB7F8 /* artist */,
 				CE802A462AD47CD300FCB7F8 /* album */,
 				CE802A452AD47CB400FCB7F8 /* song */,
-				CE7F5D912AD0144A00A02A52 /* LocalSongsForAlbumListView.swift */,
 			);
 			path = localSong;
 			sourceTree = "<group>";
@@ -370,11 +435,11 @@
 		CEDA94482ACCEF2600FE5091 /* album */ = {
 			isa = PBXGroup;
 			children = (
+				CE7CD6272ACED3E3000DB8AF /* AlbumSectionView.swift */,
 				CEDA94392ACC7FD300FE5091 /* AlbumsListView.swift */,
 				CEEBB07E2ACDC8D200272269 /* SearchPlaceholderView.swift */,
 				CEDA943B2ACCD36200FE5091 /* AlbumSearchView.swift */,
 				CE5E45A32ACE331E001E80B2 /* AlbumRowView.swift */,
-				CE7CD6272ACED3E3000DB8AF /* AlbumSectionView.swift */,
 				CE7CD62B2ACEEED7000DB8AF /* AlbumDetailView.swift */,
 				CE7CD62F2ACEFEA5000DB8AF /* SongsForAlbumListView.swift */,
 			);
@@ -384,10 +449,10 @@
 		CEDA944A2ACCF26800FE5091 /* movie */ = {
 			isa = PBXGroup;
 			children = (
+				CE7CD6292ACED3F0000DB8AF /* MovieSectionView.swift */,
 				CEDA94502ACCF45200FE5091 /* MovieListView.swift */,
 				CEDA94522ACCF4B400FE5091 /* MovieSearchView.swift */,
 				CE5E45A82ACE4BA5001E80B2 /* MoviewRowView.swift */,
-				CE7CD6292ACED3F0000DB8AF /* MovieSectionView.swift */,
 			);
 			path = movie;
 			sourceTree = "<group>";
@@ -412,9 +477,9 @@
 		CEEBB07B2ACDA5A100272269 /* song */ = {
 			isa = PBXGroup;
 			children = (
+				CE7CD6252ACED3CB000DB8AF /* SongSectionView.swift */,
 				CEEBB07C2ACDA5BE00272269 /* SongListView.swift */,
 				CEEBB0802ACDEFDB00272269 /* SongRowView.swift */,
-				CE7CD6252ACED3CB000DB8AF /* SongSectionView.swift */,
 			);
 			path = song;
 			sourceTree = "<group>";
@@ -443,6 +508,18 @@
 			dependencies = (
 			);
 			name = NeXTPlayer;
+			packageProductDependencies = (
+				CE9B8D642ADA2182009E47B8 /* GoogleMobileAds */,
+				CE0663132ADD566400CFC2A9 /* FirebaseAnalytics */,
+				CE0663152ADD566400CFC2A9 /* FirebaseAnalyticsSwift */,
+				CE0663172ADD566400CFC2A9 /* FirebaseAppCheck */,
+				CE0663192ADD566400CFC2A9 /* FirebaseCrashlytics */,
+				CE06631B2ADD566400CFC2A9 /* FirebaseFirestore */,
+				CE06631D2ADD566400CFC2A9 /* FirebaseFirestoreSwift */,
+				CE06631F2ADD566400CFC2A9 /* FirebasePerformance */,
+				CE0663212ADD566400CFC2A9 /* FirebaseRemoteConfig */,
+				CE0663232ADD566400CFC2A9 /* FirebaseStorage */,
+			);
 			productName = NeXTPlayer;
 			productReference = CEDA94022ACC75E200FE5091 /* NeXTPlayer.app */;
 			productType = "com.apple.product-type.application";
@@ -491,7 +568,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					CEDA94012ACC75E200FE5091 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -515,6 +592,10 @@
 				Base,
 			);
 			mainGroup = CEDA93F92ACC75E200FE5091;
+			packageReferences = (
+				CE9B8D632ADA2182009E47B8 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = CEDA94032ACC75E200FE5091 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -532,6 +613,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEDA940D2ACC75E400FE5091 /* Preview Assets.xcassets in Resources */,
+				CE9B8D672ADA2433009E47B8 /* GoogleService-Info.plist in Resources */,
 				CEDA940A2ACC75E300FE5091 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -564,7 +646,11 @@
 				CE617FE52AD245D600E09001 /* LocalSongsDetailView.swift in Sources */,
 				CE7F5D8B2AD0121D00A02A52 /* LocalAlbumDetailView.swift in Sources */,
 				CE802A482AD4832F00FCB7F8 /* LocalAlbumSectionView.swift in Sources */,
+				CE06632C2ADD911200CFC2A9 /* LaunchScreenView.swift in Sources */,
+				CE06632A2ADD630400CFC2A9 /* RemoteConfigManager.swift in Sources */,
 				CEDA94532ACCF4B400FE5091 /* MovieSearchView.swift in Sources */,
+				CE9B8D622ADA20F7009E47B8 /* SwiftUIMobileAds.swift in Sources */,
+				CE72D8602ADC6F9300A32B23 /* AudioPlayerManager.swift in Sources */,
 				CEDA943C2ACCD36200FE5091 /* AlbumSearchView.swift in Sources */,
 				CE7F5D922AD0144A00A02A52 /* LocalSongsForAlbumListView.swift in Sources */,
 				CEDA94512ACCF45200FE5091 /* MovieListView.swift in Sources */,
@@ -577,6 +663,7 @@
 				CE77A4A62AD34E4A003DA194 /* LocalArtist.swift in Sources */,
 				CEEBB0812ACDEFDB00272269 /* SongRowView.swift in Sources */,
 				CEDA94442ACCED8500FE5091 /* SongsListViewModel.swift in Sources */,
+				CE9B8D612ADA20F7009E47B8 /* SwiftUIBannerAd.swift in Sources */,
 				CE802A502AD4C6A400FCB7F8 /* LocalSongsSectionView.swift in Sources */,
 				CEEBB07F2ACDC8D200272269 /* SearchPlaceholderView.swift in Sources */,
 				CE802A432AD47BE600FCB7F8 /* LocalSearchAllListView.swift in Sources */,
@@ -593,12 +680,14 @@
 				CE7CD6262ACED3CB000DB8AF /* SongSectionView.swift in Sources */,
 				CE7CD62A2ACED3F0000DB8AF /* MovieSectionView.swift in Sources */,
 				CE7CD6302ACEFEA5000DB8AF /* SongsForAlbumListView.swift in Sources */,
+				CE06632E2ADD916900CFC2A9 /* Fonts.swift in Sources */,
 				CE802A522AD4C71400FCB7F8 /* LocalAlbumListView.swift in Sources */,
 				CE7CD62C2ACEEED7000DB8AF /* AlbumDetailView.swift in Sources */,
 				CEEBB06E2ACD72F900272269 /* LocalMusicListView.swift in Sources */,
 				CEDA943E2ACCDCCF00FE5091 /* APIError.swift in Sources */,
 				CEDA94342ACC7BCD00FE5091 /* Album.swift in Sources */,
 				CE7CD6282ACED3E3000DB8AF /* AlbumSectionView.swift in Sources */,
+				CE0663262ADD56B800CFC2A9 /* FeatureGate.swift in Sources */,
 				CEDA94402ACCE4CC00FE5091 /* APIService.swift in Sources */,
 				CE77A4A42AD345A7003DA194 /* TimeInterval+Extension.swift in Sources */,
 				CED7DF892ACF919700997766 /* LocalListViewModel.swift in Sources */,
@@ -612,6 +701,7 @@
 				CE77A4A22AD2BD2F003DA194 /* LocalSongsRowView.swift in Sources */,
 				CE5E45A72ACE48DC001E80B2 /* BuyButton.swift in Sources */,
 				CEEBB07A2ACDA3FB00272269 /* SearchAllListView.swift in Sources */,
+				CEB37DAE2ADDD03F003BD91E /* ContentViewModel.swift in Sources */,
 				CEEBB07D2ACDA5BE00272269 /* SongListView.swift in Sources */,
 				CEDA94372ACC7D3F00FE5091 /* AlbumListViewModel.swift in Sources */,
 				CEDA94462ACCEDB400FE5091 /* FetchState.swift in Sources */,
@@ -687,6 +777,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -701,7 +792,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -747,6 +838,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -755,7 +847,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -776,8 +868,9 @@
 				DEVELOPMENT_TEAM = PM5H66UXFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NeXTPlayer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your music library";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your iTunes library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -787,12 +880,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -810,8 +904,9 @@
 				DEVELOPMENT_TEAM = PM5H66UXFY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NeXTPlayer/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
-				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your music library";
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "This app need to access your iTunes library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -821,12 +916,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayer;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.biscuitmobile.NeXTPlayerPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -949,6 +1045,78 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
+		CE9B8D632ADA2182009E47B8 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE0663132ADD566400CFC2A9 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CE0663152ADD566400CFC2A9 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		CE0663172ADD566400CFC2A9 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		CE0663192ADD566400CFC2A9 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		CE06631B2ADD566400CFC2A9 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CE06631D2ADD566400CFC2A9 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		CE06631F2ADD566400CFC2A9 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		CE0663212ADD566400CFC2A9 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		CE0663232ADD566400CFC2A9 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE0663122ADD566400CFC2A9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		CE9B8D642ADA2182009E47B8 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE9B8D632ADA2182009E47B8 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEDA93FA2ACC75E200FE5091 /* Project object */;
 }

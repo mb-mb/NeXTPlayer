@@ -12,7 +12,7 @@ struct AlbumsListView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         List {
-            ForEach(viewModel.albums) { album in
+            ForEach(viewModel.albums, id:\.id) { album in
                 NavigationLink {
                     AlbumDetailView(album: album)
                 } label: {
@@ -22,7 +22,7 @@ struct AlbumsListView: View {
             }
             switch viewModel.state {
             case .good:
-                Color.clear
+                EmptyView()
                     .onAppear {
                         viewModel.loadMore()
                     }
@@ -38,6 +38,7 @@ struct AlbumsListView: View {
             }
             
         }
+        .lineSpacing(0)
         .listStyle(.plain)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action: {
@@ -53,6 +54,16 @@ struct AlbumsListView: View {
             }
             .foregroundColor(Color("buttonNavColor"))
         })
+        // #1
+
+//        HStack(alignment: .bottom) {
+//            Spacer()
+//            SwiftUIBannerAd(adPosition: .bottom,
+//                            adUnitId: SwiftUIMobileAds.testBannerId)
+//            .padding(.bottom, 15)
+//        }
+//        //        .background(.green)
+//        .frame(height: 50)
     }
   
 }

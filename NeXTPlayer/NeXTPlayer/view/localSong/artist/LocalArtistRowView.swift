@@ -9,31 +9,40 @@ import SwiftUI
 
 struct LocalArtistRowView: View {
     @EnvironmentObject var viewModel: LocalListViewModel
-    let artist: LocalArtist
+    var artist: LocalArtist = LocalViewModelView.artistList
     var body: some View {
-        HStack {
-            Button {
-                viewModel.setSelectedArtist(artist: artist)
-            } label: {
-                HStack {
-                    ImageLoadingView(urlString: artist.artworkUrl100?.absoluteString ?? "", size: 100)
-                    VStack(alignment: .leading) {
-                        //                Text("\(artist.id)")
-                        Text(artist.name ?? "")
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
+        VStack {
+            HStack {
+                Button {
+                    viewModel.setSelectedArtist(artist: artist)
+                } label: {
+                    HStack {
+                        
+                        ArtWorkView(artWork: artist.artwork)
+                        
+                        VStack(alignment: .leading) {
+                            //                Text("\(artist.id)")
+                            Text(artist.name ?? "")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
+                        .lineLimit(1)
+                        Spacer(minLength: 20)
                     }
-                    .lineLimit(1)
-                    Spacer(minLength: 20)
                 }
             }
+            .frame(width: 300, alignment: .leading)
+            .padding(.leading, 0)
+
+            Spacer()
+
         }
     }
 }
-//
-//struct LocalArtistDetailRowView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LocalArtistRowView(viewModel:
-//                            LocalListViewModel().loadMock(), artist: LocalArtist.mockData().first!)
-//    }
-//}
+
+struct LocalArtistDetailRowView_Previews: PreviewProvider {
+    static var previews: some View {
+        LocalArtistRowView()
+            .environmentObject(LocalViewModelView.viewModel)
+    }
+}

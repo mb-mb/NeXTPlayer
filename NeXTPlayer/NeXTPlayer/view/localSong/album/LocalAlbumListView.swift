@@ -9,19 +9,17 @@ import SwiftUI
 
 struct LocalAlbumListView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @ObservedObject var viewModel: LocalListViewModel
+    @EnvironmentObject var viewModel: LocalListViewModel
     
     var body: some View {
         List {
             ForEach(viewModel.artists, id: \.id) { artist in
-                LocalArtistRowView(viewModel: viewModel, artist: artist)
+                LocalArtistRowView(artist: artist)
+                    .environmentObject(viewModel)
             }
             switch viewModel.state {
             case .good:
-                Color.clear
-                    .onAppear {
-                        viewModel.loadMore()
-                    }
+                EmptyView()
             case .isLoading:
                 ProgressView()
                     .progressViewStyle(.circular)
@@ -49,11 +47,25 @@ struct LocalAlbumListView: View {
             }
             .foregroundColor(Color("buttonNavColor"))
         })
+        // #1
+
+//        HStack(alignment: .bottom) {
+//            Spacer()
+//            SwiftUIBannerAd(adPosition: .bottom,
+//                            adUnitId: SwiftUIMobileAds.testBannerId)
+//            .padding(.bottom, 15)
+//        }
+////        .background(.green)
+//        .frame(height: 50)
     }
 }
 
-struct LocalAlbumListView_Previews: PreviewProvider {
+
+struct LocalAlbumListView_Preview:  PreviewProvider {
     static var previews: some View {
-        LocalAlbumListView(viewModel: LocalListViewModel().loadMock())
+        NavigationStack {
+            LocalAlbumListView()
+                .environmentObject(LocalViewModelView.viewModel)
+        }
     }
 }

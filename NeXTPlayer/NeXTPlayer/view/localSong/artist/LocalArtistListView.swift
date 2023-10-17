@@ -8,19 +8,17 @@
 import SwiftUI
 
 struct LocalArtistListView: View {
-    @ObservedObject var viewModel: LocalListViewModel
+    @EnvironmentObject var viewModel: LocalListViewModel
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var body: some View {
         List {
             ForEach(viewModel.artists, id: \.id) { artist in
-                LocalArtistRowView(viewModel: viewModel, artist: artist)
+                LocalArtistRowView(artist: artist)
+                    .environmentObject(viewModel)
             }
             switch viewModel.state {
             case .good:
-                Color.clear
-                    .onAppear {
-                        viewModel.loadMore()
-                    }
+                EmptyView()
             case .isLoading:
                 ProgressView()
                     .progressViewStyle(.circular)
@@ -40,7 +38,8 @@ struct LocalArtistListView: View {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-                Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
+                Image(systemName: "arrowshape.turn.up.backward.fill")              
+                    .font(.caption)
                     .frame(width: 28, height: 32)
 //                    .background(Color.black.opacity(0.7))
                     .clipShape(RoundedRectangle(cornerRadius: 6))
@@ -50,6 +49,17 @@ struct LocalArtistListView: View {
             .foregroundColor(Color("buttonNavColor"))
 
         })
+        // #1
+
+//        HStack(alignment: .bottom) {
+//            Spacer()
+//            SwiftUIBannerAd(adPosition: .bottom,
+//                            adUnitId: SwiftUIMobileAds.testBannerId)
+//            .padding(.bottom, 15)
+//        }
+////        .background(.green)
+//        .frame(height: 50)
+
     }
     
 }
@@ -57,7 +67,8 @@ struct LocalArtistListView: View {
 struct LocalArtistListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            LocalArtistListView(viewModel: LocalListViewModel())
+            LocalArtistListView()
+                .environmentObject(LocalViewModelView.viewModel)
         }
     }
 }

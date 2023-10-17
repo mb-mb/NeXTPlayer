@@ -35,6 +35,7 @@ struct BuyButton: View {
             Link(destination: url) {
                 Text("\(priceString)")
             }
+            .font(.caption2)
             .buttonStyle(BuyButtonStyle())
         }
     }

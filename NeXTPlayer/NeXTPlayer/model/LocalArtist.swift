@@ -21,7 +21,7 @@ struct LocalArtist: Identifiable, Codable {
     let name: String?
     let genre: String?
 //    let artist: MPMediaItem?
-    let artworkUrl100: URL?
+    let artwork: Data
     let artistState: PlayerState
    
     
@@ -29,8 +29,13 @@ struct LocalArtist: Identifiable, Codable {
         self.id = artist.persistentID
         self.name = artist.artist
         self.genre = artist.genre
-//        self.artist = artist
-        self.artworkUrl100 = artist.assetURL
+        if let artWork = artist.artwork,
+            let data = artWork.image(at: CGSize(width: 100, height: 100))?.pngData() {
+            self.artwork = data
+        } else {
+            let im = UIImage(systemName: "music.mic.circle")!
+            self.artwork = im.pngData()!
+        }
         self.artistState = artistState
     }
     
@@ -39,7 +44,7 @@ struct LocalArtist: Identifiable, Codable {
         id = try container.decode(UInt64.self, forKey: .id)
         name = try container.decodeIfPresent(String.self, forKey: .name)
         genre = try container.decodeIfPresent(String.self, forKey: .genre)
-        artworkUrl100 = try container.decodeIfPresent(URL.self, forKey: .artworkUrl100)
+        artwork = try container.decode(Data.self, forKey: .artwork)
         artistState = try container.decode(PlayerState.self, forKey: .artistState)
     }
    
@@ -49,7 +54,7 @@ struct LocalArtist: Identifiable, Codable {
         case id
         case name
         case genre
-        case artworkUrl100
+        case artwork
         case artistState
     }
     
@@ -59,37 +64,109 @@ struct LocalArtist: Identifiable, Codable {
         try container.encode(id, forKey: .id)
         try container.encode(name, forKey: .name)
         try container.encode(genre, forKey: .genre)
-        try container.encode(artworkUrl100, forKey: .artworkUrl100)
+        try container.encode(artwork, forKey: .artwork)
         try container.encode(artistState.rawValue, forKey: .artistState)
     }
 }
 
 extension LocalArtist {
-
-    
     static func mockData() -> [LocalArtist] {
-        let artist0 = LocalArtist(artist: MockMediaItem(), artistState: .stop)
-        let artist1 = LocalArtist(artist: MockMediaItem(), artistState: .stop)
-        let artist2 = LocalArtist(artist: MockMediaItem(), artistState: .stop)
-        print(artist1)
+
+        let mockMPMediaItem = MockMediaItem()
+        mockMPMediaItem.mockArtist = "Artist 1"
+        mockMPMediaItem.mockGenre = "Pop"        
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return UIImage(systemName: "music.mic.circle")!
+        })
+        
+        let artist0 = LocalArtist(
+            artist: mockMPMediaItem,
+            artistState: .stop)
+
+        mockMPMediaItem.mockArtist = "Artist 2"
+
+        let artist1 = LocalArtist(
+            artist: mockMPMediaItem, artistState: .stop)
+        
+        mockMPMediaItem.mockArtist = "Artist 2"
+        let artist2 = LocalArtist(
+            artist: mockMPMediaItem, artistState: .stop)
+        
         return [artist0, artist1, artist2]
+        
     }
 }
 
 class MockMediaItem: MPMediaItem {
-    override func value(forProperty property: String) -> Any? {
-        // Implement logic to return values for specific properties as needed
-        if property == MPMediaItemPropertyTitle {
-            return "Mock Song Title"
-        } else if property == MPMediaItemPropertyArtist {
-            return "Mock Artist Name"
-        } else if property == MPMediaItemPropertyAssetURL {
-            return URL(string: "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/52/c0/4b/52c04bfb-7eb1-a158-1ac9-e1d4c82ce146/19UMGIM06727.rgb.jpg/100x100bb.jpg")
-        } else if property == MPMediaItemPropertyArtwork {
-            return "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/52/c0/4b/52c04bfb-7eb1-a158-1ac9-e1d4c82ce146/19UMGIM06727.rgb.jpg/100x100bb.jpg"
-        } else {
-            // Handle other properties or return nil if not implemented
-            return super.value(forProperty: property)
-        }
+    var mockPersistentID: MPMediaEntityPersistentID = 0
+    var mockArtist: String?
+    var mockGenre: String?
+    var mockArtwork: MPMediaItemArtwork?
+    var mockCollectionName: String?
+    var mockAlbumPersistentID: UInt64?
+    var mockArtistPersistentID: UInt64?
+    var mockReleaseDate: Date?
+    var mockAlbumTrackCount: Int = Int.random(in: 6...12)
+    
+    override var persistentID: MPMediaEntityPersistentID {
+        return UInt64.random(in: 0...99)
+//        return mockPersistentID
+    }
+    override var artist: String? {
+        return mockArtist
+    }
+
+    override var title: String? {
+        return mockCollectionName
+    }
+
+    override var genre: String? {
+        return mockGenre
+    }
+    
+    override var albumPersistentID: UInt64 {
+        return mockAlbumPersistentID ?? UInt64.random(in: 0...99)
+    }
+    override var artistPersistentID: UInt64 {
+        return mockArtistPersistentID ?? UInt64.random(in: 0...99)
+    }
+    override var releaseDate: Date? {
+        return Date() // "yyyy-MM-dd'T'HH:mm:ss'Z'"
+//        return mockReleaseDate
+    }
+    override var albumTrackCount: Int {
+        return mockAlbumTrackCount
+    }
+
+    var trackURL: URL? {
+        return URL(string: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4")!
+    }
+    
+    override var assetURL: URL? {
+        return URL(string: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4")!
+    }
+    
+    var trackDuration: String {
+        return "03:54"
+    }
+    
+    var trackNumber: Int {
+        return Int.random(in: 1...12)
+    }
+
+    var trackName: String {
+        return "track name"
+    }
+
+    override var artwork: MPMediaItemArtwork? {
+        return mockArtwork
+    }
+    
+    override var playbackDuration: Double {
+        return Double.random(in: 0 ... 60.0)
+    }
+    
+    override var albumTrackNumber: Int {
+        return Int.random(in: 1...16)
     }
 }

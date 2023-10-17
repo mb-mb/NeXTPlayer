@@ -13,18 +13,16 @@ struct LocalArtistSectionView: View {
         
     var body: some View {
         ScrollView(.horizontal) {
-            LazyHGrid(rows: rows, spacing: 55) {
+            LazyHGrid(rows: rows, spacing: 10) {
                 ForEach(viewModel.artists, id:\.id) { artist in
-                    LocalArtistRowView(viewModel: viewModel, artist: artist)
+                    LocalArtistRowView(artist: artist)
+                        .environmentObject(viewModel)
                         .frame(width: 300, height: 50)
                 }
                 
                 switch viewModel.state {
                 case .good:
                     Color.clear
-                        .onAppear {
-                            viewModel.loadMore()
-                        }
                 case .isLoading:
                     ProgressView()
                         .progressViewStyle(.circular)
@@ -37,15 +35,25 @@ struct LocalArtistSectionView: View {
                 }
 
             }
+
         }
         .padding([.horizontal, .bottom])
     }
 }
 
-//struct LocalArtistSectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationStack {
-//            LocalArtistSectionView(viewModel: LocalListViewModel().loadMock())
-//        }
-//    }
-//}
+struct LocalViewModelView: View {
+    static var viewModel = LocalListViewModel().loadMock()
+    static var artistList = LocalArtist.mockData().first!
+    var body: some View {
+        HStack {}
+    }
+}
+
+struct LocalArtistSectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationStack {
+            LocalArtistSectionView()
+                .environmentObject(LocalViewModelView.viewModel)
+        }
+    }
+}

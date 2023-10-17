@@ -8,34 +8,52 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ContentViewModel()
     var body: some View {
-        TabView {
-
-            SearchView()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
+        Group {
+            VStack{
+                
+                TabView {
+                    SearchView()
+                        .tabItem {
+                            Label("Search", systemImage: "magnifyingglass")
+                        }
+                    
+                    AlbumSearchView()
+                        .tabItem {
+                            Label("Albums", systemImage: "music.note")
+                        }
+                    
+                    MovieSearchView()
+                        .tabItem {
+                            Label("Movies", systemImage: "tv")
+                        }
+                    
+                    LocalMusicSearchView()
+                        .tabItem {
+                            Label("Local media", systemImage: "tv")
+                        }
                 }
-
-            AlbumSearchView()
-                .tabItem {
-                    Label("Albums", systemImage: "music.note")
+                if  viewModel.isBannerEnable {
+                    HStack(alignment: .bottom) {
+                        Spacer()
+                        SwiftUIBannerAd(adPosition: .bottom,
+                                        adUnitId: SwiftUIMobileAds.bannerIdProd)
+                        //                    .padding(.bottom, 0)
+                    }
+                    //        .background(.green)
+                    .frame(height: 50)
                 }
-            
-            MovieSearchView()
-                .tabItem {
-                    Label("Movies", systemImage: "tv")
-                }
-
-            LocalMusicSearchView()
-                .tabItem {
-                    Label("Local media", systemImage: "tv")
-                }
+            }
+            .onAppear {
+                viewModel.fetchRemoteConfig()
+            }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(featureGateProvider: DefaultFeatureGateProvider(configurationProvider: ConfigurationProvider()))
+//    }
+//}

@@ -30,7 +30,7 @@ struct AlbumDetailView: View {
                     
                     Text(album.primaryGenreName)
                     Text("\(album.trackCount) songs")
-                              
+                    
                     Text("Released: \(String.formattedDate(value: album.releaseDate))")
                 }
                 .font(.caption)
@@ -41,7 +41,8 @@ struct AlbumDetailView: View {
                           price: album.collectionPrice,
                           currency: album.currency)
             }
-            .padding()
+            .frame(height: 80)
+            //                .padding()
             
             SongsForAlbumListView(songsViewModel: songsViewModel)
         }
@@ -55,13 +56,26 @@ struct AlbumDetailView: View {
             HStack {
                 Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
                     .frame(width: 28, height: 32)
-//                    .background(Color.black.opacity(0.7))
+                //                    .background(Color.black.opacity(0.7))
                     .clipShape(RoundedRectangle(cornerRadius: 6))
                 Text("back")
                     .font(.caption2)
             }
             .foregroundColor(Color("buttonNavColor"))
         })
+        Spacer()
+        // #1
+
+//        HStack(alignment: .bottom) {
+//            Spacer()
+//            SwiftUIBannerAd(adPosition: .bottom,
+//                            adUnitId: SwiftUIMobileAds.testBannerId)
+//            .padding(.bottom, 15)
+//        }
+//        //        .background(.green)
+//        .frame(height: 50)
+        
+        
     }
     
 

@@ -15,23 +15,32 @@ struct LocalAlbumDetailView: View {
     init( album: LocalAlbum) {
         self.album = album
         self._localViewModel = StateObject(wrappedValue:
-                                            LocalSongsForAlbumListViewModel(albumID: album.album.id))
+                                            LocalSongsForAlbumListViewModel(albumID: album.id))
     }
     var body: some View {
         VStack {
             HStack(alignment: .bottom) {
-                ImageLoadingView(urlString: album.album.artworkUrl100, size: 100)
+
+                if let image = UIImage(data: album.artwork) {
+                    Image(uiImage: image )
+                        .resizable()
+                        .frame(width:100, height: 100)
+                        .cornerRadius(8)
+                } else {
+                    Image(systemName: "music.note.house")
+                        .frame(width:100, height: 100)
+                }
                 VStack(alignment: .leading) {
-                    Text(album.album.collectionName)
+                    Text(album.collectionName)
                         .font(.footnote)
                         .foregroundColor(Color(.label))
-                    Text(album.album.artistName)
+                    Text(album.artistName ?? "")
                         .padding(.bottom, 5)
                     
-                    Text(album.album.primaryGenreName)
-                    Text("\(album.album.trackCount) songs")
+                    Text(album.primaryGenreName)
+                    Text("\(localViewModel.songs.count) songs")
                               
-                    Text("Released: \(String.formattedDate(value: album.album.releaseDate))")
+                    Text("Released: \(String.formattedDate(value: album.releaseDate))")
                 }
                 .font(.caption)
                 .foregroundColor(.gray)
@@ -39,7 +48,7 @@ struct LocalAlbumDetailView: View {
                 Spacer(minLength: 20)
             }
             .padding()
-            LocalSongsForAlbumListView(songsViewModel: LocalSongsForAlbumListViewModel.example())
+            LocalSongsForAlbumListView(songsViewModel: localViewModel)
         }
         .onAppear {
 //            localViewModel.fetch()
@@ -59,6 +68,16 @@ struct LocalAlbumDetailView: View {
             .foregroundColor(Color("buttonNavColor"))
 
         })
+        // #1
+
+//        HStack(alignment: .bottom) {
+//            Spacer()
+//            SwiftUIBannerAd(adPosition: .bottom,
+//                            adUnitId: SwiftUIMobileAds.testBannerId)
+//            .padding(.bottom, 2)
+//        }
+////        .background(.green)
+//        .frame(height: 50)
     }
 }
 

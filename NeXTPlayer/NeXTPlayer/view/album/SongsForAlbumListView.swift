@@ -21,7 +21,6 @@ struct SongsForAlbumListView: View {
                     ForEach(songsViewModel.songs) { song in
                         GridRow {
                             Text("\(song.trackNumber)")
-                                .font(.footnote)
                                 .gridColumnAlignment(.trailing)
                             
                             Text("\(song.trackName)")
@@ -29,13 +28,13 @@ struct SongsForAlbumListView: View {
                             
                             Spacer()
                             Text(Int().formattedDuration(time: song.trackTimeMillis))
-                                .font(.footnote)
                             
                             BuySongButton(urlString: song.previewURL,
                                           price: song.trackPrice,
                                           currency: song.currency)
                             .padding(.trailing)
                         }
+                        .font(.caption)
                         Divider()
                     }
                 }

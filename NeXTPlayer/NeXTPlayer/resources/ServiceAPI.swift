@@ -32,15 +32,9 @@ func fetchLocalSongs() -> AnyPublisher<[LocalSong], APIError> {
     .eraseToAnyPublisher()
 }
 
-func fetchLocalSongsForAlbumID(albumID: Int) -> AnyPublisher<[LocalSong], APIError> {
+func fetchLocalSongsForAlbumID(albumID: UInt64) -> AnyPublisher<[LocalSong], APIError> {
     return Future<[LocalSong], APIError> { promise in
         let query = MPMediaQuery.songs()
-
-        guard let collections = query.collections else {
-            promise(.failure(.fetchFailed))
-            return
-        }
-        
         // Create a predicate to filter by album persistent ID
          let albumPredicate = MPMediaPropertyPredicate(
              value: NSNumber(value: albumID),
@@ -48,8 +42,14 @@ func fetchLocalSongsForAlbumID(albumID: Int) -> AnyPublisher<[LocalSong], APIErr
              comparisonType: .equalTo)
         
         query.addFilterPredicate(albumPredicate)
+
         
-        let localSongs = collections.compactMap { collection -> LocalSong? in
+        guard let collections = query.collections else {
+            promise(.failure(.fetchFailed))
+            return
+        }
+        
+        var localSongs = collections.compactMap { collection -> LocalSong? in
             guard let representativeItem = collection.representativeItem else {
                 print("fetchLocalSongsForAlbumID compactMap: \(collection.count)")
                 return nil
@@ -58,6 +58,7 @@ func fetchLocalSongsForAlbumID(albumID: Int) -> AnyPublisher<[LocalSong], APIErr
             return MPMediaItemToSongMapper.map(mpMediaItem: representativeItem)
         }
         print("fetchLocalSongsForAlbumID receiveValue: \(localSongs.count)")
+        localSongs.sort{ $0.trackNumber < $1.trackNumber }
         promise(.success(localSongs))
     }
     .eraseToAnyPublisher()

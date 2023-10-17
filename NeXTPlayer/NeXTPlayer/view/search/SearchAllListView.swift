@@ -14,94 +14,115 @@ struct SearchAllListView: View {
     @ObservedObject var movieViewModel: MovieListViewModel
     
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                
-                HStack {
-                    Text("Songs")
-                        .font(.title2)
-                    Spacer()
-                    NavigationLink {
-                        SongListView(viewModel: songViewModel)
-                    } label: {
-                        HStack {
+        VStack {
+            ScrollView {
+                LazyVStack {
+                    
+                    HStack {
+                        Text("Songs")
+                            .font(.title2)
+                        Spacer()
+                        NavigationLink {
+                            SongListView(viewModel: songViewModel)
+                        } label: {
                             HStack {
-                                Text("See all")
-                                    .font(.caption2)
-                                Image(systemName: "arrowshape.turn.up.right.fill")
-                                    .font(.caption)
-                              .frame(width: 18, height: 32)
-                              .clipShape(RoundedRectangle(cornerRadius: 6))
+                                HStack {
+                                    Text("See all")
+                                        .font(.caption2)
+                                    Image(systemName: "arrowshape.turn.up.right.fill")
+                                        .font(.caption)
+                                        .frame(width: 18, height: 32)
+                                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                                }
+                                .foregroundColor(Color("buttonNavColor"))
                             }
-                            .foregroundColor(Color("buttonNavColor"))
                         }
                     }
-                }
-                .padding(.horizontal)
-                SongSectionView(viewModel: songViewModel)
-                
-                Divider()
-                    .padding(.bottom)
-                
-                HStack {
-                    Text("Albums")
-                        .font(.title2)
-                    Spacer()
-                    NavigationLink {
-                        AlbumsListView(viewModel: albumViewModel)
-                    } label: {
-                        HStack {
+                    .padding(.horizontal)
+                    SongSectionView(viewModel: songViewModel)
+                    
+                    Divider()
+                        .padding(.bottom)
+                    
+                    HStack {
+                        Text("Albums")
+                            .font(.title2)
+                        Spacer()
+                        NavigationLink {
+                            AlbumsListView(viewModel: albumViewModel)
+                        } label: {
                             HStack {
-                                Text("See all")
-                                    .font(.caption2)
-                                Image(systemName: "arrowshape.turn.up.right.fill")
-                                    .font(.caption)
-                              .frame(width: 18, height: 32)
-                              .clipShape(RoundedRectangle(cornerRadius: 6))
+                                HStack {
+                                    Text("See all")
+                                        .font(.caption2)
+                                    Image(systemName: "arrowshape.turn.up.right.fill")
+                                        .font(.caption)
+                                        .frame(width: 18, height: 32)
+                                        .clipShape(RoundedRectangle(cornerRadius: 6))
+                                }
+                                .foregroundColor(Color("buttonNavColor"))
                             }
-                            .foregroundColor(Color("buttonNavColor"))
                         }
                     }
-                }
-                .padding(.horizontal)
-                AlbumSectionView(albums: albumViewModel.albums)
-                Divider()
-                    .padding(.bottom)
-                
-                HStack {
-                    Text("Movies")
-                        .font(.title2)
-                    Spacer()
-                    NavigationLink {
-                        MovieListView(viewModel: movieViewModel)
-                    } label: {
+                    .padding(.horizontal)
+                    AlbumSectionView(albums: albumViewModel.albums)
+                    Divider()
+                        .padding(.bottom)
+                    
+                    if !(movieViewModel.movies.isEmpty) {
                         HStack {
-                            HStack {
-                                Text("See all")
-                                    .font(.caption2)
-                                Image(systemName: "arrowshape.turn.up.right.fill")
-                                    .font(.caption)
-                              .frame(width: 18, height: 32)
-                              .clipShape(RoundedRectangle(cornerRadius: 6))
+                            Text("Movies")
+                                .font(.title2)
+                            Spacer()
+                            NavigationLink {
+                                MovieListView(viewModel: movieViewModel)
+                            } label: {
+                                HStack {
+                                    
+                                    HStack {
+                                        Text("See all")
+                                            .font(.caption2)
+                                        Image(systemName: "arrowshape.turn.up.right.fill")
+                                            .font(.caption)
+                                            .frame(width: 18, height: 32)
+                                            .clipShape(RoundedRectangle(cornerRadius: 6))
+                                    }
+                                    .foregroundColor(Color("buttonNavColor"))
+                                }
                             }
-                            .foregroundColor(Color("buttonNavColor"))
                         }
+                        .padding(.horizontal)
+                        
+                        MovieSectionView(movies: movieViewModel.movies)
+                        Divider()
+                            .padding(.bottom)
+                    } else {
+                        Text("No data available")
+                            .font(.caption)
+                            .foregroundColor(Color("buttonNavColor"))
                     }
                 }
-                .padding(.horizontal)
                 
-                MovieSectionView(movies: movieViewModel.movies)
-                Divider()
-                    .padding(.bottom)
             }
+            
+//            HStack(alignment: .bottom) {
+//                Spacer()
+//                SwiftUIBannerAd(adPosition: .bottom,
+//                                adUnitId: SwiftUIMobileAds.testBannerId)
+////                .padding(.bottom, 49)
+//            }
+//            //        .background(.green)
+//            .frame(height: 50)
         }
     }
 }
 
 struct SearchAllListView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchAllListView(albumViewModel: AlbumListViewModel().loadMock(),
-                          songViewModel: SongsListViewModel().loadMock(),
-                          movieViewModel: MovieListViewModel().loadMock())
+        NavigationView {
+            SearchAllListView(albumViewModel: AlbumListViewModel().loadMock(),
+                              songViewModel: SongsListViewModel().loadMock(),
+                              movieViewModel: MovieListViewModel().loadMock())
+        }
     }
 }

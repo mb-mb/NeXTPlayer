@@ -44,7 +44,11 @@ class AlbumListViewModel: ObservableObject {
     
     func loadMock() -> AlbumListViewModel {
         let vm = AlbumListViewModel()
-        vm.albums = [Album.example()]
+        let albums = [Album.example(), Album.example(), Album.example(), Album.example(), Album.example()]
+        _ = albums.map { album in
+            print(album)
+        }
+        vm.albums = albums
         return vm
     }
     
