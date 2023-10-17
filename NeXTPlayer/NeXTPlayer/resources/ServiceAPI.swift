@@ -35,12 +35,6 @@ func fetchLocalSongs() -> AnyPublisher<[LocalSong], APIError> {
 func fetchLocalSongsForAlbumID(albumID: UInt64) -> AnyPublisher<[LocalSong], APIError> {
     return Future<[LocalSong], APIError> { promise in
         let query = MPMediaQuery.songs()
-
-        guard let collections = query.collections else {
-            promise(.failure(.fetchFailed))
-            return
-        }
-        
         // Create a predicate to filter by album persistent ID
          let albumPredicate = MPMediaPropertyPredicate(
              value: NSNumber(value: albumID),
@@ -48,6 +42,12 @@ func fetchLocalSongsForAlbumID(albumID: UInt64) -> AnyPublisher<[LocalSong], API
              comparisonType: .equalTo)
         
         query.addFilterPredicate(albumPredicate)
+
+        
+        guard let collections = query.collections else {
+            promise(.failure(.fetchFailed))
+            return
+        }
         
         var localSongs = collections.compactMap { collection -> LocalSong? in
             guard let representativeItem = collection.representativeItem else {

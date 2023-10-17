@@ -13,7 +13,7 @@ struct LocalArtistSectionView: View {
         
     var body: some View {
         ScrollView(.horizontal) {
-            LazyHGrid(rows: rows, spacing: 55) {
+            LazyHGrid(rows: rows, spacing: 10) {
                 ForEach(viewModel.artists, id:\.id) { artist in
                     LocalArtistRowView(artist: artist)
                         .environmentObject(viewModel)

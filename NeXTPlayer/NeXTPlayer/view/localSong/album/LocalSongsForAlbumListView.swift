@@ -17,7 +17,7 @@ struct LocalSongsForAlbumListView: View {
                 ProgressView()
                     .progressViewStyle(.automatic)
             } else {
-                Grid(horizontalSpacing: 20){
+                Grid(horizontalSpacing: 10){
                     ForEach(songsViewModel.songs, id:\.id) { song in
                         GridRow {
                             HStack {
@@ -37,30 +37,30 @@ struct LocalSongsForAlbumListView: View {
                                 .frame(width: 35, height: 19, alignment: .leading)
                                 //                            .background(Color.gray)
                             }
+                            
                             HStack {
                                 Text("\(song.trackNumber)")
                                     .font(.caption)
                                     .gridColumnAlignment(.trailing)
-                                    .frame(width: 10, alignment: .leading)
+                                    .frame(width: 14, alignment: .leading)
                                 Text("\(song.trackName)")
                                     .gridColumnAlignment(.leading)
                                     .font(.caption)
-                                    .frame(width: 200, alignment: .leading)
+                                    .frame(width: 210, alignment: .leading)
                             }
-                            .frame(width: 215, alignment: .leading)
-//                            .background(Color.gray)
+                            .frame(width: 255, alignment: .leading)
                             
                             if let timeLabel = songsViewModel.songTimeLabel(for: song) {
                                 Text(timeLabel)
                                     .font(.caption)
                                     .frame(width: 45, alignment: .leading)
                                     .foregroundColor(.blue)
-                                    .padding(.trailing)
+//                                    .padding(.trailing)
                             } else {
                                 Text(song.trackDuration)
                                     .font(.caption)
                                     .frame(width: 45, alignment: .leading)
-                                    .padding(.trailing)
+//                                    .padding(.trailing)
                             }
                             
                         }

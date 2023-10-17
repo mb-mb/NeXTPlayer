@@ -134,7 +134,7 @@ final class NeXTPlayerTests: XCTestCase {
         
         let macTrack = URL(string: "file:///Users/marcelo.bianchi/Music/Music/Media.localized/Music/Unknown%20Artist/Unknown%20Album/stranger-things-124008.mp3")
         
-        let vm = LocalSongsForAlbumListViewModel(albumID: 0).example()
+        let vm = LocalSongsForAlbumListViewModel.example()
         let expectation = XCTestExpectation(description: "Fetch local artists")
         // Perform the publisher operation
         let song = vm.songs.first!
@@ -159,4 +159,17 @@ final class NeXTPlayerTests: XCTestCase {
         
     }
     
+//    func testSongList() throws {
+//        
+//        let vm = LocalSongsForAlbumListViewModel(albumID: 0)
+//        let expectation = XCTestExpectation(description: "Fetch local songs")
+//        // Perform the publisher operation
+//        let songs = vm.songs
+//        print(songs)
+//        XCTAssertTrue(songs.isEmpty == false, "Songs must have one or more items")
+//        expectation.fulfill()
+//        wait(for: [expectation], timeout: 5.0)
+//                
+//    }
+//    
 }

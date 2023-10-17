@@ -18,31 +18,21 @@ struct LocalAlbumRowView: View {
                 LocalAlbumDetailView(album: album)
             } label: {
                 Group {
-                    VStack {
-                        HStack {
-                            ArtWorkView(artWork: album.artwork)
-                            
-                            VStack(alignment: .leading) {
-                                Text(album.collectionName)
-                                Text(album.artistName ?? "")
-                                    .font(.caption)
-                                    .foregroundColor(.gray)
-                            }
-                            //            .frame(width: 150, height: 70)
-                            .lineLimit(1)
-                            //            .padding()
-                            //            .background(Color.gray)
-                        }
-                        Spacer(minLength: 20)
+                    HStack {
+                        ArtWorkView(artWork: album.artwork)
                         
-//                        HStack(alignment: .bottom) {
-//                            Spacer()
-//                            SwiftUIBannerAd(adPosition: .bottom,
-//                                            adUnitId: SwiftUIMobileAds.testBannerId)
-//                        }
-//                        .background(.green)
-//                        .frame(height: 170)
+                        VStack(alignment: .leading) {
+                            Text(album.collectionName)
+                            Text(album.artistName ?? "")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
+                        //            .frame(width: 150, height: 70)
+                        .lineLimit(1)
+                        .padding([.bottom, .top])
+                        //            .background(Color.gray)
                     }
+                    Spacer(minLength: 20)
                 }
             }
         }

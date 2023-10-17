@@ -38,7 +38,7 @@ struct LocalAlbumDetailView: View {
                         .padding(.bottom, 5)
                     
                     Text(album.primaryGenreName)
-                    Text("\(album.trackCount) songs")
+                    Text("\(localViewModel.songs.count) songs")
                               
                     Text("Released: \(String.formattedDate(value: album.releaseDate))")
                 }

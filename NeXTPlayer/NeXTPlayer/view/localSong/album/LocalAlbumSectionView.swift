@@ -50,6 +50,8 @@ struct LocalAlbumSectionView: View {
 //}
 
 #Preview {
-    LocalAlbumSectionView()
-        .environmentObject(LocalListViewModel().loadMock())
+    NavigationStack {
+        LocalAlbumSectionView()
+            .environmentObject(LocalListViewModel().loadMock())
+    }
 }

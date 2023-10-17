@@ -50,7 +50,7 @@ class LocalListViewModel: ObservableObject {
                     print(receivedError) // Handle the error
                 }
             }, receiveValue: {[weak self] localArtists in
-                print("fetchLocalArtists2 receiveValue: \(localArtists.count)")
+//                print("fetchLocalArtists2 receiveValue: \(localArtists.count)")
                 if localArtists.count >= 0 {
                     _ = localArtists.map { song in
                         print(localArtists)
@@ -59,9 +59,6 @@ class LocalListViewModel: ObservableObject {
                 }
             })
             .store(in: &cancellables)
-        
-       
-        
     }
     
     func loadMock() -> LocalListViewModel {

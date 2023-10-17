@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = ContentViewModel()
     var body: some View {
         Group {
             VStack{
@@ -33,24 +34,26 @@ struct ContentView: View {
                             Label("Local media", systemImage: "tv")
                         }
                 }
-                // #1
-
-                HStack(alignment: .bottom) {
-                    Spacer()
-                    SwiftUIBannerAd(adPosition: .bottom,
-                                    adUnitId: SwiftUIMobileAds.testBannerId)
-//                    .padding(.bottom, 0)
+                if  viewModel.isBannerEnable {
+                    HStack(alignment: .bottom) {
+                        Spacer()
+                        SwiftUIBannerAd(adPosition: .bottom,
+                                        adUnitId: SwiftUIMobileAds.bannerIdProd)
+                        //                    .padding(.bottom, 0)
+                    }
+                    //        .background(.green)
+                    .frame(height: 50)
                 }
-                //        .background(.green)
-                .frame(height: 50)
-
+            }
+            .onAppear {
+                viewModel.fetchRemoteConfig()
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(featureGateProvider: DefaultFeatureGateProvider(configurationProvider: ConfigurationProvider()))
+//    }
+//}
