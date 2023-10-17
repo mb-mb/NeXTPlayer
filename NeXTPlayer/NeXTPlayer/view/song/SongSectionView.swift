@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SongSectionView: View {
 //    let songs: [Song]
-    let rows = Array(repeating: GridItem(.fixed(60), spacing:0, alignment: .leading), count: 4)
+    let rows = Array(repeating: GridItem(.fixed(65), spacing:0, alignment: .leading), count: 4)
     @ObservedObject var viewModel: SongsListViewModel
     var body: some View {
         ScrollView(.horizontal) {
