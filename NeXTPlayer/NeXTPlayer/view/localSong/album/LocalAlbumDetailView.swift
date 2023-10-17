@@ -50,9 +50,6 @@ struct LocalAlbumDetailView: View {
             .padding()
             LocalSongsForAlbumListView(songsViewModel: localViewModel)
         }
-        .onAppear {
-//            localViewModel.fetch()
-        }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action: {
             self.presentationMode.wrappedValue.dismiss()

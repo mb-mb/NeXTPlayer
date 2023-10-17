@@ -24,11 +24,13 @@ struct ImageLoadingView: View {
             case .success(let image):
                 image
                     .border(Color(white:0.8))
+                
             @unknown default:
                 EmptyView()
             }
         }
         .frame(height: size)
+        .cornerRadius(8)
     }
 }
 

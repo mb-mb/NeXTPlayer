@@ -18,9 +18,12 @@ struct AlbumDetailView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0){
             HStack(alignment: .bottom) {
                 ImageLoadingView(urlString: album.artworkUrl100, size: 100)
+                    .cornerRadius(8)
+                    .padding([.leading, .top])
+                    
                 VStack(alignment: .leading) {
                     Text(album.collectionName)
                         .font(.footnote)
@@ -40,6 +43,7 @@ struct AlbumDetailView: View {
                 BuyButton(urlString: album.collectionViewURL,
                           price: album.collectionPrice,
                           currency: album.currency)
+                .padding(.trailing, 23)
             }
             .frame(height: 80)
             //                .padding()
@@ -50,11 +54,13 @@ struct AlbumDetailView: View {
             songsViewModel.fetch()
         }
         .navigationBarBackButtonHidden(true)
+        .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(leading: Button(action: {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-                Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
+                Image(systemName: "arrowshape.turn.up.backward.fill")              
+                    .font(.caption)
                     .frame(width: 28, height: 32)
                 //                    .background(Color.black.opacity(0.7))
                     .clipShape(RoundedRectangle(cornerRadius: 6))
@@ -64,17 +70,6 @@ struct AlbumDetailView: View {
             .foregroundColor(Color("buttonNavColor"))
         })
         Spacer()
-        // #1
-
-//        HStack(alignment: .bottom) {
-//            Spacer()
-//            SwiftUIBannerAd(adPosition: .bottom,
-//                            adUnitId: SwiftUIMobileAds.testBannerId)
-//            .padding(.bottom, 15)
-//        }
-//        //        .background(.green)
-//        .frame(height: 50)
-        
         
     }
     
