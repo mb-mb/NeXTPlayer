@@ -27,8 +27,7 @@ class LocalListViewModel: ObservableObject {
     var cancellables = Set<AnyCancellable>()
 
     
-    init() {
-        
+    init() {        
         $searchTerm
             .removeDuplicates()
             .dropFirst()
@@ -51,10 +50,11 @@ class LocalListViewModel: ObservableObject {
                 }
             }, receiveValue: {[weak self] localArtists in
 //                print("fetchLocalArtists2 receiveValue: \(localArtists.count)")
-                if localArtists.count >= 0 {
-                    _ = localArtists.map { song in
-                        print(localArtists)
-                        self?.artists.append(contentsOf: localArtists)
+                self?.artists = []
+                if !localArtists.isEmpty {
+                    _ = localArtists.map { art in
+                        print("\nartist: \(art)")
+                        self?.artists.append(art)
                     }
                 }
             })

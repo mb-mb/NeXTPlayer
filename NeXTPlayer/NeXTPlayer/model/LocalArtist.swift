@@ -20,7 +20,6 @@ struct LocalArtist: Identifiable, Codable {
     let id: UInt64
     let name: String?
     let genre: String?
-//    let artist: MPMediaItem?
     let artwork: Data
     let artistState: PlayerState
    

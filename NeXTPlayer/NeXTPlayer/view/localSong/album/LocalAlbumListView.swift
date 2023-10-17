@@ -13,8 +13,8 @@ struct LocalAlbumListView: View {
     
     var body: some View {
         List {
-            ForEach(viewModel.artists, id: \.id) { artist in
-                LocalArtistRowView(artist: artist)
+            ForEach(viewModel.albums, id: \.id) { album in
+                LocalAlbumRowView(album: album)
                     .environmentObject(viewModel)
             }
             switch viewModel.state {
@@ -47,16 +47,6 @@ struct LocalAlbumListView: View {
             }
             .foregroundColor(Color("buttonNavColor"))
         })
-        // #1
-
-//        HStack(alignment: .bottom) {
-//            Spacer()
-//            SwiftUIBannerAd(adPosition: .bottom,
-//                            adUnitId: SwiftUIMobileAds.testBannerId)
-//            .padding(.bottom, 15)
-//        }
-////        .background(.green)
-//        .frame(height: 50)
     }
 }
 
