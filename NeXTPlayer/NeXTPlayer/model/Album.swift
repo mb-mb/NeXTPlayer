@@ -90,7 +90,7 @@ struct Album: Codable, Identifiable {
         return Album(wrapperType: "collection", collectionType: "Album",
               id: Int.random(in: 1...9999),
               artistID: 2, amgArtistID: 3,
-              artistName: "My Chemical Romance",
+              artistName: "My Sound Romance",
               collectionName: "The Blue Parade", collectionCensoredName: "",
               artistViewURL: nil,
               collectionViewURL: albumImage,

@@ -13,7 +13,7 @@ struct AlbumRowView: View {
     var body: some View {
         HStack {
             ImageLoadingView(urlString: album.artworkUrl60, size: 90)
-                .cornerRadius(8)
+                .cornerRadius(1)
                 //.padding([.leading, .top, .bottom])
             
             VStack(alignment: .leading) {

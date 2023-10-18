@@ -28,8 +28,8 @@ struct LocalSongsForAlbumListView: View {
                                         .font(.title)
                                         .frame(width: 38, height: 32)
                                         .background(Color.black.opacity(0.7))
-                                        .clipShape(RoundedRectangle(cornerRadius: 6))
                                         .foregroundColor(.orange)
+                                        .cornerRadius(6)
 
                                 }
                                 .padding([.bottom, .top])

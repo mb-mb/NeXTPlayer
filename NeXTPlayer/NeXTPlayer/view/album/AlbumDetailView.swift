@@ -21,7 +21,7 @@ struct AlbumDetailView: View {
         VStack(spacing: 10){
             HStack(alignment: .bottom) {
                 ImageLoadingView(urlString: album.artworkUrl100, size: 100)
-                    .cornerRadius(8)
+                    .cornerRadius(1)
                     .padding([.leading, .top])
                     
                 VStack(alignment: .leading) {
@@ -43,10 +43,10 @@ struct AlbumDetailView: View {
                 BuyButton(urlString: album.collectionViewURL,
                           price: album.collectionPrice,
                           currency: album.currency)
-                .padding(.trailing, 21)
+                .padding(.trailing, 15)
             }
             .frame(height: 80)
-            //                .padding()
+            .padding(.bottom, 5)
             
             SongsForAlbumListView(songsViewModel: songsViewModel)
         }

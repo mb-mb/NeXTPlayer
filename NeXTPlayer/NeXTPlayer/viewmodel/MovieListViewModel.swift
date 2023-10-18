@@ -29,22 +29,27 @@ class MovieListViewModel: ObservableObject {
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
                 self?.state = .good
-                self?.movies = []
-                self?.fetchMovie(for: term)
+//                self?.movies = []
+//                self?.fetchMovie(for: term)
+                self?.loadMocks()
             }.store(in: &subscription)
     }
     
     func loadMore() {
-        fetchMovie(for: searchTerm)
+        // fetchMovie(for: searchTerm)
+        loadMocks()
     }
     
     
     func loadMock() -> MovieListViewModel {
         let vm = MovieListViewModel()
-        vm.movies = [Movie.example()]
+        vm.movies = Movie.examples()
         return vm
     }
     
+    func loadMocks() {
+        self.movies = Movie.examples()
+    }
     
     
     func fetchMovie(for searchTerm: String) {

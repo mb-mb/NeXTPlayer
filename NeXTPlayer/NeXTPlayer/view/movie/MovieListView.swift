@@ -13,7 +13,7 @@ struct MovieListView: View {
     var body: some View {
         List {
             if !(viewModel.movies.isEmpty) {
-                ForEach(viewModel.movies) { movie in
+                ForEach(viewModel.movies, id:\.id) { movie in
                     MoviewRowView(moview: movie)
                 }
             } else {
@@ -24,7 +24,7 @@ struct MovieListView: View {
             }
             switch viewModel.state {
             case .good:
-                Color.clear
+                EmptyView()
                     .onAppear {
                         viewModel.loadMore()
                     }
@@ -64,7 +64,7 @@ struct MovieListView: View {
 struct MovieListView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            MovieListView(viewModel: MovieListViewModel())
+            MovieListView(viewModel: MovieListViewModel().loadMock())
         }
     }
 }

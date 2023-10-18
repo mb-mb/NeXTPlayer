@@ -39,7 +39,8 @@ struct SongListView: View {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-                Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
+                Image(systemName: "arrowshape.turn.up.backward.fill")              
+                    .font(.caption)
                     .frame(width: 28, height: 32)
 //                    .background(Color.black.opacity(0.7))
                     .clipShape(RoundedRectangle(cornerRadius: 6))
@@ -48,15 +49,6 @@ struct SongListView: View {
             }
             .foregroundColor(Color("buttonNavColor"))
         })
-        // #1
-//        HStack(alignment: .bottom) {
-//            Spacer()
-//            SwiftUIBannerAd(adPosition: .bottom,
-//                            adUnitId: SwiftUIMobileAds.testBannerId)
-//            .padding(.bottom, 15)
-//        }
-//        //        .background(.green)
-//        .frame(height: 50)
     }
   
 }

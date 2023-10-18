@@ -394,11 +394,11 @@
 				CEDA944B2ACCF27D00FE5091 /* MovieListViewModel.swift */,
 				CEDA94362ACC7D3F00FE5091 /* AlbumListViewModel.swift */,
 				CEDA943D2ACCDCCF00FE5091 /* APIError.swift */,
-				CEDA94432ACCED8500FE5091 /* SongsListViewModel.swift */,
 				CEDA943F2ACCE4CC00FE5091 /* APIService.swift */,
 				CE7CD62D2ACEFB53000DB8AF /* SongsForAlbumListViewModel.swift */,
 				CED7DF882ACF919700997766 /* LocalListViewModel.swift */,
 				CE7F5D8C2AD012BE00A02A52 /* LocalSongsForListViewModel.swift */,
+				CEDA94432ACCED8500FE5091 /* SongsListViewModel.swift */,
 				CEB37DAD2ADDD03F003BD91E /* ContentViewModel.swift */,
 			);
 			path = viewmodel;
