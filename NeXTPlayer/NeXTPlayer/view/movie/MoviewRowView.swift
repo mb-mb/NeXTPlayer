@@ -11,19 +11,26 @@ struct MoviewRowView: View {
     let moview: Movie
     var body: some View {
         HStack {
-            ImageLoadingView(urlString: moview.artworkUrl100, size: 100)
+            ImageLoadingView(urlString: moview.artworkUrl100, size: 90)
+                .padding(.leading, 10)
+
             VStack(alignment: .leading) {
                 Text(moview.trackName)
                 Text(moview.primaryGenreName)
                     .foregroundColor(.gray)
-                Text(moview.releaseDate)
+                    .font(.caption)
+                Text("Released: \(String.formattedDate(value: moview.releaseDate))")
+                    .font(.caption)
+                    .foregroundColor(.gray)
             }
             .lineLimit(1)
             Spacer(minLength: 20)
             BuyButton(urlString: moview.previewURL ?? "",
                       price: moview.trackPrice,
                       currency: moview.currency)
+            .padding(.trailing, 5)
         }
+        .frame(height: 75)
     }
 }
 

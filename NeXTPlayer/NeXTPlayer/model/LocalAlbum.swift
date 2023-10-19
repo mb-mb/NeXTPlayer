@@ -92,30 +92,77 @@ struct LocalAlbum: Codable, Identifiable {
     static func mockData() -> [LocalAlbum] {
         
         let mockMPMediaItem = MockMediaItem()
-        mockMPMediaItem.mockArtist = "Artist 1"
+        mockMPMediaItem.mockArtist = "Artist Name 1"
         mockMPMediaItem.mockGenre = "Pop"
-        mockMPMediaItem.mockCollectionName = "album 1"
+        mockMPMediaItem.mockCollectionName = "Album Title 1"
         mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
-            return UIImage(systemName: "music.mic.circle")!
+            return  makeFakeImage(index: 0)
         })
 
         
         let album0 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
-        mockMPMediaItem.mockCollectionName = "album 2"
+        mockMPMediaItem.mockCollectionName = "album Title 2"
+        mockMPMediaItem.mockArtist = "Artist Name 2"
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return  makeFakeImage(index: 1)
+        })
+
         let album1 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
-        mockMPMediaItem.mockCollectionName = "album 3"
+        mockMPMediaItem.mockCollectionName = "Album Title 3"
+        mockMPMediaItem.mockArtist = "Artist 3"
+
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return  makeFakeImage(index: 2)
+        })
+
         let album2 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
-        mockMPMediaItem.mockCollectionName = "album 4"
+        mockMPMediaItem.mockCollectionName = "Album Title 4"
+        mockMPMediaItem.mockArtist = "Artist Name 4"
+
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return  makeFakeImage(index: 0)
+        })
+
         let album3 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
-        mockMPMediaItem.mockCollectionName = "album 5"
+        mockMPMediaItem.mockCollectionName = "Album Title 5"
+        mockMPMediaItem.mockArtist = "Artist Name 5"
+
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return  makeFakeImage(index: 1)
+        })
+
         let album4 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
-        mockMPMediaItem.mockCollectionName = "album 6"
+        mockMPMediaItem.mockCollectionName = "Album Title 6"
+        mockMPMediaItem.mockArtist = "Artist Name 6"
+
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return  makeFakeImage(index: 2)
+        })
+
         let album5 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
-        mockMPMediaItem.mockCollectionName = "album 7"
+        mockMPMediaItem.mockCollectionName = "Album Title 7"
+        mockMPMediaItem.mockArtist = "Artist Name 7"
+
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return  makeFakeImage(index: 0)
+        })
+
         let album6 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
-        mockMPMediaItem.mockCollectionName = "album 8"
+        mockMPMediaItem.mockCollectionName = "Album Title 8"
+        mockMPMediaItem.mockArtist = "Artist Name 8"
+
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return  makeFakeImage(index: 1)
+        })
+
         let album7 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
-        mockMPMediaItem.mockCollectionName = "album 9"
+        mockMPMediaItem.mockCollectionName = "Album Title 9"
+        mockMPMediaItem.mockArtist = "Artist Name 9"
+
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return  makeFakeImage(index: 2)
+        })
+
         let album8 = LocalAlbum(album: mockMPMediaItem, artistState: .stop)
         let ret =  [album0, album1, album2, album3, album4, album5, album6, album7, album8]
         _ = ret.map { album in

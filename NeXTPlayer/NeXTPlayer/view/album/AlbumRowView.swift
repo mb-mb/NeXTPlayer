@@ -12,7 +12,10 @@ struct AlbumRowView: View {
     let album: Album
     var body: some View {
         HStack {
-            ImageLoadingView(urlString: album.artworkUrl60, size: 100)
+            ImageLoadingView(urlString: album.artworkUrl60, size: 90)
+                .cornerRadius(1)
+                //.padding([.leading, .top, .bottom])
+            
             VStack(alignment: .leading) {
                 Text(album.collectionName)
                 Text(album.artistName)
@@ -26,7 +29,7 @@ struct AlbumRowView: View {
                       currency: album.currency)
             .padding(.trailing, 5)
         }
-        .frame(height: 65)
+        .frame(height: 75)
     }
 }
 

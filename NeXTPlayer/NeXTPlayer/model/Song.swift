@@ -21,14 +21,14 @@ struct Song: Codable, Identifiable {
     let collectionID: Int
     let id: Int
     let uuid: UUID
-    let artistName, collectionName, trackName: String
+    var artistName, collectionName, trackName: String
     let artistViewURL, collectionViewURL, trackViewURL: String
     let previewURL: String
     let artworkUrl30, artworkUrl60, artworkUrl100: String
     let collectionPrice, trackPrice: Double?
     let releaseDate: String
     let trackCount, trackNumber: Int
-    let trackTimeMillis: Int
+    var trackTimeMillis: Int
     let country, currency, primaryGenreName: String
     let collectionArtistName: String?
 
@@ -112,20 +112,64 @@ struct Song: Codable, Identifiable {
     
     
     static func example() -> Song {
-        
-        Song(wrapperType: "Song",
-             artistID: 1, collectionID: 1, id: 1, artistName: "Jack Johnson",
-             collectionName: "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
-             trackName: "Upside Down", artistViewURL: "", collectionViewURL: "", trackViewURL: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4", previewURL: "https://is3-ssl.mzstatic.com",
-             artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg", artworkUrl60: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/60x60bb.jpg", artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg", collectionPrice: 9.88, trackPrice: 1.29, releaseDate: "2005-01-01T12:00:00Z", trackCount: 14, trackNumber: 1, trackTimeMillis: 208643, country: "USA", currency: "USD", primaryGenreName: "Rock", collectionArtistName: nil)
+        let albumImage2 = makeFakeImageAlbum(index: 0)
+        return Song(wrapperType: "Song",
+             artistID: 1, collectionID: 1,
+             id: 1, 
+             artistName: "The Silent Ones",
+             collectionName: "Screaming for Silence",
+             trackName: "Upside Down",
+             artistViewURL: "",
+             collectionViewURL: "",
+             trackViewURL: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4", previewURL: "https://is3-ssl.mzstatic.com",
+             artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg", 
+             artworkUrl60: albumImage2, 
+             artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg",
+             collectionPrice: 9.88, trackPrice: 1.29, releaseDate: "2005-01-01T12:00:00Z",
+             trackCount: 14, trackNumber: 1,
+             trackTimeMillis: 208643, country: "USA",
+             currency: "USD", primaryGenreName: "Rock",
+             collectionArtistName: nil)
     }
     
     static func example2() -> Song {
-        
-    Song(wrapperType: "Song",
-         artistID: 1, collectionID: 1, id: 10, artistName: "Jack Johnson",
-         collectionName: "Jack Johnson and Friends: Sing-A-Longs and Lullabies for the Film Curious George",
+        let albumImage1 = makeFakeImageAlbum(index: 1)
+        return Song(wrapperType: "Song",
+         artistID: 2, collectionID: 1,
+         id: 10, artistName: "Doomsday",
+         collectionName: "The End of the World",
          trackName: "Upside", artistViewURL: "", collectionViewURL: "", trackViewURL: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4", previewURL: "https://is3-ssl.mzstatic.com",
-         artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg", artworkUrl60: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/60x60bb.jpg", artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg", collectionPrice: 9.88, trackPrice: 0.99, releaseDate: "2005-01-01T12:00:00Z", trackCount: 14, trackNumber: 10, trackTimeMillis: 108643, country: "USA", currency: "USD", primaryGenreName: "Rock", collectionArtistName: nil)
+         artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg", 
+         artworkUrl60: albumImage1,
+         artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg", collectionPrice: 9.88, trackPrice: 0.99, releaseDate: "2005-01-01T12:00:00Z", trackCount: 14, trackNumber: 2, trackTimeMillis: 108643, country: "USA", currency: "USD", primaryGenreName: "Rock", collectionArtistName: nil)
+    }
+
+    static func example3() -> Song {
+        let albumImage1 = makeFakeImageAlbum(index: 2)
+        return Song(wrapperType: "Song",
+         artistID: 3, collectionID: 1,
+         id: 33, artistName: "My Sound Romance",
+         collectionName: "The Colours",
+         trackName: "Upside", artistViewURL: "", collectionViewURL: "", trackViewURL: "https://music.apple.com/us/album/upside-down/1469577723?i=1469577741&uo=4", previewURL: "https://is3-ssl.mzstatic.com",
+         artworkUrl30: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/30x30bb.jpg",
+         artworkUrl60: albumImage1,
+         artworkUrl100: "https://is3-ssl.mzstatic.com/image/thumb/Music115/v4/08/11/d2/0811d2b3-b4d5-dc22-1107-3625511844b5/00602537869770.rgb.jpg/100x100bb.jpg", collectionPrice: 9.88, trackPrice: 0.99, releaseDate: "2005-01-01T12:00:00Z", trackCount: 14, trackNumber: 3, trackTimeMillis: 108643, country: "USA", currency: "USD", primaryGenreName: "Rock", collectionArtistName: nil)
+    }
+
+    
+    static func examples() -> [Song] {
+        var song1 = example()
+        song1.trackName = "The Silent Scream"
+        
+        var song2 = example2()
+        song2.trackName = "Echoes in the Void"
+        song2.trackTimeMillis = 218643
+
+        var song3 = example3()
+        song3.trackName = "Dark Side of the Moon"
+        song3.trackTimeMillis = 318600
+
+        return  [song1, song2, song3]
+        
     }
 }

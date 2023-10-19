@@ -20,16 +20,6 @@ struct MovieSearchView: View {
                     MovieListView(viewModel: viewModel)
                 }
                 Spacer()
-                // #1
-
-//                HStack(alignment: .bottom) {
-//                    Spacer()
-//                    SwiftUIBannerAd(adPosition: .bottom,
-//                                    adUnitId: SwiftUIMobileAds.testBannerId)
-//                    .padding(.bottom, 15)
-//                }
-//                //        .background(.green)
-//                .frame(height: 50)
             }
             .searchable(text: $viewModel.searchTerm)
             .navigationTitle("Search Movies")

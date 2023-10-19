@@ -35,16 +35,19 @@ class MovieListViewModel: ObservableObject {
     }
     
     func loadMore() {
-        fetchMovie(for: searchTerm)
+         fetchMovie(for: searchTerm)
     }
     
     
     func loadMock() -> MovieListViewModel {
         let vm = MovieListViewModel()
-        vm.movies = [Movie.example()]
+        vm.movies = Movie.examples()
         return vm
     }
     
+    func loadMocks() {
+        self.movies = Movie.examples()
+    }
     
     
     func fetchMovie(for searchTerm: String) {

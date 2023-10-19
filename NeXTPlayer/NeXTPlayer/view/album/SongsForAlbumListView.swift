@@ -18,21 +18,24 @@ struct SongsForAlbumListView: View {
                     .progressViewStyle(.circular)
             } else {                
                 Grid(horizontalSpacing: 20){
-                    ForEach(songsViewModel.songs) { song in
+                    ForEach(songsViewModel.songs, id:\.id) { song in
                         GridRow {
                             Text("\(song.trackNumber)")
                                 .gridColumnAlignment(.trailing)
-                            
+                                .frame(width: 15, alignment: .leading)
                             Text("\(song.trackName)")
-                                .gridColumnAlignment(.leading)
+//                                .gridColumnAlignment(.leading)
+                                .frame(maxWidth: .infinity, alignment: .leading)
                             
                             Spacer()
                             Text(Int().formattedDuration(time: song.trackTimeMillis))
+                                .frame(width: 35, alignment: .trailing)
                             
                             BuySongButton(urlString: song.previewURL,
                                           price: song.trackPrice,
                                           currency: song.currency)
-                            .padding(.trailing)
+                            .frame(width: 70, alignment: .trailing)
+                            .padding(.trailing, 5)
                         }
                         .font(.caption)
                         Divider()

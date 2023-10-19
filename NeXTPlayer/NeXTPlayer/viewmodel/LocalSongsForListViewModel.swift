@@ -28,15 +28,15 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
     @Published var timeLabel: String = "00:00"
     var cancellables = Set<AnyCancellable>()
     let service = APIService()
-    var albumID: UInt64
+    var playBack = AudioPlayerManager.shared.playbackFinishedPublisher
     
     
     init(albumID: UInt64) {
-        self.albumID = 0
         super.init()
-        self.fetchSongs(albumID: albumID)
+         self.fetchSongs(albumID: albumID)
+//        mockData()
         
-        AudioPlayerManager.shared.playbackFinishedPublisher
+        playBack
             .receive(on: DispatchQueue.main)
             .sink { [weak self] in
                 // Handle the audio playback completion event here
@@ -70,6 +70,10 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
         return vm
     }
     
+    func mockData() {
+        self.songs = LocalSong.mock()
+    }
+    
     
     func fetchSongs(albumID: UInt64) {
         fetchLocalSongsForAlbumID(albumID: albumID)
@@ -81,7 +85,6 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
                     print(error.description)
                 }
             }, receiveValue: {[weak self] value in
-                print("fetchSongs: \(value)")
                 self?.songs = value
             }).store(in: &cancellables)
     }

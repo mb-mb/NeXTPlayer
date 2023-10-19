@@ -24,7 +24,11 @@ class SongsForAlbumListViewModel: ObservableObject {
     
     
     func fetch() {
-        fetchSongs(for: albumID)
+         fetchSongs(for: albumID)
+   }
+    
+    func mockSongs() {
+        self.songs = Song.examples()
     }
     
     func fetchSongs(for albumID: Int) {
@@ -48,7 +52,7 @@ class SongsForAlbumListViewModel: ObservableObject {
     
     static func example() -> SongsForAlbumListViewModel {
         let vm = SongsForAlbumListViewModel(albumID: 1)
-        vm.songs = [Song.example(), Song.example2()]
+        vm.songs =  Song.examples() // [Song.example(), Song.example2()]
         print("mock songs for album \(1) has \(vm.songs.count) item")
         return vm
     }

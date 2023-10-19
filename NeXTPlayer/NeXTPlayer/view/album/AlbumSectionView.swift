@@ -16,6 +16,7 @@ struct AlbumSectionView: View {
                 ForEach(albums) { album in
                     VStack(alignment: .leading) {
                         ImageLoadingView(urlString: album.artworkUrl100, size: 100)
+                            .cornerRadius(1)
                         Text(album.collectionName)
                         Text(album.artistName)
                             .foregroundColor(.gray)

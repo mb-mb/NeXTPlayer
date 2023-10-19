@@ -12,14 +12,16 @@ struct MovieSectionView: View {
     
     var body: some View {
         ScrollView(.horizontal) {
-            LazyHStack(alignment: .top, spacing: 0) {
+            LazyHStack(alignment: .top, spacing: 10) {
                 ForEach(movies) { movie in
                     VStack(alignment: .leading) {
-                        ImageLoadingView(urlString: movie.artworkUrl100, size: 100)
+                        ImageLoadingView(urlString: movie.artworkUrl100, size: 90)
+//                            .padding(.leading, 10)
                         Text(movie.trackName)
                         Text(movie.primaryGenreName)
                             .foregroundColor(.gray)
                     }
+                    .padding(.leading, 10)
                     .lineLimit(2)
                     .frame(width: 80)
                     .font(.caption)
@@ -32,6 +34,6 @@ struct MovieSectionView: View {
 
 struct MovieSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieSectionView(movies: [Movie.example()])
+        MovieSectionView(movies: Movie.examples())
     }
 }

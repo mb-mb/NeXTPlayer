@@ -28,8 +28,8 @@ struct LocalSongsForAlbumListView: View {
                                         .font(.title)
                                         .frame(width: 38, height: 32)
                                         .background(Color.black.opacity(0.7))
-                                        .clipShape(RoundedRectangle(cornerRadius: 6))
                                         .foregroundColor(.orange)
+                                        .cornerRadius(6)
 
                                 }
                                 .padding([.bottom, .top])
@@ -46,9 +46,9 @@ struct LocalSongsForAlbumListView: View {
                                 Text("\(song.trackName)")
                                     .gridColumnAlignment(.leading)
                                     .font(.caption)
-                                    .frame(width: 210, alignment: .leading)
+                                    .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                             }
-                            .frame(width: 255, alignment: .leading)
+                            .frame(alignment: .leading)
                             
                             if let timeLabel = songsViewModel.songTimeLabel(for: song) {
                                 Text(timeLabel)

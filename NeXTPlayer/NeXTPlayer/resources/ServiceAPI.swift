@@ -64,3 +64,56 @@ func fetchLocalSongsForAlbumID(albumID: UInt64) -> AnyPublisher<[LocalSong], API
     .eraseToAnyPublisher()
 
 }
+
+
+func makeFakeImage(index: Int) -> UIImage {
+    // Load the image from the asset catalog
+    //    let image = UIImage(named: "metal_band")
+    
+    let imageName = ["metal_band",
+                     "jazz_band",
+                     "robot_band"]
+    
+    if let img =  UIImage(named: imageName[index]) {
+        return img
+    }
+    
+    return  UIImage(systemName: "music.mic.circle")!
+    
+}
+
+
+func makeFakeImageAlbum(index: Int) -> String {
+    // Load the image from the asset catalog
+//    let image = UIImage(named: "metal_band")
+    
+    let imageName = ["metal_band",
+                     "jazz_band",
+                     "robot_band"]
+   
+    let imageData = UIImage(named: imageName[index])
+    
+    
+    if let imageData = imageData?.pngData() {
+        // Get the app's documents directory
+        if let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+            // Construct a unique file name (e.g., using a timestamp or other identifier)
+            
+            let uniqueFileName = "\(imageName[index]).png"
+            
+            // Append the file name to the documents directory URL to get the URL of the saved image
+            let fileURL = documentsDirectory.appendingPathComponent(uniqueFileName)
+            
+            do {
+                // Write the image data to the file
+                try imageData.write(to: fileURL)
+                
+                // Now, you can use 'fileURL' to reference the image as a URL.
+                return fileURL.absoluteString
+            } catch {
+                print("Error saving image: \(error)")
+            }
+        }
+    }
+    return ""
+}

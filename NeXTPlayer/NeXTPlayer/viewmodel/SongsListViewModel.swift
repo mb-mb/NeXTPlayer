@@ -52,6 +52,12 @@ class SongsListViewModel: ObservableObject {
         fetchSong(for: searchTerm)
     }
     
+    func mockSongs() {
+        self.songs = Song.examples()
+        self.songs += Song.examples()
+        self.songs += Song.examples()
+    }
+    
     func loadMock() -> SongsListViewModel {
         let vm = SongsListViewModel()
         vm.songs = [Song.example()]
@@ -90,7 +96,7 @@ class SongsListViewModel: ObservableObject {
     }
     static func example() -> SongsListViewModel {
         let vm = SongsListViewModel()
-        vm.songs = [Song.example()]
+        vm.songs = Song.examples()
         return vm
     }
  

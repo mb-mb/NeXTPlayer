@@ -79,16 +79,36 @@ extension LocalSong {
     
     static func mock() -> [LocalSong] {
         let mockMPMediaItem = MockMediaItem()        
-        mockMPMediaItem.mockArtist = "Artist 1"
+        mockMPMediaItem.mockArtist = "Artist Name 1"
         mockMPMediaItem.mockGenre = "Pop"
-        mockMPMediaItem.mockCollectionName = "album 1"
+        mockMPMediaItem.mockCollectionName = "Track Title 1"
+        mockMPMediaItem.mockTrackNumber = 1
+        mockMPMediaItem.mockAlbumTrackNumber = 1
         
         mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
-            return UIImage(systemName: "music.mic.circle")!
+            return makeFakeImage(index: 0)
         })
 
         let song0 = LocalSong(song: mockMPMediaItem, songState: .stop)
+
+
+        mockMPMediaItem.mockArtist = "Artist Name 2"
+        mockMPMediaItem.mockCollectionName = "Track Title 2"
+        mockMPMediaItem.mockTrackNumber = 2
+        mockMPMediaItem.mockAlbumTrackNumber = 2
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return makeFakeImage(index: 1)
+        })
         let song1 = LocalSong(song: mockMPMediaItem, songState: .stop)
+
+
+        mockMPMediaItem.mockArtist = "Artist Name 3"
+        mockMPMediaItem.mockCollectionName = "Track Title 3"
+        mockMPMediaItem.mockTrackNumber = 3
+        mockMPMediaItem.mockAlbumTrackNumber = 3
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+            return makeFakeImage(index: 2)
+        })
         let song2 = LocalSong(song: mockMPMediaItem, songState: .stop)
         
         return [song0, song1, song2 ]

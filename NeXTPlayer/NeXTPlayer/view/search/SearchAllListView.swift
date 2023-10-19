@@ -104,15 +104,6 @@ struct SearchAllListView: View {
                 }
                 
             }
-            
-//            HStack(alignment: .bottom) {
-//                Spacer()
-//                SwiftUIBannerAd(adPosition: .bottom,
-//                                adUnitId: SwiftUIMobileAds.testBannerId)
-////                .padding(.bottom, 49)
-//            }
-//            //        .background(.green)
-//            .frame(height: 50)
         }
     }
 }

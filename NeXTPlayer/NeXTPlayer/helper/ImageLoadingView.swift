@@ -17,18 +17,24 @@ struct ImageLoadingView: View {
             switch phase {
             case .empty:
                 ProgressView()
-                    .frame(width: size)
+                    .frame(width: size - (size / 10), height: size)
             case .failure(_):
                 Color.gray
                     .frame(width: CGFloat(size/1.5),height: size)
             case .success(let image):
                 image
+                    .resizable()
+                    .frame(width: size - (size / 10), height: size)
                     .border(Color(white:0.8))
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
+
+                
             @unknown default:
                 EmptyView()
             }
         }
         .frame(height: size)
+        
     }
 }
 
