@@ -72,22 +72,33 @@ extension LocalArtist {
     static func mockData() -> [LocalArtist] {
 
         let mockMPMediaItem = MockMediaItem()
-        mockMPMediaItem.mockArtist = "Artist 1"
-        mockMPMediaItem.mockGenre = "Pop"        
+        mockMPMediaItem.mockArtist = "Artist Name One"
+        mockMPMediaItem.mockGenre = "Pop"
+//        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+//            return UIImage(systemName: "music.mic.circle")!
+//        })
+
         mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
-            return UIImage(systemName: "music.mic.circle")!
-        })
+                        return makeFakeImage(index: 0)
+                    })
         
         let artist0 = LocalArtist(
             artist: mockMPMediaItem,
             artistState: .stop)
 
-        mockMPMediaItem.mockArtist = "Artist 2"
+        mockMPMediaItem.mockArtist = "Artist Name 2"
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+                        return makeFakeImage(index: 1)
+                    })
 
         let artist1 = LocalArtist(
             artist: mockMPMediaItem, artistState: .stop)
         
-        mockMPMediaItem.mockArtist = "Artist 2"
+        mockMPMediaItem.mockArtist = "Artist Name 3"
+        mockMPMediaItem.mockArtwork = MPMediaItemArtwork(boundsSize: CGSize(width: 100, height: 100), requestHandler: { size in
+                        return makeFakeImage(index: 2)
+                    })
+
         let artist2 = LocalArtist(
             artist: mockMPMediaItem, artistState: .stop)
         
@@ -106,6 +117,8 @@ class MockMediaItem: MPMediaItem {
     var mockArtistPersistentID: UInt64?
     var mockReleaseDate: Date?
     var mockAlbumTrackCount: Int = Int.random(in: 6...12)
+    var mockTrackNumber: Int?
+    var mockAlbumTrackNumber: Int?
     
     override var persistentID: MPMediaEntityPersistentID {
         return UInt64.random(in: 0...99)
@@ -150,7 +163,11 @@ class MockMediaItem: MPMediaItem {
     }
     
     var trackNumber: Int {
-        return Int.random(in: 1...12)
+        return mockTrackNumber ?? 1
+    }
+
+    override var albumTrackNumber: Int {
+        return mockAlbumTrackNumber ?? 1
     }
 
     var trackName: String {
@@ -162,10 +179,7 @@ class MockMediaItem: MPMediaItem {
     }
     
     override var playbackDuration: Double {
-        return Double.random(in: 0 ... 60.0)
+        return Double.random(in: 60 ... 512.0)
     }
     
-    override var albumTrackNumber: Int {
-        return Int.random(in: 1...16)
-    }
 }

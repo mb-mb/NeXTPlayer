@@ -65,6 +65,24 @@ func fetchLocalSongsForAlbumID(albumID: UInt64) -> AnyPublisher<[LocalSong], API
 
 }
 
+
+func makeFakeImage(index: Int) -> UIImage {
+    // Load the image from the asset catalog
+    //    let image = UIImage(named: "metal_band")
+    
+    let imageName = ["metal_band",
+                     "jazz_band",
+                     "robot_band"]
+    
+    if let img =  UIImage(named: imageName[index]) {
+        return img
+    }
+    
+    return  UIImage(systemName: "music.mic.circle")!
+    
+}
+
+
 func makeFakeImageAlbum(index: Int) -> String {
     // Load the image from the asset catalog
 //    let image = UIImage(named: "metal_band")

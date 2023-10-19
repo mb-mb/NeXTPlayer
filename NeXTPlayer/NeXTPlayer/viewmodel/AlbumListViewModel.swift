@@ -33,16 +33,14 @@ class AlbumListViewModel: ObservableObject {
             .sink { [weak self] term in
                 self?.state = .good
                 self?.page = 0
-//                self?.albums = []
-                //self?.fetchAlbum(for: term)
-                self?.loadMockAlbums()
+                self?.albums = []
+                self?.fetchAlbum(for: term)
             }.store(in: &subscription)
     }
     
     func loadMore() {
         // mock time !
-//        fetchAlbum(for: searchTerm)
-//        loadMock()
+        fetchAlbum(for: searchTerm)
     }
     
     func loadMock() -> AlbumListViewModel {

@@ -33,7 +33,8 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
     
     init(albumID: UInt64) {
         super.init()
-        self.fetchSongs(albumID: albumID)
+         self.fetchSongs(albumID: albumID)
+//        mockData()
         
         playBack
             .receive(on: DispatchQueue.main)
@@ -67,6 +68,10 @@ class LocalSongsForAlbumListViewModel: NSObject, ObservableObject {
         vm.songs = LocalSong.mock()
         print("mock songs for album \(1) has \(vm.songs.count) item")
         return vm
+    }
+    
+    func mockData() {
+        self.songs = LocalSong.mock()
     }
     
     

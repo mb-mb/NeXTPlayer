@@ -53,7 +53,7 @@ class LocalListViewModel: ObservableObject {
                 self?.artists = []
                 if !localArtists.isEmpty {
                     _ = localArtists.map { art in
-                        print("\nartist: \(art)")
+//                        print("\nartist: \(art)")
                         self?.artists.append(art)
                     }
                 }
@@ -66,8 +66,14 @@ class LocalListViewModel: ObservableObject {
         vm.artists = LocalArtist.mockData()
         vm.albums = LocalAlbum.mockData()
         vm.songs = LocalSong.mock()
-        vm.songs = []
+
         return vm
+    }
+    
+    func mockData() {
+        self.artists = LocalArtist.mockData()
+        self.albums = LocalAlbum.mockData()
+        self.songs = LocalSong.mock()
     }
     
     func setSelectedArtist(artist: LocalArtist) {

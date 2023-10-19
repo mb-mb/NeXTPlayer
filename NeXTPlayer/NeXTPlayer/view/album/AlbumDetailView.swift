@@ -43,11 +43,10 @@ struct AlbumDetailView: View {
                 BuyButton(urlString: album.collectionViewURL,
                           price: album.collectionPrice,
                           currency: album.currency)
-                .padding(.trailing, 15)
+                        .padding(.trailing, 10)
             }
             .frame(height: 80)
-            .padding(.bottom, 5)
-            
+            .padding(.bottom, 15)            
             SongsForAlbumListView(songsViewModel: songsViewModel)
         }
         .onAppear {

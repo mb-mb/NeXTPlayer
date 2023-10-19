@@ -32,9 +32,8 @@ class SongsListViewModel: ObservableObject {
             .sink { [weak self] term in
                 self?.state = .good
                 self?.page = 0
-//                self?.songs = []
-//                self?.fetchSong(for: term)
-                self?.mockSongs()
+                self?.songs = []
+                self?.fetchSong(for: term)
             }.store(in: &subscription)
     }
     
@@ -50,8 +49,7 @@ class SongsListViewModel: ObservableObject {
     }
     
     func loadMore() {
-//        fetchSong(for: searchTerm)
-        mockSongs()
+        fetchSong(for: searchTerm)
     }
     
     func mockSongs() {

@@ -34,7 +34,7 @@ struct SongsForAlbumListView: View {
                             BuySongButton(urlString: song.previewURL,
                                           price: song.trackPrice,
                                           currency: song.currency)
-                            .frame(width: 70, alignment: .leading)
+                            .frame(width: 70, alignment: .trailing)
                             .padding(.trailing, 5)
                         }
                         .font(.caption)
