@@ -32,7 +32,6 @@ struct LocalArtistListView: View {
             
         }
         .listStyle(.plain)
-        .listStyle(.plain)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action: {
             self.presentationMode.wrappedValue.dismiss()

@@ -34,31 +34,13 @@ class LocalListViewModel: ObservableObject {
             .debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { [weak self] term in
                 self?.state = .good
-                self?.fetchLocalAlbum(for: term)
+                self?.fetchLocalArtist(for: term)
             }.store(in: &cancellables)
     }
     
     
     func loadMore() {
-        self.fetchLocalArtists2()
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    print("fetchLocalArtists2 finished")
-                case .failure(let receivedError):
-                    print(receivedError) // Handle the error
-                }
-            }, receiveValue: {[weak self] localArtists in
-//                print("fetchLocalArtists2 receiveValue: \(localArtists.count)")
-                self?.artists = []
-                if !localArtists.isEmpty {
-                    _ = localArtists.map { art in
-//                        print("\nartist: \(art)")
-                        self?.artists.append(art)
-                    }
-                }
-            })
-            .store(in: &cancellables)
+        fetchLocalArtist(for: "")
     }
     
     func loadMock() -> LocalListViewModel {
@@ -102,6 +84,56 @@ class LocalListViewModel: ObservableObject {
 
         }
     }
+
+    func fetchLocalArtist(for searchTerm: String) {
+        
+        guard state == .good else {
+            return
+        }
+        
+        state = .isLoading
+        
+        
+        let query = MPMediaQuery.albums()
+        
+        if !searchTerm.isEmpty {
+            query.addFilterPredicate(MPMediaPropertyPredicate(
+                value: searchTerm,
+                forProperty: MPMediaItemPropertyArtist,
+                comparisonType: .contains
+            ))
+        }
+        
+        query.items
+            .publisher
+            .map { items in
+                var artistDict = [String: MPMediaItem]()
+                
+                // Iterate through the MPMediaItems and add them to the dictionary, using the artist name as the key
+                items.forEach { item in
+                    if let artist = item.artist, artistDict[artist] == nil {
+                        artistDict[artist] = item
+                    }
+                }
+                
+                // Convert the dictionary values (MPMediaItems) to an array
+                let uniqueItems = Array(artistDict.values)
+                
+                return uniqueItems
+            }
+            .sink { [weak self] value in
+                self?.artists = []
+                _ = value.map { item in
+                    let localArtist = LocalArtist(artist: item, artistState: .stop)
+                    self?.artists.append(localArtist)
+                }
+                
+                self?.state = .loadedAll
+                
+            }
+            .store(in: &cancellables)
+    }
+    
     
     func fetchLocalAlbum(for searchTerm: String) {
         guard !searchTerm.isEmpty else {

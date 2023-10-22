@@ -12,12 +12,8 @@ struct LocalMusicSearchView: View {
     var body: some View {
         NavigationView {
             Group {
-//                if viewModel.searchTerm.isEmpty {
-//                    LocalMusicSPlaceholderView(searchTerm: $viewModel.searchTerm)
-//                } else {
                 LocalSearchAllListView()
                     .environmentObject(localViewModel)
-//                }
             }
 
         }

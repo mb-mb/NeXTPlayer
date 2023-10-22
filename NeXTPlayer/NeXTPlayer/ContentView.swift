@@ -12,33 +12,12 @@ struct ContentView: View {
     var body: some View {
         Group {
             VStack{
-                
-                TabView {
-                    SearchView()
-                        .tabItem {
-                            Label("Search", systemImage: "magnifyingglass")
-                        }
-                    
-                    AlbumSearchView()
-                        .tabItem {
-                            Label("Albums", systemImage: "music.note")
-                        }
-                    
-                    MovieSearchView()
-                        .tabItem {
-                            Label("Movies", systemImage: "tv")
-                        }
-                    
-                    LocalMusicSearchView()
-                        .tabItem {
-                            Label("Local media", systemImage: "tv")
-                        }
-                }
-                if  viewModel.isBannerEnable {
+                LocalMusicSearchView()
+                if  !viewModel.isBannerEnable {
                     HStack(alignment: .bottom) {
                         Spacer()
                         SwiftUIBannerAd(adPosition: .bottom,
-                                        adUnitId: SwiftUIMobileAds.bannerIdProd)
+                                        adUnitId: SwiftUIMobileAds.testBannerId)
                         //                    .padding(.bottom, 0)
                     }
                     //        .background(.green)
