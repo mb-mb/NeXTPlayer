@@ -38,7 +38,8 @@ struct LocalAlbumListView: View {
             self.presentationMode.wrappedValue.dismiss()
         }) {
             HStack {
-                Image(systemName: "arrowshape.turn.up.backward.fill")              .font(.caption)
+                Image(systemName: "arrowshape.turn.up.backward.fill")              
+                    .font(.caption)
                     .frame(width: 28, height: 32)
 //                    .background(Color.black.opacity(0.7))
                     .clipShape(RoundedRectangle(cornerRadius: 6))
@@ -53,7 +54,7 @@ struct LocalAlbumListView: View {
 
 struct LocalAlbumListView_Preview:  PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             LocalAlbumListView()
                 .environmentObject(LocalViewModelView.viewModel)
         }

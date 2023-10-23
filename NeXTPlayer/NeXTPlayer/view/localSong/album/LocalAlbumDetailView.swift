@@ -71,7 +71,7 @@ struct LocalAlbumDetailView: View {
 
 struct LocalAlbumDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             LocalAlbumDetailView(album: LocalAlbum.mockData().first!)
         }
     }

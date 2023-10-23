@@ -45,10 +45,7 @@ struct SearchView: View {
                         } 
                         Spacer()
                     case .album:
-                        AlbumsListView(viewModel: albumViewModel)
-                            .onAppear {
-                                albumViewModel.searchTerm = searchTerm
-                            }
+                        EmptyView()
                     case .song:
                         SongListView(viewModel: songViewModel)
                             .onAppear {

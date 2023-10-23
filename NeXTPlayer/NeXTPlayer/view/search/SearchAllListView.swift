@@ -44,31 +44,6 @@ struct SearchAllListView: View {
                     Divider()
                         .padding(.bottom)
                     
-                    HStack {
-                        Text("Albums")
-                            .font(.title2)
-                        Spacer()
-                        NavigationLink {
-                            AlbumsListView(viewModel: albumViewModel)
-                        } label: {
-                            HStack {
-                                HStack {
-                                    Text("See all")
-                                        .font(.caption2)
-                                    Image(systemName: "arrowshape.turn.up.right.fill")
-                                        .font(.caption)
-                                        .frame(width: 18, height: 32)
-                                        .clipShape(RoundedRectangle(cornerRadius: 6))
-                                }
-                                .foregroundColor(Color("buttonNavColor"))
-                            }
-                        }
-                    }
-                    .padding(.horizontal)
-                    AlbumSectionView(albums: albumViewModel.albums)
-                    Divider()
-                        .padding(.bottom)
-                    
                     if !(movieViewModel.movies.isEmpty) {
                         HStack {
                             Text("Movies")

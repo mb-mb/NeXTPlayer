@@ -62,7 +62,7 @@ struct ArtWorkView: View {
 
 struct LocalALbumRowView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             LocalAlbumRowView(album: LocalAlbum.mockData().first!)
         }
     }

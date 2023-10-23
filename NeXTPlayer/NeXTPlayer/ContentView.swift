@@ -9,24 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
+    @StateObject var localViewModel = LocalListViewModel()
     var body: some View {
-        Group {
-            VStack{
-                LocalMusicSearchView()
-                if  !viewModel.isBannerEnable {
-                    HStack(alignment: .bottom) {
-                        Spacer()
-                        SwiftUIBannerAd(adPosition: .bottom,
-                                        adUnitId: SwiftUIMobileAds.testBannerId)
-                        //                    .padding(.bottom, 0)
-                    }
-                    //        .background(.green)
-                    .frame(height: 50)
+        VStack{
+            LocalSearchAllListView()
+                .environmentObject(localViewModel)
+            if  viewModel.isBannerEnable {
+                HStack(alignment: .bottom) {
+                    Spacer()
+                    SwiftUIBannerAd(adPosition: .bottom,
+                                    adUnitId: SwiftUIMobileAds.testBannerId)
+                    //                    .padding(.bottom, 0)
                 }
+                //        .background(.green)
+                .frame(height: 50)
             }
-            .onAppear {
-                viewModel.fetchRemoteConfig()
-            }
+        }
+        .onAppear {
+            viewModel.fetchRemoteConfig()
         }
     }
 }

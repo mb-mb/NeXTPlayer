@@ -58,7 +58,7 @@ struct SongListView: View {
                    
 struct SongListView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             SongListView(viewModel: SongsListViewModel.example())
         }
     }

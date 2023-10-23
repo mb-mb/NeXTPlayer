@@ -54,7 +54,7 @@ struct LocalArtistListView: View {
 
 struct LocalArtistListView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             LocalArtistListView()
                 .environmentObject(LocalViewModelView.viewModel)
         }
