@@ -10,15 +10,16 @@ import SwiftUI
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
     @StateObject var localViewModel = LocalListViewModel()
+    let isBannerEnabled = UserDefaults.standard.bool(forKey: "isBannerEnabled")
     var body: some View {
         VStack{
             LocalSearchAllListView()
                 .environmentObject(localViewModel)
-            if  viewModel.isBannerEnable {
+            if  isBannerEnabled {
                 HStack(alignment: .bottom) {
                     Spacer()
                     SwiftUIBannerAd(adPosition: .bottom,
-                                    adUnitId: SwiftUIMobileAds.testBannerId)
+                                    adUnitId: SwiftUIMobileAds.bannerIdProd)
                     //                    .padding(.bottom, 0)
                 }
                 //        .background(.green)
