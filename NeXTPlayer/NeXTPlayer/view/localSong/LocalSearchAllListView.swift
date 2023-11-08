@@ -9,12 +9,12 @@ import SwiftUI
 
 struct LocalSearchAllListView: View {
     @EnvironmentObject var localViewModel: LocalListViewModel
+    @State private var searchTerm: String = ""
     
     var body: some View {
-        VStack {
+        NavigationView {
             ScrollView {
-                LazyVStack {
-                    
+                LazyVStack {                    
                     HStack {
                         Text("Artist")
                             .font(.title2)
@@ -28,14 +28,14 @@ struct LocalSearchAllListView: View {
                                     .font(.caption2)
                                 Image(systemName: "arrowshape.turn.up.right.fill")
                                     .font(.caption)
-                              .frame(width: 18, height: 32)
-                              .clipShape(RoundedRectangle(cornerRadius: 6))
+                                    .frame(width: 18, height: 32)
+                                    .clipShape(RoundedRectangle(cornerRadius: 6))
                             }
                             .foregroundColor(Color("buttonNavColor"))
-
+                            
                         }
                     }
-                    .padding(.horizontal)                
+                    .padding(.horizontal)
                     LocalArtistSectionView()
                         .environmentObject(localViewModel)
                     Divider()
@@ -54,11 +54,11 @@ struct LocalSearchAllListView: View {
                                     .font(.caption2)
                                 Image(systemName: "arrowshape.turn.up.right.fill")
                                     .font(.caption)
-                              .frame(width: 18, height: 32)
-                              .clipShape(RoundedRectangle(cornerRadius: 6))
+                                    .frame(width: 18, height: 32)
+                                    .clipShape(RoundedRectangle(cornerRadius: 6))
                             }
                             .foregroundColor(Color("buttonNavColor"))
-
+                            
                         }
                     }
                     .padding(.horizontal)
@@ -66,39 +66,18 @@ struct LocalSearchAllListView: View {
                         .environmentObject(localViewModel)
                     Divider()
                         .padding(.bottom)
-
                     
-    //                HStack {
-    //                    Text("Songs")
-    //                        .font(.title2)
-    //                    Spacer()
-    //                    NavigationLink {
-    //                        LocalSongsListView()
-    //                            .environmentObject(localViewModel)
-    //                    } label: {
-    //                        HStack {
-    //                            Text("See all")
-    //                                .font(.caption2)
-    //                            Image(systemName: "arrowshape.turn.up.right.fill")
-    //                                .font(.caption)
-    //                          .frame(width: 18, height: 32)
-    //                          .clipShape(RoundedRectangle(cornerRadius: 6))
-    //                        }
-    //                        .foregroundColor(Color("buttonNavColor"))
-    //
-    //                    }
-    //                }
-    //                .padding(.horizontal)
-    //                LocalSongsSectionView()
-    //                    .environmentObject(localViewModel)
-    //                Divider()
-    //                    .padding(.bottom)
-    //
+                    
                 }
                 .onAppear {
                     localViewModel.loadMore()
                 }
+                .onChange(of: searchTerm) { newValue in
+                    localViewModel.searchTerm = newValue
+                }
             }
+            .searchable(text: $searchTerm)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

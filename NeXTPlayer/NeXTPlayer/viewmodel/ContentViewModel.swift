@@ -9,7 +9,6 @@ import Foundation
 import SwiftUI
 
 class ContentViewModel: ObservableObject {
-    @Published var isBannerEnable: Bool = false
     @Published var isLoading: Bool = false
 
     func fetchRemoteConfig() {
@@ -19,10 +18,11 @@ class ContentViewModel: ObservableObject {
                 self?.isLoading = false
                 switch result {
                 case .success:
-                    self?.isBannerEnable = RemoteConfigManager.shared.getBoolParameter(forKey: .enableBannerV1)
+                    let isBannerEnabled = RemoteConfigManager.shared.getBoolParameter(forKey: .enableBannerV1)
+                    UserDefaults.standard.setValue(isBannerEnabled, forKey: "isBannerEnabled")
                 case .failure(let error):
                     print("Error fetching remote config: \(error.localizedDescription)")
-                    self?.isBannerEnable = false
+                    UserDefaults.standard.setValue(false, forKey: "isBannerEnabled")
                 }
             }
         }

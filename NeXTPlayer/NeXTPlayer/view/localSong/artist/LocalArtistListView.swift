@@ -32,7 +32,6 @@ struct LocalArtistListView: View {
             
         }
         .listStyle(.plain)
-        .listStyle(.plain)
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: Button(action: {
             self.presentationMode.wrappedValue.dismiss()
@@ -55,7 +54,7 @@ struct LocalArtistListView: View {
 
 struct LocalArtistListView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             LocalArtistListView()
                 .environmentObject(LocalViewModelView.viewModel)
         }

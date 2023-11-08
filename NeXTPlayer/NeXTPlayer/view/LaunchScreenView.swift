@@ -75,10 +75,15 @@ private extension LaunchScreenView {
     }
     
     var info: some View {
-        
-        Text("NeXTPlayer")
-            .font(Fonts.avenirNext(size: 46))
-            .foregroundColor(.white)
-        
+        VStack {
+            Text("NeXTPlayer")
+                .font(Fonts.avenirNext(size: 46))
+                .foregroundColor(.white)
+            
+            Text("basic")
+                .font(Fonts.avenirNext(size: 23))
+                .italic()
+                .foregroundColor(.white)
+        }
     }
 }

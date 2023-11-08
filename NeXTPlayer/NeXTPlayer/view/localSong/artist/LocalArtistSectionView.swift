@@ -33,8 +33,15 @@ struct LocalArtistSectionView: View {
                     Text(message)
                         .foregroundColor(.pink)
                 }
-
             }
+            .onAppear {
+                if viewModel.isAuthorized {
+                    viewModel.loadMore()
+                } else {
+                    viewModel.requestAuthorization()
+                }
+            }
+
 
         }
         .padding([.horizontal, .bottom])
@@ -51,7 +58,7 @@ struct LocalViewModelView: View {
 
 struct LocalArtistSectionView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationStack {
+        NavigationView {
             LocalArtistSectionView()
                 .environmentObject(LocalViewModelView.viewModel)
         }

@@ -9,45 +9,25 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = ContentViewModel()
+    @StateObject var localViewModel = LocalListViewModel()
+    let isBannerEnabled = UserDefaults.standard.bool(forKey: "isBannerEnabled")
     var body: some View {
-        Group {
-            VStack{
-                
-                TabView {
-                    SearchView()
-                        .tabItem {
-                            Label("Search", systemImage: "magnifyingglass")
-                        }
-                    
-                    AlbumSearchView()
-                        .tabItem {
-                            Label("Albums", systemImage: "music.note")
-                        }
-                    
-                    MovieSearchView()
-                        .tabItem {
-                            Label("Movies", systemImage: "tv")
-                        }
-                    
-                    LocalMusicSearchView()
-                        .tabItem {
-                            Label("Local media", systemImage: "tv")
-                        }
+        VStack{
+            LocalSearchAllListView()
+                .environmentObject(localViewModel)
+            if  isBannerEnabled {
+                HStack(alignment: .bottom) {
+                    Spacer()
+                    SwiftUIBannerAd(adPosition: .bottom,
+                                    adUnitId: SwiftUIMobileAds.bannerIdProd)
+                    //                    .padding(.bottom, 0)
                 }
-                if  viewModel.isBannerEnable {
-                    HStack(alignment: .bottom) {
-                        Spacer()
-                        SwiftUIBannerAd(adPosition: .bottom,
-                                        adUnitId: SwiftUIMobileAds.bannerIdProd)
-                        //                    .padding(.bottom, 0)
-                    }
-                    //        .background(.green)
-                    .frame(height: 50)
-                }
+                //        .background(.green)
+                .frame(height: 50)
             }
-            .onAppear {
-                viewModel.fetchRemoteConfig()
-            }
+        }
+        .onAppear {
+            viewModel.fetchRemoteConfig()
         }
     }
 }

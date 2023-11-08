@@ -10,7 +10,6 @@ import SwiftUI
 struct LocalAlbumSectionView: View {
     @EnvironmentObject var viewModel: LocalListViewModel
     let rows = Array(repeating: GridItem(.fixed(110), spacing:0, alignment: .leading), count: 4)
-
     var body: some View {
         ScrollView(.horizontal) {
             LazyHGrid(rows: rows, spacing: 65) {
@@ -21,37 +20,44 @@ struct LocalAlbumSectionView: View {
 //                .frame(width: 300, height: 120)
 //                .background(Color.green)
                 
-                switch viewModel.state {
-                case .good:
-                    EmptyView()
-                case .isLoading:
-                    ProgressView()
-                        .progressViewStyle(.circular)
-                        .frame(maxWidth: .infinity)
-                case .loadedAll:
-                    EmptyView()
-                case .error(let message):
-                    Text(message)
-                        .foregroundColor(.pink)
-                }
-
+//                switch viewModel.stateAlbums {
+//                case .good:
+//                    EmptyView()
+//                case .isLoading:
+//                    ProgressView()
+//                        .progressViewStyle(.circular)
+//                        .frame(maxWidth: .infinity)
+//                case .loadedAll:
+//                    EmptyView()
+//                case .error(let message):
+//                    Text(message)
+//                        .foregroundColor(.pink)
+//                }
             }
+            .onAppear {
+                if viewModel.isAuthorized {
+                    viewModel.loadMore()
+                }
+                viewModel.checkAuthorizationStatus()
+            }
+            
         }
         .padding([.horizontal, .bottom])
     }
 }
 //
-//struct LocalAlbumSectionView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NavigationStack {
-//            LocalAlbumSectionView(viewModel: LocalListViewModel().loadMock())
-//        }
-//    }
-//}
-
-#Preview {
-    NavigationStack {
-        LocalAlbumSectionView()
-            .environmentObject(LocalListViewModel().loadMock())
+struct LocalAlbumSectionView_Previews: PreviewProvider {
+    static var previews: some View {
+        NavigationView {
+            LocalAlbumSectionView()
+                .environmentObject(LocalListViewModel().loadMock())
+        }
     }
 }
+//
+//#Preview {
+//    NavigationStack {
+//        LocalAlbumSectionView()
+//            .environmentObject(LocalListViewModel().loadMock())
+//    }
+//}
